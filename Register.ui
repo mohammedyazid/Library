@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>RegisterWindow</class>
+ <widget class="QMainWindow" name="RegisterWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -40,7 +40,7 @@ border-radius: 10px;
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="reg_SignUp">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -77,7 +77,7 @@ QPushButton:hover {
       <string>Sign Up</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit">
+    <widget class="QTextEdit" name="reg_idTF">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -142,7 +142,7 @@ p, li { white-space: pre-wrap; }
       <string>Password</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_2">
+    <widget class="QTextEdit" name="reg_passTF">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -169,7 +169,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt; font-weight:400;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_3">
+    <widget class="QTextEdit" name="reg_phoneTF">
      <property name="geometry">
       <rect>
        <x>270</x>
@@ -215,7 +215,7 @@ p, li { white-space: pre-wrap; }
       <string>Phone </string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_4">
+    <widget class="QTextEdit" name="reg_fnameTF">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -264,7 +264,7 @@ p, li { white-space: pre-wrap; }
       <string>Family Name</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_5">
+    <widget class="QTextEdit" name="reg_confpassTF">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -372,7 +372,7 @@ color:rgb(0, 137, 236)</string>
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_6">
+    <widget class="QTextEdit" name="reg_mailTF">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -418,7 +418,7 @@ p, li { white-space: pre-wrap; }
       <string>Email</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_7">
+    <widget class="QTextEdit" name="reg_nameTF">
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -538,7 +538,7 @@ border-radius: 10px;
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="credits_button">
+    <widget class="QPushButton" name="reg_credits">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -576,7 +576,7 @@ QPushButton:hover {
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="help_button">
+   <widget class="QPushButton" name="reg_help">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -615,7 +615,7 @@ QPushButton:hover {
    </widget>
    <zorder>frame_2</zorder>
    <zorder>frame</zorder>
-   <zorder>help_button</zorder>
+   <zorder>reg_help</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

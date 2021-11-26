@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -40,7 +40,7 @@ border-radius: 10px;
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="log_SignIn">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -77,7 +77,7 @@ QPushButton:hover {
       <string>Sign In</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="lgstid">
+    <widget class="QTextEdit" name="log_idTF">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -139,7 +139,7 @@ p, li { white-space: pre-wrap; }
       <string>Password</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="lgpw">
+    <widget class="QTextEdit" name="log_passTF">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -254,7 +254,7 @@ color:rgb(0, 137, 236)</string>
       <string>Not a member yet?</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="log_SignUp">
      <property name="geometry">
       <rect>
        <x>240</x>
@@ -329,7 +329,7 @@ color:white;</string>
       <string>Library</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="log_credits">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -366,7 +366,10 @@ QPushButton:hover {
       <string>Credits</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_8">
+    <widget class="QPushButton" name="lib_icon">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -400,7 +403,7 @@ border-radius: 10px;
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="log_help">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -439,7 +442,7 @@ QPushButton:hover {
    </widget>
    <zorder>frame_2</zorder>
    <zorder>frame</zorder>
-   <zorder>pushButton_6</zorder>
+   <zorder>log_help</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
