@@ -87,7 +87,7 @@ QPushButton:hover {
       </rect>
      </property>
      <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can find it in your student id card&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>You can find it in your student id card</string>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: white;
