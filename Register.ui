@@ -67,8 +67,8 @@ border-radius: 10px;
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>180</y>
-       <width>321</width>
+       <y>250</y>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>
@@ -90,14 +90,14 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt; font-weight:400;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="placeholderText">
-      <string>3800.....</string>
+      <string>3800....</string>
      </property>
     </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>150</y>
+       <y>220</y>
        <width>111</width>
        <height>17</height>
       </rect>
@@ -130,7 +130,7 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>50</x>
        <y>320</y>
-       <width>321</width>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>
@@ -155,9 +155,9 @@ p, li { white-space: pre-wrap; }
     <widget class="QTextEdit" name="textEdit_3">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>270</x>
        <y>250</y>
-       <width>141</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -185,7 +185,7 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>270</x>
        <y>220</y>
        <width>141</width>
        <height>17</height>
@@ -195,7 +195,7 @@ p, li { white-space: pre-wrap; }
       <string notr="true">font: 75 16pt &quot;Ubuntu&quot;;</string>
      </property>
      <property name="text">
-      <string>Phone Number</string>
+      <string>Phone </string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEdit_4">
@@ -203,7 +203,7 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>50</x>
        <y>100</y>
-       <width>301</width>
+       <width>341</width>
        <height>31</height>
       </rect>
      </property>
@@ -232,7 +232,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>50</x>
-       <y>80</y>
+       <y>70</y>
        <width>111</width>
        <height>17</height>
       </rect>
@@ -249,7 +249,7 @@ p, li { white-space: pre-wrap; }
       <rect>
        <x>50</x>
        <y>390</y>
-       <width>321</width>
+       <width>201</width>
        <height>31</height>
       </rect>
      </property>
@@ -375,6 +375,52 @@ color:rgb(0, 137, 236)</string>
       </size>
      </property>
     </widget>
+    <widget class="QTextEdit" name="textEdit_6">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>170</y>
+       <width>341</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: white;
+border-style: solid;
+border-width: 1px;
+border-color:rgb(0, 137, 236);
+border-radius: 10px;
+font: 75 14pt &quot;Ubuntu Mono&quot;;
+
+</string>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu Mono'; font-size:14pt; font-weight:72; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt; font-weight:400;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="placeholderText">
+      <string>...@gmail.com</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>140</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 16pt &quot;Ubuntu&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Email</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame_2">
     <property name="geometry">
@@ -449,9 +495,84 @@ border-radius: 10px;
       </size>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>280</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton {
+    transition: all .5s ease;
+    color: white;
+    border-radius: 5px;
+    border:3px solid white;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    
+    
+}
+QPushButton:hover {
+    color:rgb(0, 137, 236);;
+    background-color: white;;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Credits</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>350</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    transition: all .5s ease;
+    color: rgb(0, 137, 236);;
+    border-radius: 5px;
+    border:3px solid rgb(0, 137, 236);;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    
+    
+}
+QPushButton:hover {
+    color: white;
+    background-color: rgb(0, 137, 236);;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Help</string>
+    </property>
    </widget>
    <zorder>frame_2</zorder>
    <zorder>frame</zorder>
+   <zorder>pushButton_6</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

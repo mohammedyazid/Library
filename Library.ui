@@ -355,7 +355,7 @@ color:white;</string>
      <property name="styleSheet">
       <string notr="true">background-color: rgb(237, 51, 59);
 color: rgb(255, 255, 255);
-font: 75 15pt &quot;Ubuntu&quot;;
+font: 63 15pt &quot;URW Bookman&quot;;
 border-style: solid;
 border-width: 0px;
 border-radius: 10px;
