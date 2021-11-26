@@ -218,8 +218,8 @@ color:rgb(0, 137, 236)</string>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>90</y>
+       <x>170</x>
+       <y>100</y>
        <width>89</width>
        <height>71</height>
       </rect>
@@ -233,8 +233,8 @@ color:rgb(0, 137, 236)</string>
      </property>
      <property name="iconSize">
       <size>
-       <width>80</width>
-       <height>80</height>
+       <width>100</width>
+       <height>100</height>
       </size>
      </property>
     </widget>
@@ -258,9 +258,9 @@ color:rgb(0, 137, 236)</string>
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>420</y>
+       <y>410</y>
        <width>81</width>
-       <height>21</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="cursor">
