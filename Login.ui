@@ -50,13 +50,27 @@ border-radius: 10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(0, 137, 236);
-color: rgb(255, 255, 255);
-font: 75 20pt &quot;Ubuntu&quot;;
-border-style: solid;
-border-width: 0px;
-border-radius: 10px;
-
+      <string notr="true">
+QPushButton {
+    transition: all .5s ease;
+    color: rgb(0, 137, 236);;
+    border-radius: 5px;
+    border:3px solid rgb(0, 137, 236);;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    
+    
+}
+QPushButton:hover {
+    color: white;
+    background-color: rgb(0, 137, 236);;
+}
 </string>
      </property>
      <property name="text">
@@ -250,14 +264,22 @@ color:rgb(0, 137, 236)</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:rgb(46, 194, 126);
-color: rgb(255, 255, 255);
+      <string notr="true">QPushButton{background-color:transparent;
+color: rgb(46, 194, 126);
 font: 75 12pt &quot;Ubuntu&quot;;
 border-style: solid;
 border-width: 0px;
 border-radius: 10px;
-
-</string>
+font:serif;
+}
+QPushButton:hover {
+color: rgb(46, 194, 126);
+font: 75 15pt &quot;Ubuntu&quot;;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+font:serif;
+}</string>
      </property>
      <property name="text">
       <string>Sign Up</string>
@@ -314,13 +336,27 @@ color:white;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 137, 236);
-font: 75 20pt &quot;Ubuntu&quot;;
-border-style: solid;
-border-width: 0px;
-border-radius: 10px;
-
+      <string notr="true">
+QPushButton {
+    transition: all .5s ease;
+    color: white;
+    border-radius: 5px;
+    border:3px solid white;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    
+    
+}
+QPushButton:hover {
+    color:rgb(0, 137, 236);;
+    background-color: white;;
+}
 </string>
      </property>
      <property name="text">
@@ -371,13 +407,27 @@ border-radius: 10px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 137, 236);
-color: rgb(255, 255, 255);
-font: 75 20pt &quot;Ubuntu&quot;;
-border-style: solid;
-border-width: 0px;
-border-radius: 10px;
-
+     <string notr="true">
+QPushButton {
+    transition: all .5s ease;
+    color: rgb(0, 137, 236);;
+    border-radius: 5px;
+    border:3px solid rgb(0, 137, 236);;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    
+    
+}
+QPushButton:hover {
+    color: white;
+    background-color: rgb(0, 137, 236);;
+}
 </string>
     </property>
     <property name="text">
@@ -394,7 +444,7 @@ border-radius: 10px;
      <x>0</x>
      <y>0</y>
      <width>970</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>
