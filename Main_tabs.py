@@ -10,4 +10,6 @@ if __name__ == "__main__":
     ui = Ui_Form()
     ui.setupUi(Form)
     Form.show()
+    Form.setWindowIcon(QtGui.QIcon('/home/yassine/repo/Icons/Main.png'))## make an icon for our app
+
     sys.exit(app.exec_())
