@@ -198,13 +198,13 @@ class Ui_RegisterWindow(object):
 "")
         self.pushButton_8.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/yassine/repo/Icons/library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Icons/library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_8.setIcon(icon)
         self.pushButton_8.setIconSize(QtCore.QSize(100, 100))
         self.pushButton_8.setObjectName("pushButton_8")
         self.btn_of_return=QtWidgets.QPushButton(self.frame_2)
         self.btn_of_return.setGeometry(QtCore.QRect(5, 5, 41, 41))
-        self.btn_of_return.setIcon(QtGui.QIcon('/home/yassine/repo/Icons/return2.png'))#######################################
+        self.btn_of_return.setIcon(QtGui.QIcon('Icons/return2.png'))#######################################
         self.reg_credits = QtWidgets.QPushButton(self.frame_2)
         self.reg_credits.setGeometry(QtCore.QRect(130, 280, 171, 41))
         self.reg_credits.setStyleSheet("\n"
