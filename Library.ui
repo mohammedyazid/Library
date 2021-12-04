@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>968</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(222, 221, 218);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>191</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(24, 33, 62);
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>510</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+color:rgb(32, 41, 70)</string>
+     </property>
+     <property name="text">
+      <string>__________________________</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>151</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+color:white;
+</string>
+     </property>
+     <property name="text">
+      <string>Library</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>490</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+color:rgb(32, 41, 70)</string>
+     </property>
+     <property name="text">
+      <string>__________________________</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>470</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+color:rgb(32, 41, 70)</string>
+     </property>
+     <property name="text">
+      <string>__________________________</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>450</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+color:rgb(32, 41, 70)</string>
+     </property>
+     <property name="text">
+      <string>__________________________</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>410</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+color:rgb(32, 41, 70)</string>
+     </property>
+     <property name="text">
+      <string>__________________________</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>370</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+color:rgb(32, 41, 70)</string>
+     </property>
+     <property name="text">
+      <string>__________________________</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>320</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+color:rgb(32, 41, 70)</string>
+     </property>
+     <property name="text">
+      <string>__________________________</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>260</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+color:rgb(32, 41, 70)</string>
+     </property>
+     <property name="text">
+      <string>__________________________</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="logout_button_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+transition: all .5s ease;
+background-color: rgb(237, 51, 59);
+color:rgb(24, 33, 62);
+font: 63 12pt &quot;URW Bookman&quot;;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+border:1px solid white;
+text-transform: uppercase;
+text-align: center;
+line-height: 1;
+background-color : rgb(91, 139, 229);
+padding: 10px;
+outline: none;  
+    
+}
+QPushButton:hover {
+    color:rgb(24, 33, 62);
+    background-color: white;;
+}
+
+
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>Home</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="logout_button_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+transition: all .5s ease;
+background-color: rgb(237, 51, 59);
+color:rgb(24, 33, 62);
+font: 63 12pt &quot;URW Bookman&quot;;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+border:1px solid white;
+text-transform: uppercase;
+text-align: center;
+line-height: 1;
+background-color : rgb(91, 139, 229);
+padding: 10px;
+outline: none;  
+    
+}
+QPushButton:hover {
+    color:rgb(24, 33, 62);
+    background-color: white;;
+}
+
+
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>Books</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Desktop/books.png</normaloff>../../../Desktop/books.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="logout_button_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+transition: all .5s ease;
+background-color: rgb(237, 51, 59);
+color:rgb(24, 33, 62);
+font: 63 12pt &quot;URW Bookman&quot;;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+border:1px solid white;
+text-transform: uppercase;
+text-align: center;
+line-height: 1;
+background-color : rgb(91, 139, 229);
+padding: 10px;
+outline: none;  
+    
+}
+QPushButton:hover {
+    color:rgb(24, 33, 62);
+    background-color: white;;
+}
+
+
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>My Account</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>0</y>
+      <width>771</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="main_Home">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>../../../Desktop/home.png</normaloff>../../../Desktop/home.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Home</string>
+     </attribute>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(192, 191, 188);
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTextEdit" name="textEdit_6">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>711</width>
+         <height>491</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+
+</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>30</y>
+         <width>121</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 63 italic 32pt &quot;URW Bookman&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(24, 33, 62);
+</string>
+       </property>
+       <property name="text">
+        <string>Rules</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>100</y>
+         <width>661</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(91, 139, 229);
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+color:rgb(24, 33, 62)
+
+</string>
+       </property>
+       <property name="text">
+        <string>1-You can't have more than two books at same time</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>170</y>
+         <width>661</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(91, 139, 229);
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+color:rgb(24, 33, 62)
+
+</string>
+       </property>
+       <property name="text">
+        <string>1-You can't have more than two books at same time</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>240</y>
+         <width>661</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(91, 139, 229);
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+color:rgb(24, 33, 62)
+
+</string>
+       </property>
+       <property name="text">
+        <string>1-You can't have more than two books at same time</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>320</y>
+         <width>661</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(91, 139, 229);
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+color:rgb(24, 33, 62)
+
+</string>
+       </property>
+       <property name="text">
+        <string>1-You can't have more than two books at same time</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_17">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>390</y>
+         <width>661</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(91, 139, 229);
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+color:rgb(24, 33, 62)
+
+</string>
+       </property>
+       <property name="text">
+        <string>1-You can't have more than two books at same time</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="main_Books">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>../../../Desktop/open-book.png</normaloff>../../../Desktop/open-book.png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>Books</string>
+     </attribute>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(222, 221, 218);
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>90</y>
+         <width>691</width>
+         <height>391</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+
+</string>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <column>
+        <property name="text">
+         <string>Code</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Title</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Author</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Status</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QTextEdit" name="textEdit">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>50</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+
+</string>
+       </property>
+       <property name="placeholderText">
+        <string>Book Title....</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="logout_button_7">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>50</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+transition: all .5s ease;
+background-color: rgb(237, 51, 59);
+color:black;
+font: 63 10pt &quot;URW Bookman&quot;;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+border:1px solid white;
+text-transform: uppercase;
+text-align: center;
+line-height: 1;
+background-color : rgb(91, 139, 229);
+padding: 8px;
+outline: none;  
+    
+}
+QPushButton:hover {
+    color:rgb(24, 33, 62);
+    background-color: white;;
+}
+
+
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/Mg.png</normaloff>Icons/Mg.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="main_account">
+     <attribute name="icon">
+      <iconset>
+       <normaloff>../../../Desktop/user .png</normaloff>../../../Desktop/user .png</iconset>
+     </attribute>
+     <attribute name="title">
+      <string>my account</string>
+     </attribute>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(192, 191, 188);
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="frame_6">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>20</y>
+         <width>321</width>
+         <height>251</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QTextEdit" name="textEdit_2">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>80</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Name</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_3">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>120</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>ID</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_4">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>160</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Phone</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_5">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>200</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Mail</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>20</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 20pt &quot;Ubuntu Condensed&quot;;
+color:black;
+</string>
+        </property>
+        <property name="text">
+         <string>My informations</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_7">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>280</y>
+         <width>321</width>
+         <height>251</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QTextEdit" name="textEdit_7">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>80</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Current Password</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_8">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>120</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>New Password</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit_9">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>160</y>
+          <width>201</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Confirme</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>10</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 20pt &quot;Ubuntu Condensed&quot;;
+color:black;
+</string>
+        </property>
+        <property name="text">
+         <string>Change password</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="logout_button_8">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>200</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+transition: all .5s ease;
+background-color: rgb(237, 51, 59);
+color:black;
+font: 63 10pt &quot;URW Bookman&quot;;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+border:1px solid black;
+text-transform: uppercase;
+text-align: center;
+line-height: 1;
+background-color : rgb(91, 139, 229);
+padding: 8px;
+outline: none;  
+    
+}
+QPushButton:hover {
+    color:rgb(24, 33, 62);
+    background-color: white;;
+}
+
+
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Submit</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="logout_button_2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>30</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+transition: all .5s ease;
+background-color: rgb(237, 51, 59);
+color: white;
+font: 63 12pt &quot;URW Bookman&quot;;
+border-style: solid;
+border-width: 0px;
+border-radius: 10px;
+border:1px solid white;
+text-transform: uppercase;
+text-align: center;
+line-height: 1;
+background-color : rgb(237, 51, 59);
+padding: 10px;
+outline: none;  
+    
+}
+QPushButton:hover {
+    color:rgb(0, 137, 236);;
+    background-color: white;;
+}
+
+
+
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../Desktop/logout (1).png</normaloff>../../../Desktop/logout (1).png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>25</width>
+      <height>25</height>
+     </size>
+    </property>
+   </widget>
+   <zorder>tabWidget</zorder>
+   <zorder>frame_3</zorder>
+   <zorder>logout_button_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>968</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
