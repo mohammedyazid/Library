@@ -3,7 +3,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from Register import Ui_RegisterWindow
 from Login import Ui_LoginWindow
-from Library import Ui_MainWindow
+from Library1 import Ui_MainWindow
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")

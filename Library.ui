@@ -415,6 +415,9 @@ border-radius: 10px;
 
 </string>
        </property>
+       <property name="textInteractionFlags">
+        <set>Qt::NoTextInteraction</set>
+       </property>
        <property name="placeholderText">
         <string/>
        </property>
@@ -1102,7 +1105,7 @@ QPushButton:hover {
      <x>0</x>
      <y>0</y>
      <width>968</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>

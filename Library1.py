@@ -195,6 +195,7 @@ class Ui_MainWindow(object):
 "border-radius: 10px;\n"
 "\n"
 "")
+        self.textEdit_6.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
         self.textEdit_6.setPlaceholderText("")
         self.textEdit_6.setObjectName("textEdit_6")
         self.label_15 = QtWidgets.QLabel(self.frame)
@@ -526,11 +527,11 @@ class Ui_MainWindow(object):
         self.tabWidget.raise_()
         self.frame_3.raise_()
         self.logout_button_2.raise_()
-       # MainWindow.setCentralWidget(self.centralwidget)
+        #MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 968, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 968, 24))
         self.menubar.setObjectName("menubar")
-       # MainWindow.setMenuBar(self.menubar)
+        #MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         #MainWindow.setStatusBar(self.statusbar)
@@ -583,5 +584,6 @@ class Ui_MainWindow(object):
         self.label_13.setText(_translate("MainWindow", "Change password"))
         self.logout_button_8.setText(_translate("MainWindow", "Submit"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.main_account), _translate("MainWindow", "my account"))
+
 
 
