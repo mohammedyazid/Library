@@ -327,6 +327,9 @@ border-radius: 10px;
 
 </string>
        </property>
+       <property name="textInteractionFlags">
+        <set>Qt::NoTextInteraction</set>
+       </property>
        <property name="placeholderText">
         <string/>
        </property>
@@ -1923,8 +1926,13 @@ border-radius: 10px;
     <rect>
      <x>0</x>
      <y>0</y>
+<<<<<<< HEAD
      <width>980</width>
      <height>22</height>
+=======
+     <width>968</width>
+     <height>24</height>
+>>>>>>> da42f4d03756ec38990dabe2103a6ca1fc5033e4
     </rect>
    </property>
   </widget>
