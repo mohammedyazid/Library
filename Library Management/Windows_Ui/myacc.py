@@ -40,6 +40,7 @@ class Ui_MyaccWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mm_conpassin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mm_conpassin.setObjectName("mm_conpassin")
         self.label26 = QtWidgets.QLabel(self.frame_10)
         self.label26.setGeometry(QtCore.QRect(60, 10, 271, 71))
@@ -57,6 +58,7 @@ class Ui_MyaccWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mm_newpassin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mm_newpassin.setObjectName("mm_newpassin")
         self.label28 = QtWidgets.QLabel(self.frame_10)
         self.label28.setGeometry(QtCore.QRect(40, 140, 151, 31))
@@ -101,6 +103,7 @@ class Ui_MyaccWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mm_curpassin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mm_curpassin.setObjectName("mm_curpassin")
         self.label27 = QtWidgets.QLabel(self.frame_10)
         self.label27.setGeometry(QtCore.QRect(40, 80, 161, 31))
@@ -312,6 +315,7 @@ class Ui_MyaccWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mm_nameout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mm_nameout.setReadOnly(True)
         self.mm_nameout.setObjectName("mm_nameout")
         self.label33 = QtWidgets.QLabel(self.frame_9)
@@ -342,6 +346,7 @@ class Ui_MyaccWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mm_idout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mm_idout.setReadOnly(True)
         self.mm_idout.setObjectName("mm_idout")
         self.mm_phoneout = QtWidgets.QTextEdit(self.frame_9)
@@ -354,6 +359,7 @@ class Ui_MyaccWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mm_phoneout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mm_phoneout.setReadOnly(True)
         self.mm_phoneout.setObjectName("mm_phoneout")
         self.mm_fnameout = QtWidgets.QTextEdit(self.frame_9)
@@ -366,6 +372,7 @@ class Ui_MyaccWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mm_fnameout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mm_fnameout.setReadOnly(True)
         self.mm_fnameout.setObjectName("mm_fnameout")
         self.label31 = QtWidgets.QLabel(self.frame_9)
@@ -398,6 +405,7 @@ class Ui_MyaccWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mm_mailout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mm_mailout.setReadOnly(True)
         self.mm_mailout.setObjectName("mm_mailout")
         self.icon13 = QtWidgets.QPushButton(self.frame_9)

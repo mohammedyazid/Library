@@ -84,7 +84,7 @@ class Ui_RegisterWindow(object):
         self.re_backbtn.setIconSize(QtCore.QSize(40, 40))
         self.re_backbtn.setObjectName("re_backbtn")
         self.frame_4 = QtWidgets.QFrame(self.centralwidget)
-        self.frame_4.setGeometry(QtCore.QRect(540, 20, 541, 551))
+        self.frame_4.setGeometry(QtCore.QRect(540, 20, 521, 561))
         self.frame_4.setStyleSheet("border: 1px;\n"
 "border-radius: 20px;\n"
 "background-color: white;")
@@ -92,11 +92,11 @@ class Ui_RegisterWindow(object):
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
         self.label12 = QtWidgets.QLabel(self.frame_4)
-        self.label12.setGeometry(QtCore.QRect(40, 140, 121, 31))
+        self.label12.setGeometry(QtCore.QRect(40, 130, 121, 31))
         self.label12.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label12.setObjectName("label12")
         self.re_idin = QtWidgets.QTextEdit(self.frame_4)
-        self.re_idin.setGeometry(QtCore.QRect(40, 290, 201, 31))
+        self.re_idin.setGeometry(QtCore.QRect(260, 230, 211, 31))
         self.re_idin.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
@@ -105,13 +105,14 @@ class Ui_RegisterWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.re_idin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.re_idin.setObjectName("re_idin")
         self.label15 = QtWidgets.QLabel(self.frame_4)
-        self.label15.setGeometry(QtCore.QRect(40, 270, 111, 20))
+        self.label15.setGeometry(QtCore.QRect(280, 210, 21, 20))
         self.label15.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label15.setObjectName("label15")
         self.re_signupbtn = QtWidgets.QPushButton(self.frame_4)
-        self.re_signupbtn.setGeometry(QtCore.QRect(140, 480, 261, 41))
+        self.re_signupbtn.setGeometry(QtCore.QRect(140, 450, 261, 41))
         self.re_signupbtn.setStyleSheet("\n"
 "QPushButton {\n"
 "    transition: all .5s ease;\n"
@@ -158,7 +159,7 @@ class Ui_RegisterWindow(object):
         self.icon6.setIconSize(QtCore.QSize(70, 70))
         self.icon6.setObjectName("icon6")
         self.re_namein = QtWidgets.QTextEdit(self.frame_4)
-        self.re_namein.setGeometry(QtCore.QRect(250, 170, 231, 31))
+        self.re_namein.setGeometry(QtCore.QRect(260, 160, 211, 31))
         self.re_namein.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
@@ -167,13 +168,14 @@ class Ui_RegisterWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.re_namein.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.re_namein.setObjectName("re_namein")
         self.label13 = QtWidgets.QLabel(self.frame_4)
-        self.label13.setGeometry(QtCore.QRect(250, 150, 111, 17))
+        self.label13.setGeometry(QtCore.QRect(260, 140, 111, 17))
         self.label13.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label13.setObjectName("label13")
         self.re_fnamein = QtWidgets.QTextEdit(self.frame_4)
-        self.re_fnamein.setGeometry(QtCore.QRect(40, 170, 201, 31))
+        self.re_fnamein.setGeometry(QtCore.QRect(40, 160, 211, 31))
         self.re_fnamein.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
@@ -182,10 +184,11 @@ class Ui_RegisterWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.re_fnamein.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.re_fnamein.setPlaceholderText("")
         self.re_fnamein.setObjectName("re_fnamein")
         self.re_mailin = QtWidgets.QTextEdit(self.frame_4)
-        self.re_mailin.setGeometry(QtCore.QRect(40, 230, 291, 31))
+        self.re_mailin.setGeometry(QtCore.QRect(40, 230, 211, 31))
         self.re_mailin.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
@@ -194,13 +197,14 @@ class Ui_RegisterWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.re_mailin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.re_mailin.setObjectName("re_mailin")
         self.label14 = QtWidgets.QLabel(self.frame_4)
         self.label14.setGeometry(QtCore.QRect(40, 210, 131, 20))
         self.label14.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label14.setObjectName("label14")
         self.re_cpassin = QtWidgets.QTextEdit(self.frame_4)
-        self.re_cpassin.setGeometry(QtCore.QRect(40, 410, 291, 31))
+        self.re_cpassin.setGeometry(QtCore.QRect(40, 370, 211, 31))
         self.re_cpassin.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
@@ -209,14 +213,15 @@ class Ui_RegisterWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.re_cpassin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.re_cpassin.setPlaceholderText("")
         self.re_cpassin.setObjectName("re_cpassin")
         self.label17 = QtWidgets.QLabel(self.frame_4)
-        self.label17.setGeometry(QtCore.QRect(40, 390, 181, 20))
+        self.label17.setGeometry(QtCore.QRect(40, 350, 181, 20))
         self.label17.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label17.setObjectName("label17")
         self.re_passin = QtWidgets.QTextEdit(self.frame_4)
-        self.re_passin.setGeometry(QtCore.QRect(40, 350, 291, 31))
+        self.re_passin.setGeometry(QtCore.QRect(40, 300, 211, 31))
         self.re_passin.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
@@ -225,14 +230,15 @@ class Ui_RegisterWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.re_passin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.re_passin.setPlaceholderText("")
         self.re_passin.setObjectName("re_passin")
         self.label16 = QtWidgets.QLabel(self.frame_4)
-        self.label16.setGeometry(QtCore.QRect(40, 330, 101, 20))
+        self.label16.setGeometry(QtCore.QRect(40, 280, 101, 20))
         self.label16.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label16.setObjectName("label16")
         self.re_phonein = QtWidgets.QTextEdit(self.frame_4)
-        self.re_phonein.setGeometry(QtCore.QRect(330, 290, 151, 31))
+        self.re_phonein.setGeometry(QtCore.QRect(320, 300, 151, 31))
         self.re_phonein.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
@@ -241,15 +247,13 @@ class Ui_RegisterWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.re_phonein.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.re_phonein.setObjectName("re_phonein")
         self.icon7 = QtWidgets.QPushButton(self.frame_4)
-        self.icon7.setGeometry(QtCore.QRect(250, 290, 81, 31))
+        self.icon7.setGeometry(QtCore.QRect(260, 300, 61, 31))
         self.icon7.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.icon7.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
+        self.icon7.setStyleSheet("background-color: rgba(42, 41, 41, 0);\n"
+"\n"
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
@@ -258,13 +262,18 @@ class Ui_RegisterWindow(object):
         self.icon7.setIcon(icon4)
         self.icon7.setObjectName("icon7")
         self.checkBox = QtWidgets.QCheckBox(self.frame_4)
-        self.checkBox.setGeometry(QtCore.QRect(50, 450, 92, 23))
+        self.checkBox.setGeometry(QtCore.QRect(40, 420, 92, 23))
         self.checkBox.setObjectName("checkBox")
-        # RegisterWindow.setCentralWidget(self.centralwidget)
+        self.re_error = QtWidgets.QLabel(self.frame_4)
+        self.re_error.setGeometry(QtCore.QRect(150, 500, 241, 20))
+        self.re_error.setStyleSheet("color: rgb(224, 27, 36);")
+        self.re_error.setText("")
+        self.re_error.setObjectName("re_error")
+        #RegisterWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(RegisterWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 22))
         self.menubar.setObjectName("menubar")
-        # RegisterWindow.setMenuBar(self.menubar)
+        #RegisterWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(RegisterWindow)
         QtCore.QMetaObject.connectSlotsByName(RegisterWindow)
@@ -274,7 +283,7 @@ class Ui_RegisterWindow(object):
         RegisterWindow.setWindowTitle(_translate("RegisterWindow", "Register"))
         self.label8.setText(_translate("RegisterWindow", "Library"))
         self.re_helpbtn.setText(_translate("RegisterWindow", "Help"))
-        self.label12.setText(_translate("RegisterWindow", "Family Name"))
+        self.label12.setText(_translate("RegisterWindow", "First Name"))
         self.re_idin.setHtml(_translate("RegisterWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -291,7 +300,7 @@ class Ui_RegisterWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
-        self.label13.setText(_translate("RegisterWindow", "Name"))
+        self.label13.setText(_translate("RegisterWindow", "Last Name"))
         self.re_fnamein.setHtml(_translate("RegisterWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -323,4 +332,4 @@ class Ui_RegisterWindow(object):
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.re_phonein.setPlaceholderText(_translate("RegisterWindow", "612345678"))
         self.icon7.setText(_translate("RegisterWindow", "+213"))
-        self.checkBox.setText(_translate("RegisterWindow", "I am sure"))
+        self.checkBox.setText(_translate("RegisterWindow", "I am sure "))

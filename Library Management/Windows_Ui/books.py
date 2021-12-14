@@ -224,6 +224,7 @@ class Ui_BooksWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mb_titleout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mb_titleout.setReadOnly(True)
         self.mb_titleout.setObjectName("mb_titleout")
         self.label22 = QtWidgets.QLabel(self.frame_7)
@@ -242,6 +243,7 @@ class Ui_BooksWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mb_authorout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mb_authorout.setReadOnly(True)
         self.mb_authorout.setObjectName("mb_authorout")
         self.label23 = QtWidgets.QLabel(self.frame_7)
@@ -260,6 +262,7 @@ class Ui_BooksWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mb_rdateout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mb_rdateout.setReadOnly(True)
         self.mb_rdateout.setObjectName("mb_rdateout")
         self.label24 = QtWidgets.QLabel(self.frame_7)
@@ -278,6 +281,7 @@ class Ui_BooksWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mb_statusout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mb_statusout.setReadOnly(True)
         self.mb_statusout.setObjectName("mb_statusout")
         self.mb_borrowbtn = QtWidgets.QPushButton(self.frame_7)
@@ -361,6 +365,7 @@ class Ui_BooksWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mb_titlein.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mb_titlein.setObjectName("mb_titlein")
         self.mb_submitbtn = QtWidgets.QPushButton(self.frame_5)
         self.mb_submitbtn.setGeometry(QtCore.QRect(310, 80, 91, 31))

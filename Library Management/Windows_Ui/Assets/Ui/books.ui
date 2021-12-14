@@ -411,6 +411,9 @@ font: 75 14pt &quot;Ubuntu Mono&quot;;
 
 </string>
      </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
      <property name="readOnly">
       <bool>true</bool>
      </property>
@@ -460,6 +463,9 @@ border-radius: 10px;
 font: 75 14pt &quot;Ubuntu Mono&quot;;
 
 </string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -511,6 +517,9 @@ font: 75 14pt &quot;Ubuntu Mono&quot;;
 
 </string>
      </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
      <property name="readOnly">
       <bool>true</bool>
      </property>
@@ -560,6 +569,9 @@ border-radius: 10px;
 font: 75 14pt &quot;Ubuntu Mono&quot;;
 
 </string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -747,6 +759,9 @@ border-radius: 10px;
 font: 75 14pt &quot;Ubuntu Mono&quot;;
 
 </string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
      </property>
      <property name="html">
       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;

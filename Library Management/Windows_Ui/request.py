@@ -223,6 +223,7 @@ class Ui_RequestWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mr_btitlein.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mr_btitlein.setObjectName("mr_btitlein")
         self.label39 = QtWidgets.QLabel(self.frame_15)
         self.label39.setGeometry(QtCore.QRect(70, 250, 91, 31))
@@ -238,6 +239,7 @@ class Ui_RequestWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mr_authorin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mr_authorin.setObjectName("mr_authorin")
         self.label40 = QtWidgets.QLabel(self.frame_15)
         self.label40.setGeometry(QtCore.QRect(70, 320, 121, 31))
@@ -253,6 +255,7 @@ class Ui_RequestWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mr_rdatein.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mr_rdatein.setObjectName("mr_rdatein")
         self.mr_reqbtn = QtWidgets.QPushButton(self.frame_15)
         self.mr_reqbtn.setGeometry(QtCore.QRect(110, 400, 261, 41))
@@ -293,6 +296,7 @@ class Ui_RequestWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.mr_idin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.mr_idin.setObjectName("mr_idin")
         self.label37 = QtWidgets.QLabel(self.frame_15)
         self.label37.setGeometry(QtCore.QRect(70, 120, 41, 21))

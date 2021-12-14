@@ -9,10 +9,21 @@ from help import Ui_HelpWindow
 from books import Ui_BooksWindow
 from request import Ui_RequestWindow
 from myacc import Ui_MyaccWindow
+import psycopg2
+from psycopg2 import extras
+import time
+
+DB_HOST="localhost"
+DB_NAME="library"
+DB_USER="postgres"
+DB_PASS="admin"
+
 
 class Ui_Gui(object):
-    def setupUi(self, Gui):
+    conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
+    def setupUi(self, Gui):
         '''Tab Widget Size & Postition intialisation'''
         Gui.setObjectName("Library")
         Gui.resize(1128, 615)
@@ -70,13 +81,13 @@ class Ui_Gui(object):
         #Actions
         self.register.re_backbtn.clicked.connect(self.toLogin)
         self.help.help_backbtn.clicked.connect(self.toLogin)
-
+        #Testing self.register.re_signupbtn.clicked.connect(self.toAcc)
         self.login.lg_signupbtn.clicked.connect(self.toRegister)
-        
+        self.login.lg_signinbtn.clicked.connect(self.logged)
         self.login.lg_helpbtn.clicked.connect(self.toHelp)
         self.register.re_helpbtn.clicked.connect(self.toHelp)
-
-
+        self.myacc.mm_logoutbtn.clicked.connect(self.toLogin)
+        self.register.re_signupbtn.clicked.connect(self.signupaction)
         #####Main Page Actions "After Logging in"#####
         self.books.main_accbtn.clicked.connect(self.toAcc)
         self.books.main_reqbtn.clicked.connect(self.toRequest)
@@ -94,8 +105,7 @@ class Ui_Gui(object):
         self.library_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Gui)
         ################################################
-
-
+        
     def retranslateUi(self, Gui):
         _translate = QtCore.QCoreApplication.translate
         Gui.setWindowTitle(_translate("Gui", "Gui"))
@@ -105,8 +115,25 @@ class Ui_Gui(object):
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab3), _translate("Gui", "Books"))
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab4), _translate("Gui", "My Account"))
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab5), _translate("Gui", "Request"))
-
+        
     #Fonctions
+    def logged(self):
+        #self.login.lg_error.setText("")
+        idfound=False
+        passfound=False
+        with Ui_Gui.conn:
+            Ui_Gui.cur.execute("SELECT id,password FROM members")
+            data = Ui_Gui.cur.fetchall()
+            for i in range(len(data)):
+                if(data[i]['id']==int(self.login.lg_idin.toPlainText())):
+                    idfound=True
+                    if(data[i]['password']==self.login.lg_passin.toPlainText()):
+                        self.library_tab.setCurrentIndex(4)
+                    elif (passfound==False):
+                        self.login.lg_error.setText("PASSWORD INVALID")   
+                elif(idfound==False):
+                    self.login.lg_error.setText("ID NOT FOUND")
+                    
     def toLogin(self):
         self.library_tab.setCurrentIndex(0)
     def toRegister(self):
@@ -119,3 +146,18 @@ class Ui_Gui(object):
         self.library_tab.setCurrentIndex(4)
     def toRequest(self):
         self.library_tab.setCurrentIndex(5)
+    def signupaction(self):
+        
+        fn=self.register.re_fnamein.toPlainText()
+        ln=self.register.re_namein.toPlainText()
+        ml=self.register.re_mailin.toPlainText()
+        ph=self.register.re_phonein.toPlainText()
+        ps=self.register.re_passin.toPlainText()
+        id=int(self.register.re_idin.toPlainText())
+        #if(fn!="" and ln!="" and ml!="" and ph!="" and ps!="" and str(id)!=""): 
+            #if(self.register.re_passin==self.register.re_cpassin):
+        Ui_Gui.cur.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES('"+str(id)+"','"+fn+"','"+ln+"','"+ml+"','"+ph+"','"+ps+"')")
+        Ui_Gui.conn.commit()
+        Ui_Gui.cur.close()
+
+            

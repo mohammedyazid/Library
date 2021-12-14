@@ -75,7 +75,7 @@ class Ui_LoginWindow(object):
         self.icon1.setIconSize(QtCore.QSize(100, 100))
         self.icon1.setObjectName("icon1")
         self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(670, 10, 381, 521))
+        self.frame.setGeometry(QtCore.QRect(540, 20, 521, 561))
         self.frame.setStyleSheet("border: 1px;\n"
 "border-radius: 20px;\n"
 "background-color: white;")
@@ -83,7 +83,7 @@ class Ui_LoginWindow(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.lg_signupbtn = QtWidgets.QPushButton(self.frame)
-        self.lg_signupbtn.setGeometry(QtCore.QRect(200, 400, 81, 41))
+        self.lg_signupbtn.setGeometry(QtCore.QRect(250, 400, 81, 41))
         self.lg_signupbtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.lg_signupbtn.setStyleSheet("QPushButton{background-color:transparent;\n"
 "color: rgb(46, 194, 126);\n"
@@ -103,11 +103,11 @@ class Ui_LoginWindow(object):
 "}")
         self.lg_signupbtn.setObjectName("lg_signupbtn")
         self.label5 = QtWidgets.QLabel(self.frame)
-        self.label5.setGeometry(QtCore.QRect(50, 190, 111, 17))
+        self.label5.setGeometry(QtCore.QRect(110, 190, 111, 17))
         self.label5.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label5.setObjectName("label5")
         self.lg_idin = QtWidgets.QTextEdit(self.frame)
-        self.lg_idin.setGeometry(QtCore.QRect(40, 210, 281, 31))
+        self.lg_idin.setGeometry(QtCore.QRect(100, 210, 281, 31))
         self.lg_idin.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
@@ -116,9 +116,10 @@ class Ui_LoginWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.lg_idin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.lg_idin.setObjectName("lg_idin")
         self.lg_passin = QtWidgets.QTextEdit(self.frame)
-        self.lg_passin.setGeometry(QtCore.QRect(40, 270, 281, 31))
+        self.lg_passin.setGeometry(QtCore.QRect(100, 280, 281, 31))
         self.lg_passin.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
@@ -127,14 +128,15 @@ class Ui_LoginWindow(object):
 "font: 75 14pt \"Ubuntu Mono\";\n"
 "\n"
 "")
+        self.lg_passin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.lg_passin.setPlaceholderText("")
         self.lg_passin.setObjectName("lg_passin")
         self.label6 = QtWidgets.QLabel(self.frame)
-        self.label6.setGeometry(QtCore.QRect(50, 250, 111, 20))
+        self.label6.setGeometry(QtCore.QRect(110, 260, 111, 20))
         self.label6.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label6.setObjectName("label6")
         self.lg_signinbtn = QtWidgets.QPushButton(self.frame)
-        self.lg_signinbtn.setGeometry(QtCore.QRect(60, 350, 261, 41))
+        self.lg_signinbtn.setGeometry(QtCore.QRect(110, 350, 261, 41))
         self.lg_signinbtn.setStyleSheet("\n"
 "QPushButton {\n"
 "    transition: all .5s ease;\n"
@@ -159,24 +161,24 @@ class Ui_LoginWindow(object):
 "")
         self.lg_signinbtn.setObjectName("lg_signinbtn")
         self.label7 = QtWidgets.QLabel(self.frame)
-        self.label7.setGeometry(QtCore.QRect(70, 410, 131, 21))
+        self.label7.setGeometry(QtCore.QRect(120, 410, 131, 21))
         self.label7.setStyleSheet("font: 75 12pt \"Ubuntu\";")
         self.label7.setObjectName("label7")
         self.label4 = QtWidgets.QLabel(self.frame)
-        self.label4.setGeometry(QtCore.QRect(280, 20, 91, 41))
+        self.label4.setGeometry(QtCore.QRect(330, 20, 91, 41))
         self.label4.setStyleSheet("font: 75 20pt \"Ubuntu\";")
         self.label4.setObjectName("label4")
         self.label3 = QtWidgets.QLabel(self.frame)
-        self.label3.setGeometry(QtCore.QRect(190, 20, 91, 41))
+        self.label3.setGeometry(QtCore.QRect(240, 20, 91, 41))
         self.label3.setStyleSheet("font: 75 20pt \"Ubuntu\";\n"
 "color:rgb(28, 113, 216);")
         self.label3.setObjectName("label3")
         self.label2 = QtWidgets.QLabel(self.frame)
-        self.label2.setGeometry(QtCore.QRect(30, 20, 161, 41))
+        self.label2.setGeometry(QtCore.QRect(80, 20, 161, 41))
         self.label2.setStyleSheet("font: 75 20pt \"Ubuntu\";")
         self.label2.setObjectName("label2")
         self.icon3 = QtWidgets.QPushButton(self.frame)
-        self.icon3.setGeometry(QtCore.QRect(80, 60, 191, 111))
+        self.icon3.setGeometry(QtCore.QRect(130, 60, 191, 111))
         self.icon3.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.icon3.setText("")
         icon2 = QtGui.QIcon()
@@ -184,11 +186,17 @@ class Ui_LoginWindow(object):
         self.icon3.setIcon(icon2)
         self.icon3.setIconSize(QtCore.QSize(100, 100))
         self.icon3.setObjectName("icon3")
-        # LoginWindow.setCentralWidget(self.centralwidget)
+        self.lg_error = QtWidgets.QLabel(self.frame)
+        self.lg_error.setGeometry(QtCore.QRect(110, 320, 241, 20))
+        self.lg_error.setStyleSheet("color: rgb(224, 27, 36);\n"
+"background-color: rgba(28, 113, 216, 0);")
+        self.lg_error.setText("")
+        self.lg_error.setObjectName("lg_error")
+        #LoginWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(LoginWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 22))
         self.menubar.setObjectName("menubar")
-        # LoginWindow.setMenuBar(self.menubar)
+        #LoginWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(LoginWindow)
         QtCore.QMetaObject.connectSlotsByName(LoginWindow)
