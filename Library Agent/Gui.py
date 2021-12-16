@@ -1,5 +1,3 @@
-
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 sys.path.append('Ui/')
@@ -16,9 +14,13 @@ DB_PASS="admin"
 
 
 class Ui_Gui(object):
-    # conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
-    # cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-
+    conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+    cur1 = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    cur2 = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    '''Select from books table'''
+    cur1.execute("SELECT * FROM books")
+    '''select from members table'''
+    cur2.execute("SELECT * FROM books")
     def setupUi(self, Gui):
         '''Tab Widget Size & Postition intialisation'''
         Gui.setObjectName("Library")

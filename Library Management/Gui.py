@@ -22,7 +22,7 @@ DB_PASS="admin"
 class Ui_Gui(object):
     conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-
+    
     def setupUi(self, Gui):
         '''Tab Widget Size & Postition intialisation'''
         Gui.setObjectName("Library")
@@ -120,23 +120,16 @@ class Ui_Gui(object):
     def logged(self):
         idfound=False
         passfound=False
-        with Ui_Gui.conn:
-            Ui_Gui.cur.execute("SELECT * FROM members")
-            data = Ui_Gui.cur.fetchall()
-            for i in range(len(data)):
-                if(data[i]['id']==int(self.LoginWindow.ID.text())):
-                    idfound=True
-                    if(data[i]['password']==self.LoginWindow.PASSWORD.text()):
-                        self.AccountWindow.FIRST_NAME.setText(data[i]['firstname'])
-                        self.AccountWindow.LAST_NAME.setText(data[i]['lastname'])
-                        self.AccountWindow.ID.setText(str(data[i]['id']))
-                        self.AccountWindow.PHONE.setText(data[i]['phone'])
-                        self.AccountWindow.EMAIL_ADDRESS.setText(data[i]['email'])
-                        self.toAcc()
-                    elif (passfound==False):
+        #data = Ui_Gui.cur.fetchall()
+        for i in range('''GET DATA BASE Table length'''):
+            if('''GET ID FROM DATA BASE'''==int(self.LoginWindow.ID.text())):
+                idfound=True
+                if('''GET PASSWORD FROM DATA BASE'''==self.LoginWindow.PASSWORD.text()):
+                    self.toAcc()
+                elif (passfound==False):
                         self.LoginWindow.lg_error.setText("PASSWORD INVALID")   
-                elif(idfound==False):
-                    self.LoginWindow.lg_error.setText("ID NOT FOUND")
+            elif(idfound==False):
+                self.LoginWindow.lg_error.setText("ID NOT FOUND")
                     
     def toLogin(self):
         
@@ -166,8 +159,8 @@ class Ui_Gui(object):
         if(fn!="" and ln!="" and ml!="" and ph!="" and ps!="" and id!=""): 
             if(ps==psc):
                 if self.RegisterWindow.checkBox.isChecked():
-                    Ui_Gui.cur.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES('"+str(id)+"','"+fn+"','"+ln+"','"+ml+"','"+ph+"','"+ps+"')")
-                    Ui_Gui.conn.commit()
+                    # Ui_Gui.cur.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES('"+str(id)+"','"+fn+"','"+ln+"','"+ml+"','"+ph+"','"+ps+"')")
+                    # Ui_Gui.conn.commit()
                     self.clear("register")
                     self.RegisterWindow.re_error.setStyleSheet("color:green;")
                     self.RegisterWindow.re_error.setText("Registered Succefully")
@@ -183,8 +176,9 @@ class Ui_Gui(object):
     def getbooks(self):
         with Ui_Gui.conn:
             Ui_Gui.cur.execute("SELECT * FROM book")
-            bkdata = Ui_Gui.cur.fetchall()
-            #Please write add book instructions down here
+            #Fetch Books Data's from data base
+            data = Ui_Gui.cur.fetchall()
+            #Adding Books data to table down here
     def clear(self,page):
         if(page=="register"):
             self.RegisterWindow.FIRST_NAME.setText("")
