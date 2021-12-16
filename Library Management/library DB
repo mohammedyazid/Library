@@ -1,0 +1,51 @@
+'In Terminal'
+    1|sudo su - postgres
+    2|psql
+    Then you need to create a Database
+    or if it already exists then connect to it using 'create database library;'
+    3|\c library
+    4|CREATE TABLE members( id serial NOT NULL PRIMARY KEY,firstname varchar(45) NOT NULL,lastname varchar(50) NOT NULL,email varchar(45) DEFAULT NULL,phone varchar(45) DEFAULT NULL,password varchar(60) NOT NULL);
+
+'Now let's jump into coding''
+DB_HOST="localhost"
+DB_NAME="library"
+DB_USER="postgres"
+DB_PASS="admin"
+
+#import
+import psycopg2
+
+#connect to database
+conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+
+cur = conn.cursor()
+
+'Creating DataBase Table in python'
+    cur.execute("CREATE TABLE members( id serial NOT NULL PRIMARY KEY,firstname varchar(45) NOT NULL,lastname varchar(50) NOT NULL,email varchar(45) DEFAULT NULL,phone varchar(45) DEFAULT NULL,password varchar(60) NOT NULL);")
+
+'Insert elements into table'
+    cur.execute("INSERT INTO members(id,firstname,lastname,email,phone,password) VALUES (38000884,'Ammar','Mohammed','medammar@gmail.com','0666666666','helloworld2020')")
+
+'Select elements from table'
+    cur.execute("SELECT * FROM members")
+'Fetch data from table'
+    cur.fetchall() #fetch all data
+    cur.fetchone() #fetch one
+'Print specified variable from a specified row'
+    print(row[1]['firstname'])
+'Commit changes to database table'
+    conn.commit()
+'Close connection to database'
+    conn.close()
+'close our cursor'
+    cur.close()
+
+CREATE TABLE members
+( id serial(10) NOT NULL PRIMARY KEY,
+  firstname varchar(45) NOT NULL,
+  lastname varchar(50) NOT NULL,
+  email varchar(45) DEFAULT NULL,
+  phone varchar(45) DEFAULT NULL,
+  password varchar(60) NOT NULL,
+  PRIMARY KEY(id)
+);

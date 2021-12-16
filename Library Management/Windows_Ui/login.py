@@ -106,37 +106,12 @@ class Ui_LoginWindow(object):
         self.label5.setGeometry(QtCore.QRect(110, 190, 111, 17))
         self.label5.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label5.setObjectName("label5")
-        self.lg_idin = QtWidgets.QTextEdit(self.frame)
-        self.lg_idin.setGeometry(QtCore.QRect(100, 210, 281, 31))
-        self.lg_idin.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.lg_idin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.lg_idin.setObjectName("lg_idin")
-        self.lg_passin = QtWidgets.QTextEdit(self.frame)
-        self.lg_passin.setGeometry(QtCore.QRect(100, 280, 281, 31))
-        self.lg_passin.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.lg_passin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.lg_passin.setPlaceholderText("")
-        self.lg_passin.setObjectName("lg_passin")
         self.label6 = QtWidgets.QLabel(self.frame)
-        self.label6.setGeometry(QtCore.QRect(110, 260, 111, 20))
+        self.label6.setGeometry(QtCore.QRect(110, 270, 111, 20))
         self.label6.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label6.setObjectName("label6")
         self.lg_signinbtn = QtWidgets.QPushButton(self.frame)
-        self.lg_signinbtn.setGeometry(QtCore.QRect(110, 350, 261, 41))
+        self.lg_signinbtn.setGeometry(QtCore.QRect(110, 360, 261, 41))
         self.lg_signinbtn.setStyleSheet("\n"
 "QPushButton {\n"
 "    transition: all .5s ease;\n"
@@ -186,11 +161,70 @@ class Ui_LoginWindow(object):
         self.icon3.setIcon(icon2)
         self.icon3.setIconSize(QtCore.QSize(100, 100))
         self.icon3.setObjectName("icon3")
-        self.lg_error = QtWidgets.QLabel(self.frame)
-        self.lg_error.setGeometry(QtCore.QRect(110, 320, 241, 20))
+        self.lg_idin = QtWidgets.QLineEdit(self.frame)
+        self.lg_idin.setGeometry(QtCore.QRect(100, 210, 281, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.lg_idin.setFont(font)
+        self.lg_idin.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.lg_idin.setMaxLength(10)
+        self.lg_idin.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.lg_idin.setDragEnabled(True)
+        self.lg_idin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.lg_idin.setClearButtonEnabled(True)
+        self.lg_idin.setObjectName("lg_idin")
+        self.lg_passin = QtWidgets.QLineEdit(self.frame)
+        self.lg_passin.setGeometry(QtCore.QRect(100, 290, 281, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.lg_passin.setFont(font)
+        self.lg_passin.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.lg_passin.setMaxLength(2000)
+        self.lg_passin.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.lg_passin.setDragEnabled(True)
+        self.lg_passin.setPlaceholderText("")
+        self.lg_passin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.lg_passin.setClearButtonEnabled(True)
+        self.lg_passin.setObjectName("lg_passin")
+        self.lg_error = QtWidgets.QLabel(self.centralwidget)
+        self.lg_error.setGeometry(QtCore.QRect(620, 350, 321, 20))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(75)
+        font.setStrikeOut(False)
+        self.lg_error.setFont(font)
         self.lg_error.setStyleSheet("color: rgb(224, 27, 36);\n"
-"background-color: rgba(28, 113, 216, 0);")
+"background-color: rgba(42, 41, 41, 0);")
         self.lg_error.setText("")
+        self.lg_error.setTextFormat(QtCore.Qt.AutoText)
+        self.lg_error.setAlignment(QtCore.Qt.AlignCenter)
+        self.lg_error.setWordWrap(False)
         self.lg_error.setObjectName("lg_error")
         #LoginWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(LoginWindow)
@@ -208,20 +242,10 @@ class Ui_LoginWindow(object):
         self.lg_helpbtn.setText(_translate("LoginWindow", "HELP"))
         self.lg_signupbtn.setText(_translate("LoginWindow", "Sign Up"))
         self.label5.setText(_translate("LoginWindow", "STUDENT ID"))
-        self.lg_idin.setHtml(_translate("LoginWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
-        self.lg_idin.setPlaceholderText(_translate("LoginWindow", "3800...."))
-        self.lg_passin.setHtml(_translate("LoginWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label6.setText(_translate("LoginWindow", "Password"))
         self.lg_signinbtn.setText(_translate("LoginWindow", "Sign In"))
         self.label7.setText(_translate("LoginWindow", "Not a member yet?"))
         self.label4.setText(_translate("LoginWindow", "account"))
         self.label3.setText(_translate("LoginWindow", "Library"))
         self.label2.setText(_translate("LoginWindow", "Log into Your"))
+        self.lg_idin.setPlaceholderText(_translate("LoginWindow", "193800...."))

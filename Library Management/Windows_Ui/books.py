@@ -210,82 +210,26 @@ class Ui_BooksWindow(object):
         self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_7.setObjectName("frame_7")
         self.label21 = QtWidgets.QLabel(self.frame_7)
-        self.label21.setGeometry(QtCore.QRect(80, 10, 91, 31))
+        self.label21.setGeometry(QtCore.QRect(80, 30, 91, 31))
         self.label21.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label21.setObjectName("label21")
-        self.mb_titleout = QtWidgets.QTextEdit(self.frame_7)
-        self.mb_titleout.setEnabled(True)
-        self.mb_titleout.setGeometry(QtCore.QRect(60, 40, 281, 31))
-        self.mb_titleout.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mb_titleout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mb_titleout.setReadOnly(True)
-        self.mb_titleout.setObjectName("mb_titleout")
         self.label22 = QtWidgets.QLabel(self.frame_7)
-        self.label22.setGeometry(QtCore.QRect(80, 80, 91, 31))
+        self.label22.setGeometry(QtCore.QRect(80, 100, 91, 31))
         self.label22.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(42, 41, 41, 0);")
         self.label22.setObjectName("label22")
-        self.mb_authorout = QtWidgets.QTextEdit(self.frame_7)
-        self.mb_authorout.setEnabled(True)
-        self.mb_authorout.setGeometry(QtCore.QRect(60, 110, 281, 31))
-        self.mb_authorout.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mb_authorout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mb_authorout.setReadOnly(True)
-        self.mb_authorout.setObjectName("mb_authorout")
         self.label23 = QtWidgets.QLabel(self.frame_7)
-        self.label23.setGeometry(QtCore.QRect(80, 150, 121, 31))
+        self.label23.setGeometry(QtCore.QRect(80, 170, 121, 31))
         self.label23.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(65, 191, 64, 0);")
         self.label23.setObjectName("label23")
-        self.mb_rdateout = QtWidgets.QTextEdit(self.frame_7)
-        self.mb_rdateout.setEnabled(True)
-        self.mb_rdateout.setGeometry(QtCore.QRect(60, 180, 281, 31))
-        self.mb_rdateout.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mb_rdateout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mb_rdateout.setReadOnly(True)
-        self.mb_rdateout.setObjectName("mb_rdateout")
         self.label24 = QtWidgets.QLabel(self.frame_7)
-        self.label24.setGeometry(QtCore.QRect(80, 220, 121, 31))
+        self.label24.setGeometry(QtCore.QRect(80, 230, 121, 31))
         self.label24.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(65, 191, 64, 0);")
         self.label24.setObjectName("label24")
-        self.mb_statusout = QtWidgets.QTextEdit(self.frame_7)
-        self.mb_statusout.setEnabled(True)
-        self.mb_statusout.setGeometry(QtCore.QRect(60, 250, 281, 31))
-        self.mb_statusout.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mb_statusout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mb_statusout.setReadOnly(True)
-        self.mb_statusout.setObjectName("mb_statusout")
         self.mb_borrowbtn = QtWidgets.QPushButton(self.frame_7)
-        self.mb_borrowbtn.setGeometry(QtCore.QRect(100, 300, 191, 41))
+        self.mb_borrowbtn.setGeometry(QtCore.QRect(100, 340, 191, 41))
         self.mb_borrowbtn.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
@@ -315,6 +259,106 @@ class Ui_BooksWindow(object):
         self.mb_borrowbtn.setIcon(icon5)
         self.mb_borrowbtn.setIconSize(QtCore.QSize(30, 30))
         self.mb_borrowbtn.setObjectName("mb_borrowbtn")
+        self.mb_titleout = QtWidgets.QLineEdit(self.frame_7)
+        self.mb_titleout.setGeometry(QtCore.QRect(60, 60, 281, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mb_titleout.setFont(font)
+        self.mb_titleout.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.mb_titleout.setMaxLength(100)
+        self.mb_titleout.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mb_titleout.setDragEnabled(True)
+        self.mb_titleout.setPlaceholderText("")
+        self.mb_titleout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mb_titleout.setClearButtonEnabled(False)
+        self.mb_titleout.setObjectName("mb_titleout")
+        self.mb_authorout = QtWidgets.QLineEdit(self.frame_7)
+        self.mb_authorout.setGeometry(QtCore.QRect(60, 130, 281, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mb_authorout.setFont(font)
+        self.mb_authorout.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.mb_authorout.setMaxLength(100)
+        self.mb_authorout.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mb_authorout.setDragEnabled(True)
+        self.mb_authorout.setPlaceholderText("")
+        self.mb_authorout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mb_authorout.setClearButtonEnabled(False)
+        self.mb_authorout.setObjectName("mb_authorout")
+        self.mb_rdateout = QtWidgets.QLineEdit(self.frame_7)
+        self.mb_rdateout.setGeometry(QtCore.QRect(60, 200, 281, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mb_rdateout.setFont(font)
+        self.mb_rdateout.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.mb_rdateout.setMaxLength(100)
+        self.mb_rdateout.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mb_rdateout.setDragEnabled(True)
+        self.mb_rdateout.setPlaceholderText("")
+        self.mb_rdateout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mb_rdateout.setClearButtonEnabled(False)
+        self.mb_rdateout.setObjectName("mb_rdateout")
+        self.mb_statusout = QtWidgets.QLineEdit(self.frame_7)
+        self.mb_statusout.setGeometry(QtCore.QRect(60, 260, 281, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mb_statusout.setFont(font)
+        self.mb_statusout.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.mb_statusout.setMaxLength(100)
+        self.mb_statusout.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mb_statusout.setDragEnabled(True)
+        self.mb_statusout.setPlaceholderText("")
+        self.mb_statusout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mb_statusout.setClearButtonEnabled(False)
+        self.mb_statusout.setObjectName("mb_statusout")
         self.Bookstable = QtWidgets.QTableWidget(self.BookWindow)
         self.Bookstable.setGeometry(QtCore.QRect(590, 140, 531, 461))
         self.Bookstable.setStyleSheet("border: 1px ;\n"
@@ -355,18 +399,6 @@ class Ui_BooksWindow(object):
         self.icon12.setIcon(icon)
         self.icon12.setIconSize(QtCore.QSize(25, 25))
         self.icon12.setObjectName("icon12")
-        self.mb_titlein = QtWidgets.QTextEdit(self.frame_5)
-        self.mb_titlein.setGeometry(QtCore.QRect(10, 80, 291, 31))
-        self.mb_titlein.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mb_titlein.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mb_titlein.setObjectName("mb_titlein")
         self.mb_submitbtn = QtWidgets.QPushButton(self.frame_5)
         self.mb_submitbtn.setGeometry(QtCore.QRect(310, 80, 91, 31))
         self.mb_submitbtn.setStyleSheet("\n"
@@ -398,6 +430,30 @@ class Ui_BooksWindow(object):
         self.mb_submitbtn.setIcon(icon6)
         self.mb_submitbtn.setIconSize(QtCore.QSize(17, 17))
         self.mb_submitbtn.setObjectName("mb_submitbtn")
+        self.mb_titlein = QtWidgets.QLineEdit(self.frame_5)
+        self.mb_titlein.setGeometry(QtCore.QRect(10, 80, 291, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mb_titlein.setFont(font)
+        self.mb_titlein.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.mb_titlein.setMaxLength(100)
+        self.mb_titlein.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mb_titlein.setDragEnabled(True)
+        self.mb_titlein.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mb_titlein.setClearButtonEnabled(True)
+        self.mb_titlein.setObjectName("mb_titlein")
         #BooksWindow.setCentralWidget(self.BookWindow)
         self.menubar = QtWidgets.QMenuBar(BooksWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 22))
@@ -417,29 +473,9 @@ class Ui_BooksWindow(object):
         self.main_booksbtn.setText(_translate("BooksWindow", "Books"))
         self.main_reqbtn.setText(_translate("BooksWindow", "Request"))
         self.label21.setText(_translate("BooksWindow", "Book Title"))
-        self.mb_titleout.setHtml(_translate("BooksWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label22.setText(_translate("BooksWindow", "Author"))
-        self.mb_authorout.setHtml(_translate("BooksWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label23.setText(_translate("BooksWindow", "Release Date"))
-        self.mb_rdateout.setHtml(_translate("BooksWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label24.setText(_translate("BooksWindow", "Status"))
-        self.mb_statusout.setHtml(_translate("BooksWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.mb_borrowbtn.setText(_translate("BooksWindow", "Borrow"))
         item = self.Bookstable.horizontalHeaderItem(0)
         item.setText(_translate("BooksWindow", "code"))
@@ -452,10 +488,5 @@ class Ui_BooksWindow(object):
         item = self.Bookstable.horizontalHeaderItem(4)
         item.setText(_translate("BooksWindow", "Status"))
         self.label20.setText(_translate("BooksWindow", "Catalogue"))
-        self.mb_titlein.setHtml(_translate("BooksWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
-        self.mb_titlein.setPlaceholderText(_translate("BooksWindow", "Title"))
         self.mb_submitbtn.setText(_translate("BooksWindow", "Submit"))
+        self.mb_titlein.setPlaceholderText(_translate("BooksWindow", "Title"))

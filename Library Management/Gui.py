@@ -118,25 +118,33 @@ class Ui_Gui(object):
         
     #Fonctions
     def logged(self):
-        #self.login.lg_error.setText("")
         idfound=False
         passfound=False
         with Ui_Gui.conn:
-            Ui_Gui.cur.execute("SELECT id,password FROM members")
+            Ui_Gui.cur.execute("SELECT * FROM members")
             data = Ui_Gui.cur.fetchall()
             for i in range(len(data)):
-                if(data[i]['id']==int(self.login.lg_idin.toPlainText())):
+                if(data[i]['id']==int(self.login.lg_idin.text())):
                     idfound=True
-                    if(data[i]['password']==self.login.lg_passin.toPlainText()):
-                        self.library_tab.setCurrentIndex(4)
+                    if(data[i]['password']==self.login.lg_passin.text()):
+                        self.myacc.mm_fnameout.setText(data[i]['firstname'])
+                        self.myacc.mm_nameout.setText(data[i]['lastname'])
+                        self.myacc.mm_idout.setText(str(data[i]['id']))
+                        self.myacc.mm_phoneout.setText(data[i]['phone'])
+                        self.myacc.mm_mailout.setText(data[i]['email'])
+                        self.toAcc()
                     elif (passfound==False):
                         self.login.lg_error.setText("PASSWORD INVALID")   
                 elif(idfound==False):
                     self.login.lg_error.setText("ID NOT FOUND")
                     
     def toLogin(self):
+        
         self.library_tab.setCurrentIndex(0)
+        self.clear("login")
+        self.clear("myaccount")
     def toRegister(self):
+        self.clear("register")
         self.library_tab.setCurrentIndex(1)
     def toHelp(self):
         self.library_tab.setCurrentIndex(2)
@@ -147,17 +155,51 @@ class Ui_Gui(object):
     def toRequest(self):
         self.library_tab.setCurrentIndex(5)
     def signupaction(self):
-        
-        fn=self.register.re_fnamein.toPlainText()
-        ln=self.register.re_namein.toPlainText()
-        ml=self.register.re_mailin.toPlainText()
-        ph=self.register.re_phonein.toPlainText()
-        ps=self.register.re_passin.toPlainText()
-        id=int(self.register.re_idin.toPlainText())
-        #if(fn!="" and ln!="" and ml!="" and ph!="" and ps!="" and str(id)!=""): 
-            #if(self.register.re_passin==self.register.re_cpassin):
-        Ui_Gui.cur.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES('"+str(id)+"','"+fn+"','"+ln+"','"+ml+"','"+ph+"','"+ps+"')")
-        Ui_Gui.conn.commit()
-        Ui_Gui.cur.close()
-
-            
+        #GetText From Register Fields
+        fn=self.register.re_fnamein.text()
+        ln=self.register.re_namein.text()
+        ml=self.register.re_mailin.text()
+        ph=self.register.re_phonein.text()
+        ps=self.register.re_passin.text()
+        psc=self.register.re_cpassin.text()
+        id=self.register.re_idin.text()
+        if(fn!="" and ln!="" and ml!="" and ph!="" and ps!="" and id!=""): 
+            if(ps==psc):
+                if self.register.checkBox.isChecked():
+                    Ui_Gui.cur.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES('"+str(id)+"','"+fn+"','"+ln+"','"+ml+"','"+ph+"','"+ps+"')")
+                    Ui_Gui.conn.commit()
+                    self.clear("register")
+                    self.register.re_error.setStyleSheet("color:green;")
+                    self.register.re_error.setText("Registered Succefully")
+                else:
+                    self.register.re_error.setStyleSheet("color:red;")
+                    self.register.re_error.setText("Please confirm your action by checking the check box")         
+            else:
+                self.register.re_error.setStyleSheet("color:red;")
+                self.register.re_error.setText("Password and Confirmed Password should be the same")
+        else:
+            self.register.re_error.setStyleSheet("color:red;")
+            self.register.re_error.setText("You can't leave any field empty")
+    def getbooks(self):
+        with Ui_Gui.conn:
+            Ui_Gui.cur.execute("SELECT * FROM book")
+            bkdata = Ui_Gui.cur.fetchall()
+            #Please write add book instructions down here
+    def clear(self,page):
+        if(page=="register"):
+            self.register.re_fnamein.setText("")
+            self.register.re_namein.setText("")
+            self.register.re_mailin.setText("")
+            self.register.re_phonein.setText("")
+            self.register.re_passin.setText("")
+            self.register.re_cpassin.setText("")
+            self.register.re_idin.setText("")
+        if(page=="login"):
+            self.login.lg_idin.setText("")
+            self.login.lg_passin.setText("")
+        if(page=="myaccount"):
+            self.myacc.mm_fnameout.setText("")
+            self.myacc.mm_nameout.setText("")
+            self.myacc.mm_idout.setText("")
+            self.myacc.mm_phoneout.setText("")
+            self.myacc.mm_mailout.setText("")

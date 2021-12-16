@@ -210,55 +210,19 @@ class Ui_RequestWindow(object):
         self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_15.setObjectName("frame_15")
         self.label38 = QtWidgets.QLabel(self.frame_15)
-        self.label38.setGeometry(QtCore.QRect(70, 180, 91, 31))
+        self.label38.setGeometry(QtCore.QRect(90, 120, 91, 31))
         self.label38.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label38.setObjectName("label38")
-        self.mr_btitlein = QtWidgets.QTextEdit(self.frame_15)
-        self.mr_btitlein.setGeometry(QtCore.QRect(70, 210, 331, 31))
-        self.mr_btitlein.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mr_btitlein.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mr_btitlein.setObjectName("mr_btitlein")
         self.label39 = QtWidgets.QLabel(self.frame_15)
-        self.label39.setGeometry(QtCore.QRect(70, 250, 91, 31))
+        self.label39.setGeometry(QtCore.QRect(90, 190, 91, 31))
         self.label39.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label39.setObjectName("label39")
-        self.mr_authorin = QtWidgets.QTextEdit(self.frame_15)
-        self.mr_authorin.setGeometry(QtCore.QRect(70, 280, 331, 31))
-        self.mr_authorin.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mr_authorin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mr_authorin.setObjectName("mr_authorin")
         self.label40 = QtWidgets.QLabel(self.frame_15)
-        self.label40.setGeometry(QtCore.QRect(70, 320, 121, 31))
+        self.label40.setGeometry(QtCore.QRect(90, 260, 121, 31))
         self.label40.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label40.setObjectName("label40")
-        self.mr_rdatein = QtWidgets.QTextEdit(self.frame_15)
-        self.mr_rdatein.setGeometry(QtCore.QRect(70, 350, 331, 31))
-        self.mr_rdatein.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mr_rdatein.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mr_rdatein.setObjectName("mr_rdatein")
         self.mr_reqbtn = QtWidgets.QPushButton(self.frame_15)
-        self.mr_reqbtn.setGeometry(QtCore.QRect(110, 400, 261, 41))
+        self.mr_reqbtn.setGeometry(QtCore.QRect(130, 360, 261, 41))
         self.mr_reqbtn.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
@@ -286,28 +250,87 @@ class Ui_RequestWindow(object):
         self.mr_reqbtn.setIcon(icon3)
         self.mr_reqbtn.setIconSize(QtCore.QSize(30, 30))
         self.mr_reqbtn.setObjectName("mr_reqbtn")
-        self.mr_idin = QtWidgets.QTextEdit(self.frame_15)
-        self.mr_idin.setGeometry(QtCore.QRect(70, 150, 331, 31))
-        self.mr_idin.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:rgb(0, 137, 236);\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mr_idin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mr_idin.setObjectName("mr_idin")
-        self.label37 = QtWidgets.QLabel(self.frame_15)
-        self.label37.setGeometry(QtCore.QRect(70, 120, 41, 21))
-        self.label37.setStyleSheet("font: 75 16pt \"Ubuntu\";")
-        self.label37.setObjectName("label37")
         self.label36 = QtWidgets.QLabel(self.frame_15)
-        self.label36.setGeometry(QtCore.QRect(60, 30, 371, 71))
+        self.label36.setGeometry(QtCore.QRect(80, 30, 371, 71))
         self.label36.setStyleSheet("font: 25pt \"Ubuntu Mono\";\n"
 "color:black;\n"
 "background-color: rgba(28, 113, 216, 0)")
         self.label36.setObjectName("label36")
+        self.mr_btitlein = QtWidgets.QLineEdit(self.frame_15)
+        self.mr_btitlein.setGeometry(QtCore.QRect(90, 150, 331, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mr_btitlein.setFont(font)
+        self.mr_btitlein.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.mr_btitlein.setMaxLength(100)
+        self.mr_btitlein.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mr_btitlein.setDragEnabled(True)
+        self.mr_btitlein.setPlaceholderText("")
+        self.mr_btitlein.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mr_btitlein.setClearButtonEnabled(True)
+        self.mr_btitlein.setObjectName("mr_btitlein")
+        self.mr_authorin = QtWidgets.QLineEdit(self.frame_15)
+        self.mr_authorin.setGeometry(QtCore.QRect(90, 220, 331, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mr_authorin.setFont(font)
+        self.mr_authorin.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.mr_authorin.setMaxLength(100)
+        self.mr_authorin.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mr_authorin.setDragEnabled(True)
+        self.mr_authorin.setPlaceholderText("")
+        self.mr_authorin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mr_authorin.setClearButtonEnabled(True)
+        self.mr_authorin.setObjectName("mr_authorin")
+        self.mr_rdatein = QtWidgets.QLineEdit(self.frame_15)
+        self.mr_rdatein.setGeometry(QtCore.QRect(90, 290, 331, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mr_rdatein.setFont(font)
+        self.mr_rdatein.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:rgb(0, 137, 236);\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.mr_rdatein.setMaxLength(100)
+        self.mr_rdatein.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mr_rdatein.setDragEnabled(True)
+        self.mr_rdatein.setPlaceholderText("")
+        self.mr_rdatein.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mr_rdatein.setClearButtonEnabled(True)
+        self.mr_rdatein.setObjectName("mr_rdatein")
         self.frame_14 = QtWidgets.QFrame(self.centralwidget)
         self.frame_14.setGeometry(QtCore.QRect(180, 0, 1121, 131))
         self.frame_14.setStyleSheet("border: 1px ;\n"
@@ -338,28 +361,7 @@ class Ui_RequestWindow(object):
         self.main_booksbtn.setText(_translate("RequestWindow", "Books"))
         self.main_reqbtn.setText(_translate("RequestWindow", "Request"))
         self.label38.setText(_translate("RequestWindow", "Book Title"))
-        self.mr_btitlein.setHtml(_translate("RequestWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label39.setText(_translate("RequestWindow", "Author"))
-        self.mr_authorin.setHtml(_translate("RequestWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label40.setText(_translate("RequestWindow", "Release Date"))
-        self.mr_rdatein.setHtml(_translate("RequestWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.mr_reqbtn.setText(_translate("RequestWindow", "Request"))
-        self.mr_idin.setHtml(_translate("RequestWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
-        self.label37.setText(_translate("RequestWindow", "ID"))
         self.label36.setText(_translate("RequestWindow", "Request adding a book"))

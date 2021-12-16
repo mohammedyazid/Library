@@ -27,46 +27,22 @@ class Ui_MyaccWindow(object):
         self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_10.setObjectName("frame_10")
         self.label29 = QtWidgets.QLabel(self.frame_10)
-        self.label29.setGeometry(QtCore.QRect(40, 200, 181, 31))
+        self.label29.setGeometry(QtCore.QRect(40, 220, 181, 31))
         self.label29.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label29.setObjectName("label29")
-        self.mm_conpassin = QtWidgets.QTextEdit(self.frame_10)
-        self.mm_conpassin.setGeometry(QtCore.QRect(40, 230, 311, 31))
-        self.mm_conpassin.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mm_conpassin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mm_conpassin.setObjectName("mm_conpassin")
         self.label26 = QtWidgets.QLabel(self.frame_10)
         self.label26.setGeometry(QtCore.QRect(60, 10, 271, 71))
         self.label26.setStyleSheet("font: 25pt \"Ubuntu Mono\";\n"
 "color:black;\n"
 "background-color: rgba(28, 113, 216, 0)")
         self.label26.setObjectName("label26")
-        self.mm_newpassin = QtWidgets.QTextEdit(self.frame_10)
-        self.mm_newpassin.setGeometry(QtCore.QRect(40, 170, 311, 31))
-        self.mm_newpassin.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mm_newpassin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mm_newpassin.setObjectName("mm_newpassin")
         self.label28 = QtWidgets.QLabel(self.frame_10)
-        self.label28.setGeometry(QtCore.QRect(40, 140, 151, 31))
+        self.label28.setGeometry(QtCore.QRect(40, 150, 151, 31))
         self.label28.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(28, 113, 216, 0);")
         self.label28.setObjectName("label28")
         self.mm_submitbtn = QtWidgets.QPushButton(self.frame_10)
-        self.mm_submitbtn.setGeometry(QtCore.QRect(80, 270, 191, 41))
+        self.mm_submitbtn.setGeometry(QtCore.QRect(80, 320, 191, 41))
         self.mm_submitbtn.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
@@ -93,23 +69,83 @@ class Ui_MyaccWindow(object):
 "")
         self.mm_submitbtn.setIconSize(QtCore.QSize(30, 30))
         self.mm_submitbtn.setObjectName("mm_submitbtn")
-        self.mm_curpassin = QtWidgets.QTextEdit(self.frame_10)
-        self.mm_curpassin.setGeometry(QtCore.QRect(40, 110, 311, 31))
-        self.mm_curpassin.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mm_curpassin.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mm_curpassin.setObjectName("mm_curpassin")
         self.label27 = QtWidgets.QLabel(self.frame_10)
         self.label27.setGeometry(QtCore.QRect(40, 80, 161, 31))
         self.label27.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(28, 113, 216, 0);")
         self.label27.setObjectName("label27")
+        self.mm_curpassin = QtWidgets.QLineEdit(self.frame_10)
+        self.mm_curpassin.setGeometry(QtCore.QRect(40, 110, 311, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mm_curpassin.setFont(font)
+        self.mm_curpassin.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"")
+        self.mm_curpassin.setMaxLength(2000)
+        self.mm_curpassin.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.mm_curpassin.setDragEnabled(True)
+        self.mm_curpassin.setPlaceholderText("")
+        self.mm_curpassin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mm_curpassin.setClearButtonEnabled(True)
+        self.mm_curpassin.setObjectName("mm_curpassin")
+        self.mm_newpassin = QtWidgets.QLineEdit(self.frame_10)
+        self.mm_newpassin.setGeometry(QtCore.QRect(40, 180, 311, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mm_newpassin.setFont(font)
+        self.mm_newpassin.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"")
+        self.mm_newpassin.setMaxLength(2000)
+        self.mm_newpassin.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.mm_newpassin.setDragEnabled(True)
+        self.mm_newpassin.setPlaceholderText("")
+        self.mm_newpassin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mm_newpassin.setClearButtonEnabled(True)
+        self.mm_newpassin.setObjectName("mm_newpassin")
+        self.mm_conpassin = QtWidgets.QLineEdit(self.frame_10)
+        self.mm_conpassin.setGeometry(QtCore.QRect(40, 250, 311, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mm_conpassin.setFont(font)
+        self.mm_conpassin.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"")
+        self.mm_conpassin.setMaxLength(2000)
+        self.mm_conpassin.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.mm_conpassin.setDragEnabled(True)
+        self.mm_conpassin.setPlaceholderText("")
+        self.mm_conpassin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mm_conpassin.setClearButtonEnabled(True)
+        self.mm_conpassin.setObjectName("mm_conpassin")
         self.frame_16 = QtWidgets.QFrame(self.centralwidget)
         self.frame_16.setGeometry(QtCore.QRect(0, 0, 171, 621))
         self.frame_16.setStyleSheet("border: 1px ;\n"
@@ -302,119 +338,176 @@ class Ui_MyaccWindow(object):
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_9.setObjectName("frame_9")
         self.label32 = QtWidgets.QLabel(self.frame_9)
-        self.label32.setGeometry(QtCore.QRect(240, 80, 91, 31))
+        self.label32.setGeometry(QtCore.QRect(260, 120, 91, 31))
         self.label32.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label32.setObjectName("label32")
-        self.mm_nameout = QtWidgets.QTextEdit(self.frame_9)
-        self.mm_nameout.setGeometry(QtCore.QRect(240, 110, 271, 31))
-        self.mm_nameout.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mm_nameout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mm_nameout.setReadOnly(True)
-        self.mm_nameout.setObjectName("mm_nameout")
         self.label33 = QtWidgets.QLabel(self.frame_9)
-        self.label33.setGeometry(QtCore.QRect(30, 150, 21, 31))
+        self.label33.setGeometry(QtCore.QRect(50, 190, 21, 31))
         self.label33.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label33.setObjectName("label33")
         self.label34 = QtWidgets.QLabel(self.frame_9)
-        self.label34.setGeometry(QtCore.QRect(240, 150, 121, 31))
+        self.label34.setGeometry(QtCore.QRect(260, 190, 121, 31))
         self.label34.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label34.setObjectName("label34")
         self.label35 = QtWidgets.QLabel(self.frame_9)
-        self.label35.setGeometry(QtCore.QRect(30, 220, 121, 31))
+        self.label35.setGeometry(QtCore.QRect(200, 270, 121, 31))
         self.label35.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label35.setObjectName("label35")
         self.label30 = QtWidgets.QLabel(self.frame_9)
-        self.label30.setGeometry(QtCore.QRect(60, 10, 271, 71))
+        self.label30.setGeometry(QtCore.QRect(80, 10, 271, 71))
         self.label30.setStyleSheet("font: 25pt \"Ubuntu Mono\";\n"
 "color:black;\n"
 "background-color: rgba(28, 113, 216, 0)")
         self.label30.setObjectName("label30")
-        self.mm_idout = QtWidgets.QTextEdit(self.frame_9)
-        self.mm_idout.setGeometry(QtCore.QRect(30, 180, 181, 31))
-        self.mm_idout.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mm_idout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mm_idout.setReadOnly(True)
-        self.mm_idout.setObjectName("mm_idout")
-        self.mm_phoneout = QtWidgets.QTextEdit(self.frame_9)
-        self.mm_phoneout.setGeometry(QtCore.QRect(300, 180, 141, 31))
-        self.mm_phoneout.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mm_phoneout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mm_phoneout.setReadOnly(True)
-        self.mm_phoneout.setObjectName("mm_phoneout")
-        self.mm_fnameout = QtWidgets.QTextEdit(self.frame_9)
-        self.mm_fnameout.setGeometry(QtCore.QRect(30, 110, 181, 31))
-        self.mm_fnameout.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mm_fnameout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mm_fnameout.setReadOnly(True)
-        self.mm_fnameout.setObjectName("mm_fnameout")
         self.label31 = QtWidgets.QLabel(self.frame_9)
-        self.label31.setGeometry(QtCore.QRect(30, 80, 151, 31))
+        self.label31.setGeometry(QtCore.QRect(50, 120, 151, 31))
         self.label31.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(28, 113, 216, 0);")
         self.label31.setObjectName("label31")
         self.pushButton_11 = QtWidgets.QPushButton(self.frame_9)
-        self.pushButton_11.setGeometry(QtCore.QRect(240, 180, 61, 31))
+        self.pushButton_11.setGeometry(QtCore.QRect(260, 220, 61, 31))
         self.pushButton_11.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.pushButton_11.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
 "font: 75 14pt \"Ubuntu Mono\";\n"
+"background-color: rgba(42, 41, 41, 0);\n"
 "\n"
 "")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_11.setIcon(icon5)
         self.pushButton_11.setObjectName("pushButton_11")
-        self.mm_mailout = QtWidgets.QTextEdit(self.frame_9)
-        self.mm_mailout.setGeometry(QtCore.QRect(30, 250, 261, 31))
-        self.mm_mailout.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 14pt \"Ubuntu Mono\";\n"
-"\n"
-"")
-        self.mm_mailout.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.mm_mailout.setReadOnly(True)
-        self.mm_mailout.setObjectName("mm_mailout")
         self.icon13 = QtWidgets.QPushButton(self.frame_9)
-        self.icon13.setGeometry(QtCore.QRect(310, 10, 111, 51))
+        self.icon13.setGeometry(QtCore.QRect(330, 10, 111, 51))
         self.icon13.setStyleSheet("")
         self.icon13.setText("")
         self.icon13.setIcon(icon1)
         self.icon13.setIconSize(QtCore.QSize(50, 50))
         self.icon13.setObjectName("icon13")
+        self.mm_fnameout = QtWidgets.QLineEdit(self.frame_9)
+        self.mm_fnameout.setGeometry(QtCore.QRect(50, 150, 181, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mm_fnameout.setFont(font)
+        self.mm_fnameout.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"")
+        self.mm_fnameout.setMaxLength(100)
+        self.mm_fnameout.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mm_fnameout.setDragEnabled(True)
+        self.mm_fnameout.setReadOnly(True)
+        self.mm_fnameout.setPlaceholderText("")
+        self.mm_fnameout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mm_fnameout.setClearButtonEnabled(False)
+        self.mm_fnameout.setObjectName("mm_fnameout")
+        self.mm_nameout = QtWidgets.QLineEdit(self.frame_9)
+        self.mm_nameout.setGeometry(QtCore.QRect(260, 150, 201, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mm_nameout.setFont(font)
+        self.mm_nameout.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"")
+        self.mm_nameout.setMaxLength(100)
+        self.mm_nameout.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mm_nameout.setDragEnabled(True)
+        self.mm_nameout.setReadOnly(True)
+        self.mm_nameout.setPlaceholderText("")
+        self.mm_nameout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mm_nameout.setClearButtonEnabled(False)
+        self.mm_nameout.setObjectName("mm_nameout")
+        self.mm_idout = QtWidgets.QLineEdit(self.frame_9)
+        self.mm_idout.setGeometry(QtCore.QRect(50, 220, 181, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mm_idout.setFont(font)
+        self.mm_idout.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"")
+        self.mm_idout.setMaxLength(100)
+        self.mm_idout.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mm_idout.setDragEnabled(True)
+        self.mm_idout.setReadOnly(True)
+        self.mm_idout.setPlaceholderText("")
+        self.mm_idout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mm_idout.setClearButtonEnabled(False)
+        self.mm_idout.setObjectName("mm_idout")
+        self.mm_phoneout = QtWidgets.QLineEdit(self.frame_9)
+        self.mm_phoneout.setGeometry(QtCore.QRect(320, 220, 141, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mm_phoneout.setFont(font)
+        self.mm_phoneout.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"")
+        self.mm_phoneout.setMaxLength(100)
+        self.mm_phoneout.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mm_phoneout.setDragEnabled(True)
+        self.mm_phoneout.setReadOnly(True)
+        self.mm_phoneout.setPlaceholderText("")
+        self.mm_phoneout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mm_phoneout.setClearButtonEnabled(False)
+        self.mm_phoneout.setObjectName("mm_phoneout")
+        self.mm_mailout = QtWidgets.QLineEdit(self.frame_9)
+        self.mm_mailout.setGeometry(QtCore.QRect(150, 300, 221, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.mm_mailout.setFont(font)
+        self.mm_mailout.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"")
+        self.mm_mailout.setMaxLength(100)
+        self.mm_mailout.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.mm_mailout.setDragEnabled(True)
+        self.mm_mailout.setReadOnly(True)
+        self.mm_mailout.setPlaceholderText("")
+        self.mm_mailout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.mm_mailout.setClearButtonEnabled(False)
+        self.mm_mailout.setObjectName("mm_mailout")
         self.frame_8 = QtWidgets.QFrame(self.centralwidget)
         self.frame_8.setGeometry(QtCore.QRect(180, 0, 941, 121))
         self.frame_8.setStyleSheet("border: 1px ;\n"
@@ -473,24 +566,9 @@ class Ui_MyaccWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MyaccWindow.setWindowTitle(_translate("MyaccWindow", "My Account"))
         self.label29.setText(_translate("MyaccWindow", "Confirme password"))
-        self.mm_conpassin.setHtml(_translate("MyaccWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label26.setText(_translate("MyaccWindow", "Change password"))
-        self.mm_newpassin.setHtml(_translate("MyaccWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label28.setText(_translate("MyaccWindow", "New password"))
         self.mm_submitbtn.setText(_translate("MyaccWindow", "Submit"))
-        self.mm_curpassin.setHtml(_translate("MyaccWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label27.setText(_translate("MyaccWindow", "Current password"))
         self.label19.setText(_translate("MyaccWindow", "Library"))
         self.log_credits_24.setText(_translate("MyaccWindow", "My account"))
@@ -499,36 +577,11 @@ class Ui_MyaccWindow(object):
         self.main_booksbtn.setText(_translate("MyaccWindow", "Books"))
         self.main_reqbtn.setText(_translate("MyaccWindow", "Request"))
         self.label32.setText(_translate("MyaccWindow", "Name"))
-        self.mm_nameout.setHtml(_translate("MyaccWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label33.setText(_translate("MyaccWindow", "ID"))
         self.label34.setText(_translate("MyaccWindow", "Phone"))
         self.label35.setText(_translate("MyaccWindow", "Mail address"))
         self.label30.setText(_translate("MyaccWindow", "My Informations"))
-        self.mm_idout.setHtml(_translate("MyaccWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
-        self.mm_phoneout.setHtml(_translate("MyaccWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
-        self.mm_fnameout.setHtml(_translate("MyaccWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label31.setText(_translate("MyaccWindow", "Family name"))
         self.pushButton_11.setText(_translate("MyaccWindow", "+213"))
-        self.mm_mailout.setHtml(_translate("MyaccWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Ubuntu Mono\'; font-size:14pt; font-weight:72; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Ubuntu\'; font-size:11pt; font-weight:400;\"><br /></p></body></html>"))
         self.label25.setText(_translate("MyaccWindow", "My Account"))
         self.mm_logoutbtn.setText(_translate("MyaccWindow", "Logout"))
