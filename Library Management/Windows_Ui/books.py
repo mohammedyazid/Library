@@ -103,9 +103,9 @@ class Ui_BooksWindow(object):
         self.log_credits_25.setIcon(icon2)
         self.log_credits_25.setIconSize(QtCore.QSize(25, 25))
         self.log_credits_25.setObjectName("log_credits_25")
-        self.main_accbtn = QtWidgets.QPushButton(self.frame_16)
-        self.main_accbtn.setGeometry(QtCore.QRect(10, 180, 151, 51))
-        self.main_accbtn.setStyleSheet("\n"
+        self.MY_ACCOUNT = QtWidgets.QPushButton(self.frame_16)
+        self.MY_ACCOUNT.setGeometry(QtCore.QRect(10, 180, 151, 51))
+        self.MY_ACCOUNT.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
 "    border: 2px solid white;\n"
@@ -129,12 +129,12 @@ class Ui_BooksWindow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.main_accbtn.setIcon(icon1)
-        self.main_accbtn.setIconSize(QtCore.QSize(25, 25))
-        self.main_accbtn.setObjectName("main_accbtn")
-        self.main_booksbtn = QtWidgets.QPushButton(self.frame_16)
-        self.main_booksbtn.setGeometry(QtCore.QRect(10, 240, 151, 51))
-        self.main_booksbtn.setStyleSheet("\n"
+        self.MY_ACCOUNT.setIcon(icon1)
+        self.MY_ACCOUNT.setIconSize(QtCore.QSize(25, 25))
+        self.MY_ACCOUNT.setObjectName("MY_ACCOUNT")
+        self.BOOKS = QtWidgets.QPushButton(self.frame_16)
+        self.BOOKS.setGeometry(QtCore.QRect(10, 240, 151, 51))
+        self.BOOKS.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
 "    border: 2px solid white;\n"
@@ -158,12 +158,12 @@ class Ui_BooksWindow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.main_booksbtn.setIcon(icon2)
-        self.main_booksbtn.setIconSize(QtCore.QSize(25, 25))
-        self.main_booksbtn.setObjectName("main_booksbtn")
-        self.main_reqbtn = QtWidgets.QPushButton(self.frame_16)
-        self.main_reqbtn.setGeometry(QtCore.QRect(10, 300, 151, 51))
-        self.main_reqbtn.setStyleSheet("\n"
+        self.BOOKS.setIcon(icon2)
+        self.BOOKS.setIconSize(QtCore.QSize(25, 25))
+        self.BOOKS.setObjectName("BOOKS")
+        self.REQUEST = QtWidgets.QPushButton(self.frame_16)
+        self.REQUEST.setGeometry(QtCore.QRect(10, 300, 151, 51))
+        self.REQUEST.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
 "    border: 2px solid white;\n"
@@ -189,9 +189,9 @@ class Ui_BooksWindow(object):
 "")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/interview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.main_reqbtn.setIcon(icon3)
-        self.main_reqbtn.setIconSize(QtCore.QSize(25, 25))
-        self.main_reqbtn.setObjectName("main_reqbtn")
+        self.REQUEST.setIcon(icon3)
+        self.REQUEST.setIconSize(QtCore.QSize(25, 25))
+        self.REQUEST.setObjectName("REQUEST")
         self.icon11 = QtWidgets.QPushButton(self.frame_16)
         self.icon11.setGeometry(QtCore.QRect(-20, 50, 191, 111))
         self.icon11.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
@@ -228,9 +228,9 @@ class Ui_BooksWindow(object):
         self.label24.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(65, 191, 64, 0);")
         self.label24.setObjectName("label24")
-        self.mb_borrowbtn = QtWidgets.QPushButton(self.frame_7)
-        self.mb_borrowbtn.setGeometry(QtCore.QRect(100, 340, 191, 41))
-        self.mb_borrowbtn.setStyleSheet("\n"
+        self.BORROW = QtWidgets.QPushButton(self.frame_7)
+        self.BORROW.setGeometry(QtCore.QRect(100, 340, 191, 41))
+        self.BORROW.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
 "    border: 2px solid white;\n"
@@ -256,19 +256,19 @@ class Ui_BooksWindow(object):
 "")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/borrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.mb_borrowbtn.setIcon(icon5)
-        self.mb_borrowbtn.setIconSize(QtCore.QSize(30, 30))
-        self.mb_borrowbtn.setObjectName("mb_borrowbtn")
-        self.mb_titleout = QtWidgets.QLineEdit(self.frame_7)
-        self.mb_titleout.setGeometry(QtCore.QRect(60, 60, 281, 31))
+        self.BORROW.setIcon(icon5)
+        self.BORROW.setIconSize(QtCore.QSize(30, 30))
+        self.BORROW.setObjectName("BORROW")
+        self.BOOK_TITLE = QtWidgets.QLineEdit(self.frame_7)
+        self.BOOK_TITLE.setGeometry(QtCore.QRect(60, 60, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mb_titleout.setFont(font)
-        self.mb_titleout.setStyleSheet("background-color: white;\n"
+        self.BOOK_TITLE.setFont(font)
+        self.BOOK_TITLE.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -277,23 +277,23 @@ class Ui_BooksWindow(object):
 "\n"
 "\n"
 "")
-        self.mb_titleout.setMaxLength(100)
-        self.mb_titleout.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mb_titleout.setDragEnabled(True)
-        self.mb_titleout.setPlaceholderText("")
-        self.mb_titleout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mb_titleout.setClearButtonEnabled(False)
-        self.mb_titleout.setObjectName("mb_titleout")
-        self.mb_authorout = QtWidgets.QLineEdit(self.frame_7)
-        self.mb_authorout.setGeometry(QtCore.QRect(60, 130, 281, 31))
+        self.BOOK_TITLE.setMaxLength(100)
+        self.BOOK_TITLE.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.BOOK_TITLE.setDragEnabled(True)
+        self.BOOK_TITLE.setPlaceholderText("")
+        self.BOOK_TITLE.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.BOOK_TITLE.setClearButtonEnabled(False)
+        self.BOOK_TITLE.setObjectName("BOOK_TITLE")
+        self.AUTHOR = QtWidgets.QLineEdit(self.frame_7)
+        self.AUTHOR.setGeometry(QtCore.QRect(60, 130, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mb_authorout.setFont(font)
-        self.mb_authorout.setStyleSheet("background-color: white;\n"
+        self.AUTHOR.setFont(font)
+        self.AUTHOR.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -302,23 +302,23 @@ class Ui_BooksWindow(object):
 "\n"
 "\n"
 "")
-        self.mb_authorout.setMaxLength(100)
-        self.mb_authorout.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mb_authorout.setDragEnabled(True)
-        self.mb_authorout.setPlaceholderText("")
-        self.mb_authorout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mb_authorout.setClearButtonEnabled(False)
-        self.mb_authorout.setObjectName("mb_authorout")
-        self.mb_rdateout = QtWidgets.QLineEdit(self.frame_7)
-        self.mb_rdateout.setGeometry(QtCore.QRect(60, 200, 281, 31))
+        self.AUTHOR.setMaxLength(100)
+        self.AUTHOR.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.AUTHOR.setDragEnabled(True)
+        self.AUTHOR.setPlaceholderText("")
+        self.AUTHOR.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.AUTHOR.setClearButtonEnabled(False)
+        self.AUTHOR.setObjectName("AUTHOR")
+        self.RELEASE_YEAR = QtWidgets.QLineEdit(self.frame_7)
+        self.RELEASE_YEAR.setGeometry(QtCore.QRect(60, 200, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mb_rdateout.setFont(font)
-        self.mb_rdateout.setStyleSheet("background-color: white;\n"
+        self.RELEASE_YEAR.setFont(font)
+        self.RELEASE_YEAR.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -327,23 +327,23 @@ class Ui_BooksWindow(object):
 "\n"
 "\n"
 "")
-        self.mb_rdateout.setMaxLength(100)
-        self.mb_rdateout.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mb_rdateout.setDragEnabled(True)
-        self.mb_rdateout.setPlaceholderText("")
-        self.mb_rdateout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mb_rdateout.setClearButtonEnabled(False)
-        self.mb_rdateout.setObjectName("mb_rdateout")
-        self.mb_statusout = QtWidgets.QLineEdit(self.frame_7)
-        self.mb_statusout.setGeometry(QtCore.QRect(60, 260, 281, 31))
+        self.RELEASE_YEAR.setMaxLength(100)
+        self.RELEASE_YEAR.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.RELEASE_YEAR.setDragEnabled(True)
+        self.RELEASE_YEAR.setPlaceholderText("")
+        self.RELEASE_YEAR.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.RELEASE_YEAR.setClearButtonEnabled(False)
+        self.RELEASE_YEAR.setObjectName("RELEASE_YEAR")
+        self.STATUS = QtWidgets.QLineEdit(self.frame_7)
+        self.STATUS.setGeometry(QtCore.QRect(60, 260, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mb_statusout.setFont(font)
-        self.mb_statusout.setStyleSheet("background-color: white;\n"
+        self.STATUS.setFont(font)
+        self.STATUS.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -352,32 +352,32 @@ class Ui_BooksWindow(object):
 "\n"
 "\n"
 "")
-        self.mb_statusout.setMaxLength(100)
-        self.mb_statusout.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mb_statusout.setDragEnabled(True)
-        self.mb_statusout.setPlaceholderText("")
-        self.mb_statusout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mb_statusout.setClearButtonEnabled(False)
-        self.mb_statusout.setObjectName("mb_statusout")
-        self.Bookstable = QtWidgets.QTableWidget(self.BookWindow)
-        self.Bookstable.setGeometry(QtCore.QRect(590, 140, 531, 461))
-        self.Bookstable.setStyleSheet("border: 1px ;\n"
+        self.STATUS.setMaxLength(100)
+        self.STATUS.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.STATUS.setDragEnabled(True)
+        self.STATUS.setPlaceholderText("")
+        self.STATUS.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.STATUS.setClearButtonEnabled(False)
+        self.STATUS.setObjectName("STATUS")
+        self.TABLE = QtWidgets.QTableWidget(self.BookWindow)
+        self.TABLE.setGeometry(QtCore.QRect(590, 140, 531, 461))
+        self.TABLE.setStyleSheet("border: 1px ;\n"
 "border-radius: 20px;\n"
 "background-color: white;")
-        self.Bookstable.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.Bookstable.setObjectName("Bookstable")
-        self.Bookstable.setColumnCount(5)
-        self.Bookstable.setRowCount(0)
+        self.TABLE.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.TABLE.setObjectName("TABLE")
+        self.TABLE.setColumnCount(5)
+        self.TABLE.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
-        self.Bookstable.setHorizontalHeaderItem(0, item)
+        self.TABLE.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
-        self.Bookstable.setHorizontalHeaderItem(1, item)
+        self.TABLE.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        self.Bookstable.setHorizontalHeaderItem(2, item)
+        self.TABLE.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
-        self.Bookstable.setHorizontalHeaderItem(3, item)
+        self.TABLE.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
-        self.Bookstable.setHorizontalHeaderItem(4, item)
+        self.TABLE.setHorizontalHeaderItem(4, item)
         self.frame_5 = QtWidgets.QFrame(self.BookWindow)
         self.frame_5.setGeometry(QtCore.QRect(180, 0, 941, 131))
         self.frame_5.setStyleSheet("border: 1px ;\n"
@@ -399,9 +399,9 @@ class Ui_BooksWindow(object):
         self.icon12.setIcon(icon)
         self.icon12.setIconSize(QtCore.QSize(25, 25))
         self.icon12.setObjectName("icon12")
-        self.mb_submitbtn = QtWidgets.QPushButton(self.frame_5)
-        self.mb_submitbtn.setGeometry(QtCore.QRect(310, 80, 91, 31))
-        self.mb_submitbtn.setStyleSheet("\n"
+        self.SUBMIT = QtWidgets.QPushButton(self.frame_5)
+        self.SUBMIT.setGeometry(QtCore.QRect(310, 80, 91, 31))
+        self.SUBMIT.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
 "    border: 2px solid white;\n"
@@ -427,19 +427,19 @@ class Ui_BooksWindow(object):
 "")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.mb_submitbtn.setIcon(icon6)
-        self.mb_submitbtn.setIconSize(QtCore.QSize(17, 17))
-        self.mb_submitbtn.setObjectName("mb_submitbtn")
-        self.mb_titlein = QtWidgets.QLineEdit(self.frame_5)
-        self.mb_titlein.setGeometry(QtCore.QRect(10, 80, 291, 31))
+        self.SUBMIT.setIcon(icon6)
+        self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
+        self.SUBMIT.setObjectName("SUBMIT")
+        self.TITLE = QtWidgets.QLineEdit(self.frame_5)
+        self.TITLE.setGeometry(QtCore.QRect(10, 80, 291, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mb_titlein.setFont(font)
-        self.mb_titlein.setStyleSheet("background-color: white;\n"
+        self.TITLE.setFont(font)
+        self.TITLE.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -448,12 +448,12 @@ class Ui_BooksWindow(object):
 "\n"
 "\n"
 "")
-        self.mb_titlein.setMaxLength(100)
-        self.mb_titlein.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mb_titlein.setDragEnabled(True)
-        self.mb_titlein.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mb_titlein.setClearButtonEnabled(True)
-        self.mb_titlein.setObjectName("mb_titlein")
+        self.TITLE.setMaxLength(100)
+        self.TITLE.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.TITLE.setDragEnabled(True)
+        self.TITLE.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.TITLE.setClearButtonEnabled(True)
+        self.TITLE.setObjectName("TITLE")
         #BooksWindow.setCentralWidget(self.BookWindow)
         self.menubar = QtWidgets.QMenuBar(BooksWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 22))
@@ -469,24 +469,24 @@ class Ui_BooksWindow(object):
         self.label19.setText(_translate("BooksWindow", "Library"))
         self.log_credits_24.setText(_translate("BooksWindow", "My account"))
         self.log_credits_25.setText(_translate("BooksWindow", "Books"))
-        self.main_accbtn.setText(_translate("BooksWindow", "My account"))
-        self.main_booksbtn.setText(_translate("BooksWindow", "Books"))
-        self.main_reqbtn.setText(_translate("BooksWindow", "Request"))
+        self.MY_ACCOUNT.setText(_translate("BooksWindow", "My account"))
+        self.BOOKS.setText(_translate("BooksWindow", "Books"))
+        self.REQUEST.setText(_translate("BooksWindow", "Request"))
         self.label21.setText(_translate("BooksWindow", "Book Title"))
         self.label22.setText(_translate("BooksWindow", "Author"))
-        self.label23.setText(_translate("BooksWindow", "Release Date"))
+        self.label23.setText(_translate("BooksWindow", "Release Year"))
         self.label24.setText(_translate("BooksWindow", "Status"))
-        self.mb_borrowbtn.setText(_translate("BooksWindow", "Borrow"))
-        item = self.Bookstable.horizontalHeaderItem(0)
+        self.BORROW.setText(_translate("BooksWindow", "Borrow"))
+        item = self.TABLE.horizontalHeaderItem(0)
         item.setText(_translate("BooksWindow", "code"))
-        item = self.Bookstable.horizontalHeaderItem(1)
+        item = self.TABLE.horizontalHeaderItem(1)
         item.setText(_translate("BooksWindow", "Title"))
-        item = self.Bookstable.horizontalHeaderItem(2)
+        item = self.TABLE.horizontalHeaderItem(2)
         item.setText(_translate("BooksWindow", "Author"))
-        item = self.Bookstable.horizontalHeaderItem(3)
-        item.setText(_translate("BooksWindow", "Release Date"))
-        item = self.Bookstable.horizontalHeaderItem(4)
+        item = self.TABLE.horizontalHeaderItem(3)
+        item.setText(_translate("BooksWindow", "Release Year"))
+        item = self.TABLE.horizontalHeaderItem(4)
         item.setText(_translate("BooksWindow", "Status"))
         self.label20.setText(_translate("BooksWindow", "Catalogue"))
-        self.mb_submitbtn.setText(_translate("BooksWindow", "Submit"))
-        self.mb_titlein.setPlaceholderText(_translate("BooksWindow", "Title"))
+        self.SUBMIT.setText(_translate("BooksWindow", "Submit"))
+        self.TITLE.setPlaceholderText(_translate("BooksWindow", "Title"))

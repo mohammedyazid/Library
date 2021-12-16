@@ -179,7 +179,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="main_accbtn">
+    <widget class="QPushButton" name="MY_ACCOUNT">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -228,7 +228,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="main_booksbtn">
+    <widget class="QPushButton" name="BOOKS">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -277,7 +277,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="main_reqbtn">
+    <widget class="QPushButton" name="REQUEST">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -420,7 +420,7 @@ background-color: rgba(42, 41, 41, 0);</string>
 background-color: rgba(65, 191, 64, 0);</string>
      </property>
      <property name="text">
-      <string>Release Date</string>
+      <string>Release Year</string>
      </property>
     </widget>
     <widget class="QLabel" name="label24">
@@ -440,7 +440,7 @@ background-color: rgba(65, 191, 64, 0);</string>
       <string>Status</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="mb_borrowbtn">
+    <widget class="QPushButton" name="BORROW">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -489,7 +489,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mb_titleout">
+    <widget class="QLineEdit" name="BOOK_TITLE">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -537,7 +537,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mb_authorout">
+    <widget class="QLineEdit" name="AUTHOR">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -585,7 +585,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mb_rdateout">
+    <widget class="QLineEdit" name="RELEASE_YEAR">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -633,7 +633,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mb_statusout">
+    <widget class="QLineEdit" name="STATUS">
      <property name="geometry">
       <rect>
        <x>60</x>
@@ -682,7 +682,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
      </property>
     </widget>
    </widget>
-   <widget class="QTableWidget" name="Bookstable">
+   <widget class="QTableWidget" name="TABLE">
     <property name="geometry">
      <rect>
       <x>590</x>
@@ -716,7 +716,7 @@ background-color: white;</string>
     </column>
     <column>
      <property name="text">
-      <string>Release Date</string>
+      <string>Release Year</string>
      </property>
     </column>
     <column>
@@ -789,7 +789,7 @@ background-color: rgba(28, 113, 216, 0);</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="mb_submitbtn">
+    <widget class="QPushButton" name="SUBMIT">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -838,7 +838,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mb_titlein">
+    <widget class="QLineEdit" name="TITLE">
      <property name="geometry">
       <rect>
        <x>10</x>

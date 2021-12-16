@@ -31,9 +31,9 @@ class Ui_RegisterWindow(object):
         self.label8.setStyleSheet("font: 63 italic 40pt \"URW Bookman\";\n"
 "color:white;")
         self.label8.setObjectName("label8")
-        self.re_helpbtn = QtWidgets.QPushButton(self.frame_3)
-        self.re_helpbtn.setGeometry(QtCore.QRect(170, 270, 171, 41))
-        self.re_helpbtn.setStyleSheet("\n"
+        self.HELP = QtWidgets.QPushButton(self.frame_3)
+        self.HELP.setGeometry(QtCore.QRect(170, 270, 171, 41))
+        self.HELP.setStyleSheet("\n"
 "QPushButton {\n"
 "    transition: all .5s ease;\n"
 "    color: white;\n"
@@ -55,7 +55,7 @@ class Ui_RegisterWindow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.re_helpbtn.setObjectName("re_helpbtn")
+        self.HELP.setObjectName("HELP")
         self.icon4 = QtWidgets.QPushButton(self.frame_3)
         self.icon4.setGeometry(QtCore.QRect(290, 60, 89, 41))
         self.icon4.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
@@ -74,15 +74,15 @@ class Ui_RegisterWindow(object):
         self.icon5.setIcon(icon1)
         self.icon5.setIconSize(QtCore.QSize(100, 100))
         self.icon5.setObjectName("icon5")
-        self.re_backbtn = QtWidgets.QPushButton(self.frame_3)
-        self.re_backbtn.setGeometry(QtCore.QRect(10, 10, 51, 41))
-        self.re_backbtn.setStyleSheet("")
-        self.re_backbtn.setText("")
+        self.BACK = QtWidgets.QPushButton(self.frame_3)
+        self.BACK.setGeometry(QtCore.QRect(10, 10, 51, 41))
+        self.BACK.setStyleSheet("")
+        self.BACK.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/previous.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.re_backbtn.setIcon(icon2)
-        self.re_backbtn.setIconSize(QtCore.QSize(40, 40))
-        self.re_backbtn.setObjectName("re_backbtn")
+        self.BACK.setIcon(icon2)
+        self.BACK.setIconSize(QtCore.QSize(40, 40))
+        self.BACK.setObjectName("BACK")
         self.frame_4 = QtWidgets.QFrame(self.centralwidget)
         self.frame_4.setGeometry(QtCore.QRect(540, 20, 521, 561))
         self.frame_4.setStyleSheet("border: 1px;\n"
@@ -96,12 +96,12 @@ class Ui_RegisterWindow(object):
         self.label12.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label12.setObjectName("label12")
         self.label15 = QtWidgets.QLabel(self.frame_4)
-        self.label15.setGeometry(QtCore.QRect(280, 210, 21, 20))
+        self.label15.setGeometry(QtCore.QRect(260, 210, 101, 20))
         self.label15.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label15.setObjectName("label15")
-        self.re_signupbtn = QtWidgets.QPushButton(self.frame_4)
-        self.re_signupbtn.setGeometry(QtCore.QRect(140, 450, 261, 41))
-        self.re_signupbtn.setStyleSheet("\n"
+        self.SIGN_UP = QtWidgets.QPushButton(self.frame_4)
+        self.SIGN_UP.setGeometry(QtCore.QRect(140, 450, 261, 41))
+        self.SIGN_UP.setStyleSheet("\n"
 "QPushButton {\n"
 "    transition: all .5s ease;\n"
 "    color: rgb(0, 137, 236);;\n"
@@ -123,7 +123,7 @@ class Ui_RegisterWindow(object):
 "    background-color: rgb(0, 137, 236);;\n"
 "}\n"
 "")
-        self.re_signupbtn.setObjectName("re_signupbtn")
+        self.SIGN_UP.setObjectName("SIGN_UP")
         self.label11 = QtWidgets.QLabel(self.frame_4)
         self.label11.setGeometry(QtCore.QRect(280, 0, 151, 41))
         self.label11.setStyleSheet("font: 75 20pt \"Ubuntu\";")
@@ -192,16 +192,16 @@ class Ui_RegisterWindow(object):
         self.re_error.setAlignment(QtCore.Qt.AlignCenter)
         self.re_error.setWordWrap(False)
         self.re_error.setObjectName("re_error")
-        self.re_namein = QtWidgets.QLineEdit(self.frame_4)
-        self.re_namein.setGeometry(QtCore.QRect(260, 160, 211, 31))
+        self.LAST_NAME = QtWidgets.QLineEdit(self.frame_4)
+        self.LAST_NAME.setGeometry(QtCore.QRect(260, 160, 211, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.re_namein.setFont(font)
-        self.re_namein.setStyleSheet("background-color: white;\n"
+        self.LAST_NAME.setFont(font)
+        self.LAST_NAME.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -210,23 +210,23 @@ class Ui_RegisterWindow(object):
 "\n"
 "\n"
 "")
-        self.re_namein.setMaxLength(100)
-        self.re_namein.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.re_namein.setDragEnabled(True)
-        self.re_namein.setPlaceholderText("")
-        self.re_namein.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.re_namein.setClearButtonEnabled(True)
-        self.re_namein.setObjectName("re_namein")
-        self.re_mailin = QtWidgets.QLineEdit(self.frame_4)
-        self.re_mailin.setGeometry(QtCore.QRect(40, 230, 211, 31))
+        self.LAST_NAME.setMaxLength(100)
+        self.LAST_NAME.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.LAST_NAME.setDragEnabled(True)
+        self.LAST_NAME.setPlaceholderText("")
+        self.LAST_NAME.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.LAST_NAME.setClearButtonEnabled(True)
+        self.LAST_NAME.setObjectName("LAST_NAME")
+        self.EMAIL_ADDRESS = QtWidgets.QLineEdit(self.frame_4)
+        self.EMAIL_ADDRESS.setGeometry(QtCore.QRect(40, 230, 211, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.re_mailin.setFont(font)
-        self.re_mailin.setStyleSheet("background-color: white;\n"
+        self.EMAIL_ADDRESS.setFont(font)
+        self.EMAIL_ADDRESS.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -235,22 +235,22 @@ class Ui_RegisterWindow(object):
 "\n"
 "\n"
 "")
-        self.re_mailin.setMaxLength(100)
-        self.re_mailin.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.re_mailin.setDragEnabled(True)
-        self.re_mailin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.re_mailin.setClearButtonEnabled(True)
-        self.re_mailin.setObjectName("re_mailin")
-        self.re_idin = QtWidgets.QLineEdit(self.frame_4)
-        self.re_idin.setGeometry(QtCore.QRect(260, 230, 211, 31))
+        self.EMAIL_ADDRESS.setMaxLength(100)
+        self.EMAIL_ADDRESS.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.EMAIL_ADDRESS.setDragEnabled(True)
+        self.EMAIL_ADDRESS.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.EMAIL_ADDRESS.setClearButtonEnabled(True)
+        self.EMAIL_ADDRESS.setObjectName("EMAIL_ADDRESS")
+        self.ID = QtWidgets.QLineEdit(self.frame_4)
+        self.ID.setGeometry(QtCore.QRect(260, 230, 211, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.re_idin.setFont(font)
-        self.re_idin.setStyleSheet("background-color: white;\n"
+        self.ID.setFont(font)
+        self.ID.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -259,22 +259,22 @@ class Ui_RegisterWindow(object):
 "\n"
 "\n"
 "")
-        self.re_idin.setMaxLength(10)
-        self.re_idin.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.re_idin.setDragEnabled(True)
-        self.re_idin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.re_idin.setClearButtonEnabled(True)
-        self.re_idin.setObjectName("re_idin")
-        self.re_passin = QtWidgets.QLineEdit(self.frame_4)
-        self.re_passin.setGeometry(QtCore.QRect(40, 300, 211, 31))
+        self.ID.setMaxLength(10)
+        self.ID.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.ID.setDragEnabled(True)
+        self.ID.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.ID.setClearButtonEnabled(True)
+        self.ID.setObjectName("ID")
+        self.PASSWORD = QtWidgets.QLineEdit(self.frame_4)
+        self.PASSWORD.setGeometry(QtCore.QRect(40, 300, 211, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.re_passin.setFont(font)
-        self.re_passin.setStyleSheet("background-color: white;\n"
+        self.PASSWORD.setFont(font)
+        self.PASSWORD.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -283,23 +283,23 @@ class Ui_RegisterWindow(object):
 "\n"
 "\n"
 "")
-        self.re_passin.setMaxLength(2000)
-        self.re_passin.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.re_passin.setDragEnabled(True)
-        self.re_passin.setPlaceholderText("")
-        self.re_passin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.re_passin.setClearButtonEnabled(True)
-        self.re_passin.setObjectName("re_passin")
-        self.re_cpassin = QtWidgets.QLineEdit(self.frame_4)
-        self.re_cpassin.setGeometry(QtCore.QRect(40, 370, 211, 31))
+        self.PASSWORD.setMaxLength(2000)
+        self.PASSWORD.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.PASSWORD.setDragEnabled(True)
+        self.PASSWORD.setPlaceholderText("")
+        self.PASSWORD.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.PASSWORD.setClearButtonEnabled(True)
+        self.PASSWORD.setObjectName("PASSWORD")
+        self.CONFIRME_PASSWORD = QtWidgets.QLineEdit(self.frame_4)
+        self.CONFIRME_PASSWORD.setGeometry(QtCore.QRect(40, 370, 211, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.re_cpassin.setFont(font)
-        self.re_cpassin.setStyleSheet("background-color: white;\n"
+        self.CONFIRME_PASSWORD.setFont(font)
+        self.CONFIRME_PASSWORD.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -308,23 +308,23 @@ class Ui_RegisterWindow(object):
 "\n"
 "\n"
 "")
-        self.re_cpassin.setMaxLength(2000)
-        self.re_cpassin.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.re_cpassin.setDragEnabled(True)
-        self.re_cpassin.setPlaceholderText("")
-        self.re_cpassin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.re_cpassin.setClearButtonEnabled(True)
-        self.re_cpassin.setObjectName("re_cpassin")
-        self.re_phonein = QtWidgets.QLineEdit(self.frame_4)
-        self.re_phonein.setGeometry(QtCore.QRect(320, 300, 151, 31))
+        self.CONFIRME_PASSWORD.setMaxLength(2000)
+        self.CONFIRME_PASSWORD.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.CONFIRME_PASSWORD.setDragEnabled(True)
+        self.CONFIRME_PASSWORD.setPlaceholderText("")
+        self.CONFIRME_PASSWORD.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.CONFIRME_PASSWORD.setClearButtonEnabled(True)
+        self.CONFIRME_PASSWORD.setObjectName("CONFIRME_PASSWORD")
+        self.PHONE = QtWidgets.QLineEdit(self.frame_4)
+        self.PHONE.setGeometry(QtCore.QRect(320, 300, 151, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.re_phonein.setFont(font)
-        self.re_phonein.setStyleSheet("background-color: white;\n"
+        self.PHONE.setFont(font)
+        self.PHONE.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -333,22 +333,26 @@ class Ui_RegisterWindow(object):
 "\n"
 "\n"
 "")
-        self.re_phonein.setMaxLength(10)
-        self.re_phonein.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.re_phonein.setDragEnabled(True)
-        self.re_phonein.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.re_phonein.setClearButtonEnabled(True)
-        self.re_phonein.setObjectName("re_phonein")
-        self.re_fnamein = QtWidgets.QLineEdit(self.centralwidget)
-        self.re_fnamein.setGeometry(QtCore.QRect(580, 180, 211, 31))
+        self.PHONE.setMaxLength(10)
+        self.PHONE.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.PHONE.setDragEnabled(True)
+        self.PHONE.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.PHONE.setClearButtonEnabled(True)
+        self.PHONE.setObjectName("PHONE")
+        self.label16_2 = QtWidgets.QLabel(self.frame_4)
+        self.label16_2.setGeometry(QtCore.QRect(260, 280, 101, 20))
+        self.label16_2.setStyleSheet("font: 75 16pt \"Ubuntu\";")
+        self.label16_2.setObjectName("label16_2")
+        self.FIRST_NAME = QtWidgets.QLineEdit(self.centralwidget)
+        self.FIRST_NAME.setGeometry(QtCore.QRect(580, 180, 211, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.re_fnamein.setFont(font)
-        self.re_fnamein.setStyleSheet("background-color: white;\n"
+        self.FIRST_NAME.setFont(font)
+        self.FIRST_NAME.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -357,13 +361,13 @@ class Ui_RegisterWindow(object):
 "\n"
 "\n"
 "")
-        self.re_fnamein.setMaxLength(100)
-        self.re_fnamein.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.re_fnamein.setDragEnabled(True)
-        self.re_fnamein.setPlaceholderText("")
-        self.re_fnamein.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.re_fnamein.setClearButtonEnabled(True)
-        self.re_fnamein.setObjectName("re_fnamein")
+        self.FIRST_NAME.setMaxLength(100)
+        self.FIRST_NAME.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.FIRST_NAME.setDragEnabled(True)
+        self.FIRST_NAME.setPlaceholderText("")
+        self.FIRST_NAME.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.FIRST_NAME.setClearButtonEnabled(True)
+        self.FIRST_NAME.setObjectName("FIRST_NAME")
         #RegisterWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(RegisterWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 22))
@@ -377,10 +381,10 @@ class Ui_RegisterWindow(object):
         _translate = QtCore.QCoreApplication.translate
         RegisterWindow.setWindowTitle(_translate("RegisterWindow", "Register"))
         self.label8.setText(_translate("RegisterWindow", "Library"))
-        self.re_helpbtn.setText(_translate("RegisterWindow", "Help"))
+        self.HELP.setText(_translate("RegisterWindow", "Help"))
         self.label12.setText(_translate("RegisterWindow", "First Name"))
         self.label15.setText(_translate("RegisterWindow", "ID"))
-        self.re_signupbtn.setText(_translate("RegisterWindow", "Sign Up"))
+        self.SIGN_UP.setText(_translate("RegisterWindow", "Sign Up"))
         self.label11.setText(_translate("RegisterWindow", "membership"))
         self.label10.setText(_translate("RegisterWindow", "Library"))
         self.label9.setText(_translate("RegisterWindow", "Create a"))
@@ -390,6 +394,7 @@ class Ui_RegisterWindow(object):
         self.label16.setText(_translate("RegisterWindow", "Password"))
         self.icon7.setText(_translate("RegisterWindow", "+213"))
         self.checkBox.setText(_translate("RegisterWindow", "I am sure "))
-        self.re_mailin.setPlaceholderText(_translate("RegisterWindow", "Someone@mail.com"))
-        self.re_idin.setPlaceholderText(_translate("RegisterWindow", "193800...."))
-        self.re_phonein.setPlaceholderText(_translate("RegisterWindow", "612345678"))
+        self.EMAIL_ADDRESS.setPlaceholderText(_translate("RegisterWindow", "Someone@mail.com"))
+        self.ID.setPlaceholderText(_translate("RegisterWindow", "193800...."))
+        self.PHONE.setPlaceholderText(_translate("RegisterWindow", "612345678"))
+        self.label16_2.setText(_translate("RegisterWindow", "Phone"))

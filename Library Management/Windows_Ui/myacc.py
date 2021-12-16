@@ -41,9 +41,9 @@ class Ui_MyaccWindow(object):
         self.label28.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(28, 113, 216, 0);")
         self.label28.setObjectName("label28")
-        self.mm_submitbtn = QtWidgets.QPushButton(self.frame_10)
-        self.mm_submitbtn.setGeometry(QtCore.QRect(80, 320, 191, 41))
-        self.mm_submitbtn.setStyleSheet("\n"
+        self.SUBMIT = QtWidgets.QPushButton(self.frame_10)
+        self.SUBMIT.setGeometry(QtCore.QRect(80, 320, 191, 41))
+        self.SUBMIT.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
 "    border: 2px solid white;\n"
@@ -67,23 +67,23 @@ class Ui_MyaccWindow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.mm_submitbtn.setIconSize(QtCore.QSize(30, 30))
-        self.mm_submitbtn.setObjectName("mm_submitbtn")
+        self.SUBMIT.setIconSize(QtCore.QSize(30, 30))
+        self.SUBMIT.setObjectName("SUBMIT")
         self.label27 = QtWidgets.QLabel(self.frame_10)
         self.label27.setGeometry(QtCore.QRect(40, 80, 161, 31))
         self.label27.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(28, 113, 216, 0);")
         self.label27.setObjectName("label27")
-        self.mm_curpassin = QtWidgets.QLineEdit(self.frame_10)
-        self.mm_curpassin.setGeometry(QtCore.QRect(40, 110, 311, 31))
+        self.CURRENT_PASSWORD = QtWidgets.QLineEdit(self.frame_10)
+        self.CURRENT_PASSWORD.setGeometry(QtCore.QRect(40, 110, 311, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mm_curpassin.setFont(font)
-        self.mm_curpassin.setStyleSheet("background-color: white;\n"
+        self.CURRENT_PASSWORD.setFont(font)
+        self.CURRENT_PASSWORD.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:black;\n"
@@ -91,23 +91,23 @@ class Ui_MyaccWindow(object):
 "font: 75 13pt \"Ubuntu Mono\";\n"
 "\n"
 "")
-        self.mm_curpassin.setMaxLength(2000)
-        self.mm_curpassin.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.mm_curpassin.setDragEnabled(True)
-        self.mm_curpassin.setPlaceholderText("")
-        self.mm_curpassin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mm_curpassin.setClearButtonEnabled(True)
-        self.mm_curpassin.setObjectName("mm_curpassin")
-        self.mm_newpassin = QtWidgets.QLineEdit(self.frame_10)
-        self.mm_newpassin.setGeometry(QtCore.QRect(40, 180, 311, 31))
+        self.CURRENT_PASSWORD.setMaxLength(2000)
+        self.CURRENT_PASSWORD.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.CURRENT_PASSWORD.setDragEnabled(True)
+        self.CURRENT_PASSWORD.setPlaceholderText("")
+        self.CURRENT_PASSWORD.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.CURRENT_PASSWORD.setClearButtonEnabled(True)
+        self.CURRENT_PASSWORD.setObjectName("CURRENT_PASSWORD")
+        self.NEW_PASSWORD = QtWidgets.QLineEdit(self.frame_10)
+        self.NEW_PASSWORD.setGeometry(QtCore.QRect(40, 180, 311, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mm_newpassin.setFont(font)
-        self.mm_newpassin.setStyleSheet("background-color: white;\n"
+        self.NEW_PASSWORD.setFont(font)
+        self.NEW_PASSWORD.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:black;\n"
@@ -115,23 +115,23 @@ class Ui_MyaccWindow(object):
 "font: 75 13pt \"Ubuntu Mono\";\n"
 "\n"
 "")
-        self.mm_newpassin.setMaxLength(2000)
-        self.mm_newpassin.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.mm_newpassin.setDragEnabled(True)
-        self.mm_newpassin.setPlaceholderText("")
-        self.mm_newpassin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mm_newpassin.setClearButtonEnabled(True)
-        self.mm_newpassin.setObjectName("mm_newpassin")
-        self.mm_conpassin = QtWidgets.QLineEdit(self.frame_10)
-        self.mm_conpassin.setGeometry(QtCore.QRect(40, 250, 311, 31))
+        self.NEW_PASSWORD.setMaxLength(2000)
+        self.NEW_PASSWORD.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.NEW_PASSWORD.setDragEnabled(True)
+        self.NEW_PASSWORD.setPlaceholderText("")
+        self.NEW_PASSWORD.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.NEW_PASSWORD.setClearButtonEnabled(True)
+        self.NEW_PASSWORD.setObjectName("NEW_PASSWORD")
+        self.CONFIRME_PASSWORD = QtWidgets.QLineEdit(self.frame_10)
+        self.CONFIRME_PASSWORD.setGeometry(QtCore.QRect(40, 250, 311, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mm_conpassin.setFont(font)
-        self.mm_conpassin.setStyleSheet("background-color: white;\n"
+        self.CONFIRME_PASSWORD.setFont(font)
+        self.CONFIRME_PASSWORD.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:black;\n"
@@ -139,13 +139,13 @@ class Ui_MyaccWindow(object):
 "font: 75 13pt \"Ubuntu Mono\";\n"
 "\n"
 "")
-        self.mm_conpassin.setMaxLength(2000)
-        self.mm_conpassin.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.mm_conpassin.setDragEnabled(True)
-        self.mm_conpassin.setPlaceholderText("")
-        self.mm_conpassin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mm_conpassin.setClearButtonEnabled(True)
-        self.mm_conpassin.setObjectName("mm_conpassin")
+        self.CONFIRME_PASSWORD.setMaxLength(2000)
+        self.CONFIRME_PASSWORD.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.CONFIRME_PASSWORD.setDragEnabled(True)
+        self.CONFIRME_PASSWORD.setPlaceholderText("")
+        self.CONFIRME_PASSWORD.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.CONFIRME_PASSWORD.setClearButtonEnabled(True)
+        self.CONFIRME_PASSWORD.setObjectName("CONFIRME_PASSWORD")
         self.frame_16 = QtWidgets.QFrame(self.centralwidget)
         self.frame_16.setGeometry(QtCore.QRect(0, 0, 171, 621))
         self.frame_16.setStyleSheet("border: 1px ;\n"
@@ -231,9 +231,9 @@ class Ui_MyaccWindow(object):
         self.log_credits_25.setIcon(icon2)
         self.log_credits_25.setIconSize(QtCore.QSize(25, 25))
         self.log_credits_25.setObjectName("log_credits_25")
-        self.main_accbtn = QtWidgets.QPushButton(self.frame_16)
-        self.main_accbtn.setGeometry(QtCore.QRect(10, 180, 151, 51))
-        self.main_accbtn.setStyleSheet("\n"
+        self.MY_ACCOUNT = QtWidgets.QPushButton(self.frame_16)
+        self.MY_ACCOUNT.setGeometry(QtCore.QRect(10, 180, 151, 51))
+        self.MY_ACCOUNT.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
 "    border: 2px solid white;\n"
@@ -257,12 +257,12 @@ class Ui_MyaccWindow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.main_accbtn.setIcon(icon1)
-        self.main_accbtn.setIconSize(QtCore.QSize(25, 25))
-        self.main_accbtn.setObjectName("main_accbtn")
-        self.main_booksbtn = QtWidgets.QPushButton(self.frame_16)
-        self.main_booksbtn.setGeometry(QtCore.QRect(10, 240, 151, 51))
-        self.main_booksbtn.setStyleSheet("\n"
+        self.MY_ACCOUNT.setIcon(icon1)
+        self.MY_ACCOUNT.setIconSize(QtCore.QSize(25, 25))
+        self.MY_ACCOUNT.setObjectName("MY_ACCOUNT")
+        self.BOOKS = QtWidgets.QPushButton(self.frame_16)
+        self.BOOKS.setGeometry(QtCore.QRect(10, 240, 151, 51))
+        self.BOOKS.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
 "    border: 2px solid white;\n"
@@ -286,12 +286,12 @@ class Ui_MyaccWindow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.main_booksbtn.setIcon(icon2)
-        self.main_booksbtn.setIconSize(QtCore.QSize(25, 25))
-        self.main_booksbtn.setObjectName("main_booksbtn")
-        self.main_reqbtn = QtWidgets.QPushButton(self.frame_16)
-        self.main_reqbtn.setGeometry(QtCore.QRect(10, 300, 151, 51))
-        self.main_reqbtn.setStyleSheet("\n"
+        self.BOOKS.setIcon(icon2)
+        self.BOOKS.setIconSize(QtCore.QSize(25, 25))
+        self.BOOKS.setObjectName("BOOKS")
+        self.REQUEST = QtWidgets.QPushButton(self.frame_16)
+        self.REQUEST.setGeometry(QtCore.QRect(10, 300, 151, 51))
+        self.REQUEST.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
 "    border: 2px solid white;\n"
@@ -317,9 +317,9 @@ class Ui_MyaccWindow(object):
 "")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/interview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.main_reqbtn.setIcon(icon3)
-        self.main_reqbtn.setIconSize(QtCore.QSize(25, 25))
-        self.main_reqbtn.setObjectName("main_reqbtn")
+        self.REQUEST.setIcon(icon3)
+        self.REQUEST.setIconSize(QtCore.QSize(25, 25))
+        self.REQUEST.setObjectName("REQUEST")
         self.icon11 = QtWidgets.QPushButton(self.frame_16)
         self.icon11.setGeometry(QtCore.QRect(-20, 50, 191, 111))
         self.icon11.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
@@ -338,7 +338,7 @@ class Ui_MyaccWindow(object):
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_9.setObjectName("frame_9")
         self.label32 = QtWidgets.QLabel(self.frame_9)
-        self.label32.setGeometry(QtCore.QRect(260, 120, 91, 31))
+        self.label32.setGeometry(QtCore.QRect(260, 120, 101, 31))
         self.label32.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label32.setObjectName("label32")
         self.label33 = QtWidgets.QLabel(self.frame_9)
@@ -350,7 +350,7 @@ class Ui_MyaccWindow(object):
         self.label34.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label34.setObjectName("label34")
         self.label35 = QtWidgets.QLabel(self.frame_9)
-        self.label35.setGeometry(QtCore.QRect(200, 270, 121, 31))
+        self.label35.setGeometry(QtCore.QRect(190, 270, 131, 31))
         self.label35.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label35.setObjectName("label35")
         self.label30 = QtWidgets.QLabel(self.frame_9)
@@ -383,16 +383,16 @@ class Ui_MyaccWindow(object):
         self.icon13.setIcon(icon1)
         self.icon13.setIconSize(QtCore.QSize(50, 50))
         self.icon13.setObjectName("icon13")
-        self.mm_fnameout = QtWidgets.QLineEdit(self.frame_9)
-        self.mm_fnameout.setGeometry(QtCore.QRect(50, 150, 181, 31))
+        self.FIRST_NAME = QtWidgets.QLineEdit(self.frame_9)
+        self.FIRST_NAME.setGeometry(QtCore.QRect(50, 150, 181, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mm_fnameout.setFont(font)
-        self.mm_fnameout.setStyleSheet("background-color: white;\n"
+        self.FIRST_NAME.setFont(font)
+        self.FIRST_NAME.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:black;\n"
@@ -400,24 +400,24 @@ class Ui_MyaccWindow(object):
 "font: 75 13pt \"Ubuntu Mono\";\n"
 "\n"
 "")
-        self.mm_fnameout.setMaxLength(100)
-        self.mm_fnameout.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mm_fnameout.setDragEnabled(True)
-        self.mm_fnameout.setReadOnly(True)
-        self.mm_fnameout.setPlaceholderText("")
-        self.mm_fnameout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mm_fnameout.setClearButtonEnabled(False)
-        self.mm_fnameout.setObjectName("mm_fnameout")
-        self.mm_nameout = QtWidgets.QLineEdit(self.frame_9)
-        self.mm_nameout.setGeometry(QtCore.QRect(260, 150, 201, 31))
+        self.FIRST_NAME.setMaxLength(100)
+        self.FIRST_NAME.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.FIRST_NAME.setDragEnabled(True)
+        self.FIRST_NAME.setReadOnly(True)
+        self.FIRST_NAME.setPlaceholderText("")
+        self.FIRST_NAME.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.FIRST_NAME.setClearButtonEnabled(False)
+        self.FIRST_NAME.setObjectName("FIRST_NAME")
+        self.LAST_NAME = QtWidgets.QLineEdit(self.frame_9)
+        self.LAST_NAME.setGeometry(QtCore.QRect(260, 150, 201, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mm_nameout.setFont(font)
-        self.mm_nameout.setStyleSheet("background-color: white;\n"
+        self.LAST_NAME.setFont(font)
+        self.LAST_NAME.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:black;\n"
@@ -425,24 +425,24 @@ class Ui_MyaccWindow(object):
 "font: 75 13pt \"Ubuntu Mono\";\n"
 "\n"
 "")
-        self.mm_nameout.setMaxLength(100)
-        self.mm_nameout.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mm_nameout.setDragEnabled(True)
-        self.mm_nameout.setReadOnly(True)
-        self.mm_nameout.setPlaceholderText("")
-        self.mm_nameout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mm_nameout.setClearButtonEnabled(False)
-        self.mm_nameout.setObjectName("mm_nameout")
-        self.mm_idout = QtWidgets.QLineEdit(self.frame_9)
-        self.mm_idout.setGeometry(QtCore.QRect(50, 220, 181, 31))
+        self.LAST_NAME.setMaxLength(100)
+        self.LAST_NAME.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.LAST_NAME.setDragEnabled(True)
+        self.LAST_NAME.setReadOnly(True)
+        self.LAST_NAME.setPlaceholderText("")
+        self.LAST_NAME.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.LAST_NAME.setClearButtonEnabled(False)
+        self.LAST_NAME.setObjectName("LAST_NAME")
+        self.ID = QtWidgets.QLineEdit(self.frame_9)
+        self.ID.setGeometry(QtCore.QRect(50, 220, 181, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mm_idout.setFont(font)
-        self.mm_idout.setStyleSheet("background-color: white;\n"
+        self.ID.setFont(font)
+        self.ID.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:black;\n"
@@ -450,24 +450,24 @@ class Ui_MyaccWindow(object):
 "font: 75 13pt \"Ubuntu Mono\";\n"
 "\n"
 "")
-        self.mm_idout.setMaxLength(100)
-        self.mm_idout.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mm_idout.setDragEnabled(True)
-        self.mm_idout.setReadOnly(True)
-        self.mm_idout.setPlaceholderText("")
-        self.mm_idout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mm_idout.setClearButtonEnabled(False)
-        self.mm_idout.setObjectName("mm_idout")
-        self.mm_phoneout = QtWidgets.QLineEdit(self.frame_9)
-        self.mm_phoneout.setGeometry(QtCore.QRect(320, 220, 141, 31))
+        self.ID.setMaxLength(100)
+        self.ID.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.ID.setDragEnabled(True)
+        self.ID.setReadOnly(True)
+        self.ID.setPlaceholderText("")
+        self.ID.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.ID.setClearButtonEnabled(False)
+        self.ID.setObjectName("ID")
+        self.PHONE = QtWidgets.QLineEdit(self.frame_9)
+        self.PHONE.setGeometry(QtCore.QRect(320, 220, 141, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mm_phoneout.setFont(font)
-        self.mm_phoneout.setStyleSheet("background-color: white;\n"
+        self.PHONE.setFont(font)
+        self.PHONE.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:black;\n"
@@ -475,24 +475,24 @@ class Ui_MyaccWindow(object):
 "font: 75 13pt \"Ubuntu Mono\";\n"
 "\n"
 "")
-        self.mm_phoneout.setMaxLength(100)
-        self.mm_phoneout.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mm_phoneout.setDragEnabled(True)
-        self.mm_phoneout.setReadOnly(True)
-        self.mm_phoneout.setPlaceholderText("")
-        self.mm_phoneout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mm_phoneout.setClearButtonEnabled(False)
-        self.mm_phoneout.setObjectName("mm_phoneout")
-        self.mm_mailout = QtWidgets.QLineEdit(self.frame_9)
-        self.mm_mailout.setGeometry(QtCore.QRect(150, 300, 221, 31))
+        self.PHONE.setMaxLength(100)
+        self.PHONE.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.PHONE.setDragEnabled(True)
+        self.PHONE.setReadOnly(True)
+        self.PHONE.setPlaceholderText("")
+        self.PHONE.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.PHONE.setClearButtonEnabled(False)
+        self.PHONE.setObjectName("PHONE")
+        self.EMAIL_ADDRESS = QtWidgets.QLineEdit(self.frame_9)
+        self.EMAIL_ADDRESS.setGeometry(QtCore.QRect(150, 300, 221, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.mm_mailout.setFont(font)
-        self.mm_mailout.setStyleSheet("background-color: white;\n"
+        self.EMAIL_ADDRESS.setFont(font)
+        self.EMAIL_ADDRESS.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:black;\n"
@@ -500,14 +500,14 @@ class Ui_MyaccWindow(object):
 "font: 75 13pt \"Ubuntu Mono\";\n"
 "\n"
 "")
-        self.mm_mailout.setMaxLength(100)
-        self.mm_mailout.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.mm_mailout.setDragEnabled(True)
-        self.mm_mailout.setReadOnly(True)
-        self.mm_mailout.setPlaceholderText("")
-        self.mm_mailout.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.mm_mailout.setClearButtonEnabled(False)
-        self.mm_mailout.setObjectName("mm_mailout")
+        self.EMAIL_ADDRESS.setMaxLength(100)
+        self.EMAIL_ADDRESS.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.EMAIL_ADDRESS.setDragEnabled(True)
+        self.EMAIL_ADDRESS.setReadOnly(True)
+        self.EMAIL_ADDRESS.setPlaceholderText("")
+        self.EMAIL_ADDRESS.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.EMAIL_ADDRESS.setClearButtonEnabled(False)
+        self.EMAIL_ADDRESS.setObjectName("EMAIL_ADDRESS")
         self.frame_8 = QtWidgets.QFrame(self.centralwidget)
         self.frame_8.setGeometry(QtCore.QRect(180, 0, 941, 121))
         self.frame_8.setStyleSheet("border: 1px ;\n"
@@ -522,9 +522,9 @@ class Ui_MyaccWindow(object):
 "color:white;\n"
 "background-color: rgba(28, 113, 216, 0);")
         self.label25.setObjectName("label25")
-        self.mm_logoutbtn = QtWidgets.QPushButton(self.frame_8)
-        self.mm_logoutbtn.setGeometry(QtCore.QRect(810, 10, 121, 41))
-        self.mm_logoutbtn.setStyleSheet("\n"
+        self.LOGOUT = QtWidgets.QPushButton(self.frame_8)
+        self.LOGOUT.setGeometry(QtCore.QRect(810, 10, 121, 41))
+        self.LOGOUT.setStyleSheet("\n"
 "QPushButton {\n"
 "background-color:rgb(224, 27, 36);\n"
 "    border: 2px solid white;\n"
@@ -550,9 +550,9 @@ class Ui_MyaccWindow(object):
 "")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/logout (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.mm_logoutbtn.setIcon(icon6)
-        self.mm_logoutbtn.setIconSize(QtCore.QSize(20, 20))
-        self.mm_logoutbtn.setObjectName("mm_logoutbtn")
+        self.LOGOUT.setIcon(icon6)
+        self.LOGOUT.setIconSize(QtCore.QSize(20, 20))
+        self.LOGOUT.setObjectName("LOGOUT")
         #MyaccWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MyaccWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 22))
@@ -568,20 +568,20 @@ class Ui_MyaccWindow(object):
         self.label29.setText(_translate("MyaccWindow", "Confirme password"))
         self.label26.setText(_translate("MyaccWindow", "Change password"))
         self.label28.setText(_translate("MyaccWindow", "New password"))
-        self.mm_submitbtn.setText(_translate("MyaccWindow", "Submit"))
+        self.SUBMIT.setText(_translate("MyaccWindow", "Submit"))
         self.label27.setText(_translate("MyaccWindow", "Current password"))
         self.label19.setText(_translate("MyaccWindow", "Library"))
         self.log_credits_24.setText(_translate("MyaccWindow", "My account"))
         self.log_credits_25.setText(_translate("MyaccWindow", "Books"))
-        self.main_accbtn.setText(_translate("MyaccWindow", "My account"))
-        self.main_booksbtn.setText(_translate("MyaccWindow", "Books"))
-        self.main_reqbtn.setText(_translate("MyaccWindow", "Request"))
-        self.label32.setText(_translate("MyaccWindow", "Name"))
+        self.MY_ACCOUNT.setText(_translate("MyaccWindow", "My account"))
+        self.BOOKS.setText(_translate("MyaccWindow", "Books"))
+        self.REQUEST.setText(_translate("MyaccWindow", "Request"))
+        self.label32.setText(_translate("MyaccWindow", "Last Name"))
         self.label33.setText(_translate("MyaccWindow", "ID"))
         self.label34.setText(_translate("MyaccWindow", "Phone"))
-        self.label35.setText(_translate("MyaccWindow", "Mail address"))
+        self.label35.setText(_translate("MyaccWindow", "Email Address"))
         self.label30.setText(_translate("MyaccWindow", "My Informations"))
-        self.label31.setText(_translate("MyaccWindow", "Family name"))
+        self.label31.setText(_translate("MyaccWindow", "First name"))
         self.pushButton_11.setText(_translate("MyaccWindow", "+213"))
         self.label25.setText(_translate("MyaccWindow", "My Account"))
-        self.mm_logoutbtn.setText(_translate("MyaccWindow", "Logout"))
+        self.LOGOUT.setText(_translate("MyaccWindow", "Logout"))

@@ -32,16 +32,16 @@ class Ui_Gui(object):
         #TAB 1
         self.tab0 = QtWidgets.QWidget()
         self.tab0.setObjectName("tab0")
-        self.bookswin=Ui_BooksWindow()
-        self.bookswin.setupUi(self.tab0)
+        self.BooksWindow=Ui_BooksWindow()
+        self.BooksWindow.setupUi(self.tab0)
         self.library_tab.addTab(self.tab0,"")
 
 
         #TAB 2
         self.tab1 = QtWidgets.QWidget()
         self.tab1.setObjectName("tab1")
-        self.memberswin=Ui_MembersWidnow()
-        self.memberswin.setupUi(self.tab1)
+        self.MembersWindow=Ui_MembersWidnow()
+        self.MembersWindow.setupUi(self.tab1)
         self.library_tab.addTab(self.tab1,"")
         
         
@@ -49,8 +49,8 @@ class Ui_Gui(object):
         #########################################
 
         #Actions
-        self.bookswin.manage_members.clicked.connect(self.tomembers)
-        self.memberswin.manage_books.clicked.connect(self.tobooks)
+        self.BooksWindow.MANAGE_MEMBERS.clicked.connect(self.tomembers)
+        self.MembersWindow.MANAGE_BOOKS.clicked.connect(self.tobooks)
 
         '''Setting initial index to Zero which means 
         when you run the code the first page u will see is the login page'''

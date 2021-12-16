@@ -40,15 +40,15 @@ class Ui_HelpWindow(object):
         self.icon8.setIcon(icon)
         self.icon8.setIconSize(QtCore.QSize(50, 50))
         self.icon8.setObjectName("icon8")
-        self.help_backbtn = QtWidgets.QPushButton(self.frame_11)
-        self.help_backbtn.setGeometry(QtCore.QRect(10, 10, 51, 41))
-        self.help_backbtn.setStyleSheet("")
-        self.help_backbtn.setText("")
+        self.BACK = QtWidgets.QPushButton(self.frame_11)
+        self.BACK.setGeometry(QtCore.QRect(10, 10, 51, 41))
+        self.BACK.setStyleSheet("")
+        self.BACK.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/previous.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.help_backbtn.setIcon(icon1)
-        self.help_backbtn.setIconSize(QtCore.QSize(40, 40))
-        self.help_backbtn.setObjectName("help_backbtn")
+        self.BACK.setIcon(icon1)
+        self.BACK.setIconSize(QtCore.QSize(40, 40))
+        self.BACK.setObjectName("BACK")
         self.frame_12 = QtWidgets.QFrame(self.centralwidget)
         self.frame_12.setGeometry(QtCore.QRect(390, 80, 291, 451))
         self.frame_12.setStyleSheet("border: 1px ;\n"
@@ -81,9 +81,9 @@ class Ui_HelpWindow(object):
         self.icon9.setIcon(icon3)
         self.icon9.setIconSize(QtCore.QSize(50, 50))
         self.icon9.setObjectName("icon9")
-        self.help_codebtn = QtWidgets.QPushButton(self.frame_12)
-        self.help_codebtn.setGeometry(QtCore.QRect(50, 150, 191, 51))
-        self.help_codebtn.setStyleSheet("\n"
+        self.CHECK_CODE = QtWidgets.QPushButton(self.frame_12)
+        self.CHECK_CODE.setGeometry(QtCore.QRect(50, 150, 191, 51))
+        self.CHECK_CODE.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(28, 113, 216);\n"
 "    border: 2px solid white;\n"
@@ -109,12 +109,12 @@ class Ui_HelpWindow(object):
 "")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/coding.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.help_codebtn.setIcon(icon4)
-        self.help_codebtn.setIconSize(QtCore.QSize(30, 30))
-        self.help_codebtn.setObjectName("help_codebtn")
-        self.help_tutorialbtn = QtWidgets.QPushButton(self.frame_12)
-        self.help_tutorialbtn.setGeometry(QtCore.QRect(50, 210, 191, 51))
-        self.help_tutorialbtn.setStyleSheet("\n"
+        self.CHECK_CODE.setIcon(icon4)
+        self.CHECK_CODE.setIconSize(QtCore.QSize(30, 30))
+        self.CHECK_CODE.setObjectName("CHECK_CODE")
+        self.TUTORIAL = QtWidgets.QPushButton(self.frame_12)
+        self.TUTORIAL.setGeometry(QtCore.QRect(50, 210, 191, 51))
+        self.TUTORIAL.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(28, 113, 216);\n"
 "    border: 2px solid white;\n"
@@ -140,12 +140,12 @@ class Ui_HelpWindow(object):
 "")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/video-tutorials.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.help_tutorialbtn.setIcon(icon5)
-        self.help_tutorialbtn.setIconSize(QtCore.QSize(30, 30))
-        self.help_tutorialbtn.setObjectName("help_tutorialbtn")
-        self.help_bugbtn = QtWidgets.QPushButton(self.frame_12)
-        self.help_bugbtn.setGeometry(QtCore.QRect(50, 270, 191, 51))
-        self.help_bugbtn.setStyleSheet("\n"
+        self.TUTORIAL.setIcon(icon5)
+        self.TUTORIAL.setIconSize(QtCore.QSize(30, 30))
+        self.TUTORIAL.setObjectName("TUTORIAL")
+        self.REPORT_BUG = QtWidgets.QPushButton(self.frame_12)
+        self.REPORT_BUG.setGeometry(QtCore.QRect(50, 270, 191, 51))
+        self.REPORT_BUG.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(28, 113, 216);\n"
 "    border: 2px solid white;\n"
@@ -171,12 +171,12 @@ class Ui_HelpWindow(object):
 "")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/bug-report.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.help_bugbtn.setIcon(icon6)
-        self.help_bugbtn.setIconSize(QtCore.QSize(30, 30))
-        self.help_bugbtn.setObjectName("help_bugbtn")
-        self.help_contactbtn = QtWidgets.QPushButton(self.frame_12)
-        self.help_contactbtn.setGeometry(QtCore.QRect(50, 330, 191, 51))
-        self.help_contactbtn.setStyleSheet("\n"
+        self.REPORT_BUG.setIcon(icon6)
+        self.REPORT_BUG.setIconSize(QtCore.QSize(30, 30))
+        self.REPORT_BUG.setObjectName("REPORT_BUG")
+        self.CONTACT_US = QtWidgets.QPushButton(self.frame_12)
+        self.CONTACT_US.setGeometry(QtCore.QRect(50, 330, 191, 51))
+        self.CONTACT_US.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(28, 113, 216);\n"
 "    border: 2px solid white;\n"
@@ -202,21 +202,21 @@ class Ui_HelpWindow(object):
 "")
         icon7 = QtGui.QIcon()
         icon7.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/contact-us.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.help_contactbtn.setIcon(icon7)
-        self.help_contactbtn.setIconSize(QtCore.QSize(30, 30))
-        self.help_contactbtn.setObjectName("help_contactbtn")
+        self.CONTACT_US.setIcon(icon7)
+        self.CONTACT_US.setIconSize(QtCore.QSize(30, 30))
+        self.CONTACT_US.setObjectName("CONTACT_US")
         self.frame_13.raise_()
         self.icon10.raise_()
         self.icon9.raise_()
-        self.help_codebtn.raise_()
-        self.help_tutorialbtn.raise_()
-        self.help_bugbtn.raise_()
-        self.help_contactbtn.raise_()
-        # HelpWindow.setCentralWidget(self.centralwidget)
+        self.CHECK_CODE.raise_()
+        self.TUTORIAL.raise_()
+        self.REPORT_BUG.raise_()
+        self.CONTACT_US.raise_()
+        #HelpWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(HelpWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 22))
         self.menubar.setObjectName("menubar")
-        # HelpWindow.setMenuBar(self.menubar)
+        #HelpWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(HelpWindow)
         QtCore.QMetaObject.connectSlotsByName(HelpWindow)
@@ -225,7 +225,7 @@ class Ui_HelpWindow(object):
         _translate = QtCore.QCoreApplication.translate
         HelpWindow.setWindowTitle(_translate("HelpWindow", "Help"))
         self.label18.setText(_translate("HelpWindow", "Library"))
-        self.help_codebtn.setText(_translate("HelpWindow", "Check the code"))
-        self.help_tutorialbtn.setText(_translate("HelpWindow", "Tutorial"))
-        self.help_bugbtn.setText(_translate("HelpWindow", "Report a bug"))
-        self.help_contactbtn.setText(_translate("HelpWindow", "Contact Us"))
+        self.CHECK_CODE.setText(_translate("HelpWindow", "Check the code"))
+        self.TUTORIAL.setText(_translate("HelpWindow", "Tutorial"))
+        self.REPORT_BUG.setText(_translate("HelpWindow", "Report a bug"))
+        self.CONTACT_US.setText(_translate("HelpWindow", "Contact Us"))

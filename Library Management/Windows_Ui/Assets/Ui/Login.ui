@@ -54,7 +54,7 @@ color:white;</string>
       <string>Library</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="lg_helpbtn">
+    <widget class="QPushButton" name="HELP">
      <property name="geometry">
       <rect>
        <x>170</x>
@@ -164,7 +164,7 @@ background-color: white;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="lg_signupbtn">
+    <widget class="QPushButton" name="SIGN_UP">
      <property name="geometry">
       <rect>
        <x>250</x>
@@ -211,7 +211,7 @@ font:serif;
       <string notr="true">font: 75 16pt &quot;Ubuntu&quot;;</string>
      </property>
      <property name="text">
-      <string>STUDENT ID</string>
+      <string>ID</string>
      </property>
     </widget>
     <widget class="QLabel" name="label6">
@@ -230,7 +230,7 @@ font:serif;
       <string>Password</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="lg_signinbtn">
+    <widget class="QPushButton" name="SIGN_IN">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -358,7 +358,7 @@ color:rgb(28, 113, 216);</string>
       </size>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lg_idin">
+    <widget class="QLineEdit" name="ID">
      <property name="geometry">
       <rect>
        <x>100</x>
@@ -406,7 +406,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lg_passin">
+    <widget class="QLineEdit" name="PASSWORD">
      <property name="geometry">
       <rect>
        <x>100</x>

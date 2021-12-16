@@ -81,7 +81,7 @@ background-color: rgba(28, 113, 216, 0);</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="manage_books">
+    <widget class="QPushButton" name="MANAGE_BOOKS">
      <property name="geometry">
       <rect>
        <x>1010</x>
@@ -228,7 +228,7 @@ background-color: rgba(42, 41, 41, 0);</string>
      <string>First Name</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="fname">
+   <widget class="QLineEdit" name="FIRST_NAME">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -276,7 +276,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lname">
+   <widget class="QLineEdit" name="LAST_NAME">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -324,7 +324,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="phone">
+   <widget class="QLineEdit" name="PHONE">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -410,7 +410,7 @@ background-color: rgba(28, 113, 216, 0);</string>
       <string>Manage Member Informations</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="sub_modifications">
+    <widget class="QPushButton" name="SUBMIT_MODIFICATION">
      <property name="geometry">
       <rect>
        <x>180</x>
@@ -460,7 +460,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="deletemember">
+    <widget class="QPushButton" name="DELETE">
      <property name="geometry">
       <rect>
        <x>180</x>
@@ -510,7 +510,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="addmember">
+    <widget class="QPushButton" name="ADDMEMBER">
      <property name="geometry">
       <rect>
        <x>180</x>
@@ -560,7 +560,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QLineEdit" name="email">
+    <widget class="QLineEdit" name="EMAIL_ADDRESS">
      <property name="geometry">
       <rect>
        <x>300</x>
@@ -613,7 +613,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <rect>
        <x>300</x>
        <y>160</y>
-       <width>121</width>
+       <width>131</width>
        <height>31</height>
       </rect>
      </property>
@@ -622,7 +622,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
 background-color: rgba(65, 191, 64, 0);</string>
      </property>
      <property name="text">
-      <string>Email</string>
+      <string>Email Address</string>
      </property>
     </widget>
     <widget class="QLabel" name="label23_4">
@@ -642,7 +642,7 @@ background-color: rgba(65, 191, 64, 0);</string>
       <string>ID</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="id">
+    <widget class="QLineEdit" name="ID">
      <property name="geometry">
       <rect>
        <x>170</x>
@@ -717,7 +717,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
      </property>
     </widget>
    </widget>
-   <widget class="QLineEdit" name="title_in">
+   <widget class="QLineEdit" name="SEARCH_FIELD">
     <property name="geometry">
      <rect>
       <x>590</x>
@@ -765,7 +765,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="search_mem">
+   <widget class="QPushButton" name="SUBMIT">
     <property name="geometry">
      <rect>
       <x>1070</x>
@@ -821,11 +821,11 @@ QPushButton:hover {
    <zorder>label22</zorder>
    <zorder>label23</zorder>
    <zorder>label21</zorder>
-   <zorder>fname</zorder>
-   <zorder>lname</zorder>
-   <zorder>phone</zorder>
-   <zorder>title_in</zorder>
-   <zorder>search_mem</zorder>
+   <zorder>FIRST_NAME</zorder>
+   <zorder>LAST_NAME</zorder>
+   <zorder>PHONE</zorder>
+   <zorder>SEARCH_FIELD</zorder>
+   <zorder>SUBMIT</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

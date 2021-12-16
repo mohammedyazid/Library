@@ -80,7 +80,7 @@ color:white;</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="help_backbtn">
+    <widget class="QPushButton" name="BACK">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -198,7 +198,7 @@ background-color: rgba(42, 41, 41, 0)</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="help_codebtn">
+    <widget class="QPushButton" name="CHECK_CODE">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -247,7 +247,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="help_tutorialbtn">
+    <widget class="QPushButton" name="TUTORIAL">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -296,7 +296,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="help_bugbtn">
+    <widget class="QPushButton" name="REPORT_BUG">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -345,7 +345,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="help_contactbtn">
+    <widget class="QPushButton" name="CONTACT_US">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -397,10 +397,10 @@ QPushButton:hover {
     <zorder>frame_13</zorder>
     <zorder>icon10</zorder>
     <zorder>icon9</zorder>
-    <zorder>help_codebtn</zorder>
-    <zorder>help_tutorialbtn</zorder>
-    <zorder>help_bugbtn</zorder>
-    <zorder>help_contactbtn</zorder>
+    <zorder>CHECK_CODE</zorder>
+    <zorder>TUTORIAL</zorder>
+    <zorder>REPORT_BUG</zorder>
+    <zorder>CONTACT_US</zorder>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

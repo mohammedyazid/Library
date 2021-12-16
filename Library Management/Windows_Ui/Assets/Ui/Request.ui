@@ -179,7 +179,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="main_accbtn">
+    <widget class="QPushButton" name="MY_ACCOUNT">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -228,7 +228,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="main_booksbtn">
+    <widget class="QPushButton" name="BOOKS">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -269,55 +269,6 @@ QPushButton:hover {
      <property name="icon">
       <iconset>
        <normaloff>Icons/book.png</normaloff>Icons/book.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>25</width>
-       <height>25</height>
-      </size>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="main_reqbtn">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>300</y>
-       <width>151</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-QPushButton {
-	background-color: rgb(46, 194, 126);
-    border: 2px solid white;
-    border-radius: 20px;
-    border-style: outset;
-    padding: 5px;
-    transition: all .5s ease;
-    color: white;
-    font-family:'Montserrat', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1;
-    font-size: 12px;
-    padding: 10px;
-    outline: none;
-    
-    
-}
-QPushButton:hover {
-    color:rgb(0, 137, 236);;
-    background-color: white;;
-}
-</string>
-     </property>
-     <property name="text">
-      <string>Request</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>Icons/interview.png</normaloff>Icons/interview.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -418,10 +369,10 @@ background-color: white;</string>
       <string notr="true">font: 75 16pt &quot;Ubuntu&quot;;</string>
      </property>
      <property name="text">
-      <string>Release Date</string>
+      <string>Release Year</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="mr_reqbtn">
+    <widget class="QPushButton" name="REQUEST">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -488,7 +439,7 @@ background-color: rgba(28, 113, 216, 0)</string>
       <string>Request adding a book</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mr_btitlein">
+    <widget class="QLineEdit" name="BOOK_TITLE">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -536,7 +487,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mr_authorin">
+    <widget class="QLineEdit" name="AUTHOR">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -584,7 +535,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mr_rdatein">
+    <widget class="QLineEdit" name="RELEASE_YEAR">
      <property name="geometry">
       <rect>
        <x>90</x>

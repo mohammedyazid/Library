@@ -81,7 +81,7 @@ background-color: rgba(28, 113, 216, 0);</string>
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="manage_members">
+    <widget class="QPushButton" name="MANAGE_MEMBERS">
      <property name="geometry">
       <rect>
        <x>1010</x>
@@ -168,7 +168,7 @@ background-color: rgb(34, 39, 46);</string>
     </column>
     <column>
      <property name="text">
-      <string>Release Date</string>
+      <string>Release Year</string>
      </property>
     </column>
     <column>
@@ -211,7 +211,7 @@ background-color: rgba(65, 191, 64, 0);</string>
      <string>Release Year</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="add_book">
+   <widget class="QPushButton" name="ADD_BOOK">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -278,7 +278,7 @@ background-color: rgba(42, 41, 41, 0);</string>
      <string>Book Title</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="bktitle_in">
+   <widget class="QLineEdit" name="BOOK_TITLE_ADD">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -326,7 +326,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="bkauthor_in">
+   <widget class="QLineEdit" name="AUTHOR_ADD">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -374,7 +374,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="bkyear_in">
+   <widget class="QLineEdit" name="RELEASE_YEAR_ADD">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -481,7 +481,7 @@ background-color: white;</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="sub_modifications">
+    <widget class="QPushButton" name="SUBMIT_MODIFICATION">
      <property name="geometry">
       <rect>
        <x>290</x>
@@ -531,7 +531,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="delete_book">
+    <widget class="QPushButton" name="DELETE">
      <property name="geometry">
       <rect>
        <x>290</x>
@@ -615,7 +615,7 @@ background-color: rgba(42, 41, 41, 0);</string>
       <string>Author</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="bktitle_mod">
+    <widget class="QLineEdit" name="BOOK_TITLE">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -663,7 +663,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="bkauthor_mod">
+    <widget class="QLineEdit" name="AUTHOR">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -711,7 +711,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="bkyear_mod">
+    <widget class="QLineEdit" name="RELEASE_YEAR">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -777,7 +777,7 @@ background-color: rgba(65, 191, 64, 0);</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLineEdit" name="title_in">
+   <widget class="QLineEdit" name="SEARCH_FIELD">
     <property name="geometry">
      <rect>
       <x>590</x>
@@ -825,7 +825,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="search">
+   <widget class="QPushButton" name="SUBMIT">
     <property name="geometry">
      <rect>
       <x>1070</x>
@@ -912,7 +912,7 @@ background-color: rgba(42, 41, 41, 0);</string>
       <string>Number of Books in the library</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="books_num">
+    <widget class="QLineEdit" name="NUMBER_OF_BOOKS">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -1001,7 +1001,7 @@ background-color: rgba(42, 41, 41, 0);</string>
       <string>Number of Members</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="memb_num">
+    <widget class="QLineEdit" name="NUMBER_OF_MEMBERS">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -1058,14 +1058,14 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
    <zorder>Books_table</zorder>
    <zorder>label22</zorder>
    <zorder>label23</zorder>
-   <zorder>add_book</zorder>
+   <zorder>ADD_BOOK</zorder>
    <zorder>label21</zorder>
-   <zorder>bktitle_in</zorder>
-   <zorder>bkauthor_in</zorder>
-   <zorder>bkyear_in</zorder>
+   <zorder>BOOK_TITLE_ADD</zorder>
+   <zorder>AUTHOR_ADD</zorder>
+   <zorder>RELEASE_YEAR_ADD</zorder>
    <zorder>frame_16</zorder>
-   <zorder>title_in</zorder>
-   <zorder>search</zorder>
+   <zorder>SEARCH_FIELD</zorder>
+   <zorder>SUBMIT</zorder>
    <zorder>frame_17</zorder>
    <zorder>frame_18</zorder>
   </widget>

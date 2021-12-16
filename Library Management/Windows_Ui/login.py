@@ -31,9 +31,9 @@ class Ui_LoginWindow(object):
         self.label1.setStyleSheet("font: 63 italic 40pt \"URW Bookman\";\n"
 "color:white;")
         self.label1.setObjectName("label1")
-        self.lg_helpbtn = QtWidgets.QPushButton(self.frame_2)
-        self.lg_helpbtn.setGeometry(QtCore.QRect(170, 270, 171, 41))
-        self.lg_helpbtn.setStyleSheet("\n"
+        self.HELP = QtWidgets.QPushButton(self.frame_2)
+        self.HELP.setGeometry(QtCore.QRect(170, 270, 171, 41))
+        self.HELP.setStyleSheet("\n"
 "QPushButton {\n"
 "    transition: all .5s ease;\n"
 "    color: white;\n"
@@ -55,7 +55,7 @@ class Ui_LoginWindow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.lg_helpbtn.setObjectName("lg_helpbtn")
+        self.HELP.setObjectName("HELP")
         self.icon2 = QtWidgets.QPushButton(self.frame_2)
         self.icon2.setGeometry(QtCore.QRect(290, 60, 89, 41))
         self.icon2.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
@@ -82,10 +82,10 @@ class Ui_LoginWindow(object):
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.lg_signupbtn = QtWidgets.QPushButton(self.frame)
-        self.lg_signupbtn.setGeometry(QtCore.QRect(250, 400, 81, 41))
-        self.lg_signupbtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.lg_signupbtn.setStyleSheet("QPushButton{background-color:transparent;\n"
+        self.SIGN_UP = QtWidgets.QPushButton(self.frame)
+        self.SIGN_UP.setGeometry(QtCore.QRect(250, 400, 81, 41))
+        self.SIGN_UP.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.SIGN_UP.setStyleSheet("QPushButton{background-color:transparent;\n"
 "color: rgb(46, 194, 126);\n"
 "font: 75 12pt \"Ubuntu\";\n"
 "border-style: solid;\n"
@@ -101,7 +101,7 @@ class Ui_LoginWindow(object):
 "border-radius: 10px;\n"
 "font:serif;\n"
 "}")
-        self.lg_signupbtn.setObjectName("lg_signupbtn")
+        self.SIGN_UP.setObjectName("SIGN_UP")
         self.label5 = QtWidgets.QLabel(self.frame)
         self.label5.setGeometry(QtCore.QRect(110, 190, 111, 17))
         self.label5.setStyleSheet("font: 75 16pt \"Ubuntu\";")
@@ -110,9 +110,9 @@ class Ui_LoginWindow(object):
         self.label6.setGeometry(QtCore.QRect(110, 270, 111, 20))
         self.label6.setStyleSheet("font: 75 16pt \"Ubuntu\";")
         self.label6.setObjectName("label6")
-        self.lg_signinbtn = QtWidgets.QPushButton(self.frame)
-        self.lg_signinbtn.setGeometry(QtCore.QRect(110, 360, 261, 41))
-        self.lg_signinbtn.setStyleSheet("\n"
+        self.SIGN_IN = QtWidgets.QPushButton(self.frame)
+        self.SIGN_IN.setGeometry(QtCore.QRect(110, 360, 261, 41))
+        self.SIGN_IN.setStyleSheet("\n"
 "QPushButton {\n"
 "    transition: all .5s ease;\n"
 "    color: rgb(0, 137, 236);;\n"
@@ -134,7 +134,7 @@ class Ui_LoginWindow(object):
 "    background-color: rgb(0, 137, 236);;\n"
 "}\n"
 "")
-        self.lg_signinbtn.setObjectName("lg_signinbtn")
+        self.SIGN_IN.setObjectName("SIGN_IN")
         self.label7 = QtWidgets.QLabel(self.frame)
         self.label7.setGeometry(QtCore.QRect(120, 410, 131, 21))
         self.label7.setStyleSheet("font: 75 12pt \"Ubuntu\";")
@@ -161,16 +161,16 @@ class Ui_LoginWindow(object):
         self.icon3.setIcon(icon2)
         self.icon3.setIconSize(QtCore.QSize(100, 100))
         self.icon3.setObjectName("icon3")
-        self.lg_idin = QtWidgets.QLineEdit(self.frame)
-        self.lg_idin.setGeometry(QtCore.QRect(100, 210, 281, 31))
+        self.ID = QtWidgets.QLineEdit(self.frame)
+        self.ID.setGeometry(QtCore.QRect(100, 210, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.lg_idin.setFont(font)
-        self.lg_idin.setStyleSheet("background-color: white;\n"
+        self.ID.setFont(font)
+        self.ID.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -179,22 +179,22 @@ class Ui_LoginWindow(object):
 "\n"
 "\n"
 "")
-        self.lg_idin.setMaxLength(10)
-        self.lg_idin.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.lg_idin.setDragEnabled(True)
-        self.lg_idin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.lg_idin.setClearButtonEnabled(True)
-        self.lg_idin.setObjectName("lg_idin")
-        self.lg_passin = QtWidgets.QLineEdit(self.frame)
-        self.lg_passin.setGeometry(QtCore.QRect(100, 290, 281, 31))
+        self.ID.setMaxLength(10)
+        self.ID.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.ID.setDragEnabled(True)
+        self.ID.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.ID.setClearButtonEnabled(True)
+        self.ID.setObjectName("ID")
+        self.PASSWORD = QtWidgets.QLineEdit(self.frame)
+        self.PASSWORD.setGeometry(QtCore.QRect(100, 290, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
         font.setBold(False)
         font.setItalic(False)
         font.setWeight(9)
-        self.lg_passin.setFont(font)
-        self.lg_passin.setStyleSheet("background-color: white;\n"
+        self.PASSWORD.setFont(font)
+        self.PASSWORD.setStyleSheet("background-color: white;\n"
 "border-style: solid;\n"
 "border-width: 1px;\n"
 "border-color:rgb(0, 137, 236);\n"
@@ -203,13 +203,13 @@ class Ui_LoginWindow(object):
 "\n"
 "\n"
 "")
-        self.lg_passin.setMaxLength(2000)
-        self.lg_passin.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.lg_passin.setDragEnabled(True)
-        self.lg_passin.setPlaceholderText("")
-        self.lg_passin.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.lg_passin.setClearButtonEnabled(True)
-        self.lg_passin.setObjectName("lg_passin")
+        self.PASSWORD.setMaxLength(2000)
+        self.PASSWORD.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.PASSWORD.setDragEnabled(True)
+        self.PASSWORD.setPlaceholderText("")
+        self.PASSWORD.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.PASSWORD.setClearButtonEnabled(True)
+        self.PASSWORD.setObjectName("PASSWORD")
         self.lg_error = QtWidgets.QLabel(self.centralwidget)
         self.lg_error.setGeometry(QtCore.QRect(620, 350, 321, 20))
         font = QtGui.QFont()
@@ -239,13 +239,13 @@ class Ui_LoginWindow(object):
         _translate = QtCore.QCoreApplication.translate
         LoginWindow.setWindowTitle(_translate("LoginWindow", "Login"))
         self.label1.setText(_translate("LoginWindow", "Library"))
-        self.lg_helpbtn.setText(_translate("LoginWindow", "HELP"))
-        self.lg_signupbtn.setText(_translate("LoginWindow", "Sign Up"))
-        self.label5.setText(_translate("LoginWindow", "STUDENT ID"))
+        self.HELP.setText(_translate("LoginWindow", "HELP"))
+        self.SIGN_UP.setText(_translate("LoginWindow", "Sign Up"))
+        self.label5.setText(_translate("LoginWindow", "ID"))
         self.label6.setText(_translate("LoginWindow", "Password"))
-        self.lg_signinbtn.setText(_translate("LoginWindow", "Sign In"))
+        self.SIGN_IN.setText(_translate("LoginWindow", "Sign In"))
         self.label7.setText(_translate("LoginWindow", "Not a member yet?"))
         self.label4.setText(_translate("LoginWindow", "account"))
         self.label3.setText(_translate("LoginWindow", "Library"))
         self.label2.setText(_translate("LoginWindow", "Log into Your"))
-        self.lg_idin.setPlaceholderText(_translate("LoginWindow", "193800...."))
+        self.ID.setPlaceholderText(_translate("LoginWindow", "193800...."))

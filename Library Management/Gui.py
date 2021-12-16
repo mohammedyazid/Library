@@ -36,67 +36,67 @@ class Ui_Gui(object):
         #TAB 1
         self.tab0 = QtWidgets.QWidget()
         self.tab0.setObjectName("tab0")
-        self.login=Ui_LoginWindow()
-        self.login.setupUi(self.tab0)
+        self.LoginWindow=Ui_LoginWindow()
+        self.LoginWindow.setupUi(self.tab0)
         self.library_tab.addTab(self.tab0,"")
 
 
         #TAB 2
         self.tab1 = QtWidgets.QWidget()
         self.tab1.setObjectName("tab1")
-        self.register=Ui_RegisterWindow()
-        self.register.setupUi(self.tab1)
+        self.RegisterWindow=Ui_RegisterWindow()
+        self.RegisterWindow.setupUi(self.tab1)
         self.library_tab.addTab(self.tab1,"")
         
         #TAB 3 
         self.tab2 = QtWidgets.QWidget()
         self.tab2.setObjectName("tab2")
-        self.help=Ui_HelpWindow()
-        self.help.setupUi(self.tab2)
+        self.HelpWindow=Ui_HelpWindow()
+        self.HelpWindow.setupUi(self.tab2)
         self.library_tab.addTab(self.tab2,"")
 
         #TAB 4
         self.tab3 = QtWidgets.QWidget()
         self.tab3.setObjectName("tab3")
-        self.books= Ui_BooksWindow()
-        self.books.setupUi(self.tab3)
+        self.BooksWindow= Ui_BooksWindow()
+        self.BooksWindow.setupUi(self.tab3)
         self.library_tab.addTab(self.tab3,"")
 
         #TAB 5
         self.tab4 = QtWidgets.QWidget()
         self.tab4.setObjectName("tab4")
-        self.myacc= Ui_MyaccWindow()
-        self.myacc.setupUi(self.tab4)
+        self.AccountWindow= Ui_MyaccWindow()
+        self.AccountWindow.setupUi(self.tab4)
         self.library_tab.addTab(self.tab4,"")
 
         #TAB 6
         self.tab5 = QtWidgets.QWidget()
         self.tab5.setObjectName("tab5")
-        self.reqbook= Ui_RequestWindow()
-        self.reqbook.setupUi(self.tab5)
+        self.RequestWindow= Ui_RequestWindow()
+        self.RequestWindow.setupUi(self.tab5)
         self.library_tab.addTab(self.tab5,"")
 
         #########################################
 
         #Actions
-        self.register.re_backbtn.clicked.connect(self.toLogin)
-        self.help.help_backbtn.clicked.connect(self.toLogin)
-        #Testing self.register.re_signupbtn.clicked.connect(self.toAcc)
-        self.login.lg_signupbtn.clicked.connect(self.toRegister)
-        self.login.lg_signinbtn.clicked.connect(self.logged)
-        self.login.lg_helpbtn.clicked.connect(self.toHelp)
-        self.register.re_helpbtn.clicked.connect(self.toHelp)
-        self.myacc.mm_logoutbtn.clicked.connect(self.toLogin)
-        self.register.re_signupbtn.clicked.connect(self.signupaction)
+        self.RegisterWindow.BACK.clicked.connect(self.toLogin)
+        self.HelpWindow.BACK.clicked.connect(self.toLogin)
+        #Testing self.RegisterWindow.SIGN_UP.clicked.connect(self.toAcc)
+        self.LoginWindow.SIGN_UP.clicked.connect(self.toRegister)
+        self.LoginWindow.SIGN_IN.clicked.connect(self.logged)
+        self.LoginWindow.HELP.clicked.connect(self.toHelp)
+        self.RegisterWindow.HELP.clicked.connect(self.toHelp)
+        self.AccountWindow.LOGOUT.clicked.connect(self.toLogin)
+        self.RegisterWindow.SIGN_UP.clicked.connect(self.signupaction)
         #####Main Page Actions "After Logging in"#####
-        self.books.main_accbtn.clicked.connect(self.toAcc)
-        self.books.main_reqbtn.clicked.connect(self.toRequest)
+        self.BooksWindow.MY_ACCOUNT.clicked.connect(self.toAcc)
+        self.BooksWindow.REQUEST.clicked.connect(self.toRequest)
 
-        self.myacc.main_booksbtn.clicked.connect(self.toBooks)
-        self.myacc.main_reqbtn.clicked.connect(self.toRequest)
+        self.AccountWindow.BOOKS.clicked.connect(self.toBooks)
+        self.AccountWindow.REQUEST.clicked.connect(self.toRequest)
 
-        self.reqbook.main_accbtn.clicked.connect(self.toAcc)
-        self.reqbook.main_booksbtn.clicked.connect(self.toBooks)
+        self.RequestWindow.MY_ACCOUNT.clicked.connect(self.toAcc)
+        self.RequestWindow.BOOKS.clicked.connect(self.toBooks)
 
         '''Setting initial index to Zero which means 
         when you run the code the first page u will see is the login page'''
@@ -124,19 +124,19 @@ class Ui_Gui(object):
             Ui_Gui.cur.execute("SELECT * FROM members")
             data = Ui_Gui.cur.fetchall()
             for i in range(len(data)):
-                if(data[i]['id']==int(self.login.lg_idin.text())):
+                if(data[i]['id']==int(self.LoginWindow.ID.text())):
                     idfound=True
-                    if(data[i]['password']==self.login.lg_passin.text()):
-                        self.myacc.mm_fnameout.setText(data[i]['firstname'])
-                        self.myacc.mm_nameout.setText(data[i]['lastname'])
-                        self.myacc.mm_idout.setText(str(data[i]['id']))
-                        self.myacc.mm_phoneout.setText(data[i]['phone'])
-                        self.myacc.mm_mailout.setText(data[i]['email'])
+                    if(data[i]['password']==self.LoginWindow.PASSWORD.text()):
+                        self.AccountWindow.FIRST_NAME.setText(data[i]['firstname'])
+                        self.AccountWindow.LAST_NAME.setText(data[i]['lastname'])
+                        self.AccountWindow.ID.setText(str(data[i]['id']))
+                        self.AccountWindow.PHONE.setText(data[i]['phone'])
+                        self.AccountWindow.EMAIL_ADDRESS.setText(data[i]['email'])
                         self.toAcc()
                     elif (passfound==False):
-                        self.login.lg_error.setText("PASSWORD INVALID")   
+                        self.LoginWindow.lg_error.setText("PASSWORD INVALID")   
                 elif(idfound==False):
-                    self.login.lg_error.setText("ID NOT FOUND")
+                    self.LoginWindow.lg_error.setText("ID NOT FOUND")
                     
     def toLogin(self):
         
@@ -156,30 +156,30 @@ class Ui_Gui(object):
         self.library_tab.setCurrentIndex(5)
     def signupaction(self):
         #GetText From Register Fields
-        fn=self.register.re_fnamein.text()
-        ln=self.register.re_namein.text()
-        ml=self.register.re_mailin.text()
-        ph=self.register.re_phonein.text()
-        ps=self.register.re_passin.text()
-        psc=self.register.re_cpassin.text()
-        id=self.register.re_idin.text()
+        fn=self.RegisterWindow.FIRST_NAME.text()
+        ln=self.RegisterWindow.LAST_NAME.text()
+        ml=self.RegisterWindow.EMAIL_ADDRESS.text()
+        ph=self.RegisterWindow.PHONE.text()
+        ps=self.RegisterWindow.PASSWORD.text()
+        psc=self.RegisterWindow.CONFIRME_PASSWORD.text()
+        id=self.RegisterWindow.ID.text()
         if(fn!="" and ln!="" and ml!="" and ph!="" and ps!="" and id!=""): 
             if(ps==psc):
-                if self.register.checkBox.isChecked():
+                if self.RegisterWindow.checkBox.isChecked():
                     Ui_Gui.cur.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES('"+str(id)+"','"+fn+"','"+ln+"','"+ml+"','"+ph+"','"+ps+"')")
                     Ui_Gui.conn.commit()
                     self.clear("register")
-                    self.register.re_error.setStyleSheet("color:green;")
-                    self.register.re_error.setText("Registered Succefully")
+                    self.RegisterWindow.re_error.setStyleSheet("color:green;")
+                    self.RegisterWindow.re_error.setText("Registered Succefully")
                 else:
-                    self.register.re_error.setStyleSheet("color:red;")
-                    self.register.re_error.setText("Please confirm your action by checking the check box")         
+                    self.RegisterWindow.re_error.setStyleSheet("color:red;")
+                    self.RegisterWindow.re_error.setText("Please confirm your action by checking the check box")         
             else:
-                self.register.re_error.setStyleSheet("color:red;")
-                self.register.re_error.setText("Password and Confirmed Password should be the same")
+                self.RegisterWindow.re_error.setStyleSheet("color:red;")
+                self.RegisterWindow.re_error.setText("Password and Confirmed Password should be the same")
         else:
-            self.register.re_error.setStyleSheet("color:red;")
-            self.register.re_error.setText("You can't leave any field empty")
+            self.RegisterWindow.re_error.setStyleSheet("color:red;")
+            self.RegisterWindow.re_error.setText("You can't leave any field empty")
     def getbooks(self):
         with Ui_Gui.conn:
             Ui_Gui.cur.execute("SELECT * FROM book")
@@ -187,19 +187,19 @@ class Ui_Gui(object):
             #Please write add book instructions down here
     def clear(self,page):
         if(page=="register"):
-            self.register.re_fnamein.setText("")
-            self.register.re_namein.setText("")
-            self.register.re_mailin.setText("")
-            self.register.re_phonein.setText("")
-            self.register.re_passin.setText("")
-            self.register.re_cpassin.setText("")
-            self.register.re_idin.setText("")
+            self.RegisterWindow.FIRST_NAME.setText("")
+            self.RegisterWindow.LAST_NAME.setText("")
+            self.RegisterWindow.EMAIL_ADDRESS.setText("")
+            self.RegisterWindow.PHONE.setText("")
+            self.RegisterWindow.PASSWORD.setText("")
+            self.RegisterWindow.CONFIRME_PASSWORD.setText("")
+            self.RegisterWindow.ID.setText("")
         if(page=="login"):
-            self.login.lg_idin.setText("")
-            self.login.lg_passin.setText("")
+            self.LoginWindow.ID.setText("")
+            self.LoginWindow.PASSWORD.setText("")
         if(page=="myaccount"):
-            self.myacc.mm_fnameout.setText("")
-            self.myacc.mm_nameout.setText("")
-            self.myacc.mm_idout.setText("")
-            self.myacc.mm_phoneout.setText("")
-            self.myacc.mm_mailout.setText("")
+            self.AccountWindow.FIRST_NAME.setText("")
+            self.AccountWindow.LAST_NAME.setText("")
+            self.AccountWindow.ID.setText("")
+            self.AccountWindow.PHONE.setText("")
+            self.AccountWindow.EMAIL_ADDRESS.setText("")

@@ -88,7 +88,7 @@ background-color: rgba(28, 113, 216, 0);</string>
       <string>New password</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="mm_submitbtn">
+    <widget class="QPushButton" name="SUBMIT">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -150,7 +150,7 @@ background-color: rgba(28, 113, 216, 0);</string>
       <string>Current password</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mm_curpassin">
+    <widget class="QLineEdit" name="CURRENT_PASSWORD">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -197,7 +197,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mm_newpassin">
+    <widget class="QLineEdit" name="NEW_PASSWORD">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -244,7 +244,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mm_conpassin">
+    <widget class="QLineEdit" name="CONFIRME_PASSWORD">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -454,7 +454,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="main_accbtn">
+    <widget class="QPushButton" name="MY_ACCOUNT">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -503,7 +503,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="main_booksbtn">
+    <widget class="QPushButton" name="BOOKS">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -552,7 +552,7 @@ QPushButton:hover {
       </size>
      </property>
     </widget>
-    <widget class="QPushButton" name="main_reqbtn">
+    <widget class="QPushButton" name="REQUEST">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -653,7 +653,7 @@ background-color: white;</string>
       <rect>
        <x>260</x>
        <y>120</y>
-       <width>91</width>
+       <width>101</width>
        <height>31</height>
       </rect>
      </property>
@@ -661,7 +661,7 @@ background-color: white;</string>
       <string notr="true">font: 75 16pt &quot;Ubuntu&quot;;</string>
      </property>
      <property name="text">
-      <string>Name</string>
+      <string>Last Name</string>
      </property>
     </widget>
     <widget class="QLabel" name="label33">
@@ -699,9 +699,9 @@ background-color: white;</string>
     <widget class="QLabel" name="label35">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>190</x>
        <y>270</y>
-       <width>121</width>
+       <width>131</width>
        <height>31</height>
       </rect>
      </property>
@@ -709,7 +709,7 @@ background-color: white;</string>
       <string notr="true">font: 75 16pt &quot;Ubuntu&quot;;</string>
      </property>
      <property name="text">
-      <string>Mail address</string>
+      <string>Email Address</string>
      </property>
     </widget>
     <widget class="QLabel" name="label30">
@@ -744,7 +744,7 @@ background-color: rgba(28, 113, 216, 0)</string>
 background-color: rgba(28, 113, 216, 0);</string>
      </property>
      <property name="text">
-      <string>Family name</string>
+      <string>First name</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_11">
@@ -800,7 +800,7 @@ background-color: rgba(42, 41, 41, 0);
       </size>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mm_fnameout">
+    <widget class="QLineEdit" name="FIRST_NAME">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -850,7 +850,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mm_nameout">
+    <widget class="QLineEdit" name="LAST_NAME">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -900,7 +900,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mm_idout">
+    <widget class="QLineEdit" name="ID">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -950,7 +950,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mm_phoneout">
+    <widget class="QLineEdit" name="PHONE">
      <property name="geometry">
       <rect>
        <x>320</x>
@@ -1000,7 +1000,7 @@ font: 75 13pt &quot;Ubuntu Mono&quot;;
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="mm_mailout">
+    <widget class="QLineEdit" name="EMAIL_ADDRESS">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -1089,7 +1089,7 @@ background-color: rgba(28, 113, 216, 0);</string>
       <string>My Account</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="mm_logoutbtn">
+    <widget class="QPushButton" name="LOGOUT">
      <property name="geometry">
       <rect>
        <x>810</x>
