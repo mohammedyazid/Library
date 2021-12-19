@@ -1,3 +1,6 @@
+import socket
+import hashlib
+from typing import Text
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -13,15 +16,18 @@ import psycopg2
 from psycopg2 import extras
 import time
 
-DB_HOST="localhost"
-DB_NAME="library"
-DB_USER="postgres"
-DB_PASS="admin"
+#DB_HOST=""
+#DB_NAME=""
+#DB_USER=""
+#DB_PASS=""
+
+
+
 
 
 class Ui_Gui(object):
-    conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
-    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    #conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+    #cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     
     def setupUi(self, Gui):
         '''Tab Widget Size & Postition intialisation'''
@@ -118,21 +124,27 @@ class Ui_Gui(object):
         
     #Fonctions
     def logged(self):
-        idfound=False
-        passfound=False
-        #data = Ui_Gui.cur.fetchall()
-        for i in range('''GET DATA BASE Table length'''):
-            if('''GET ID FROM DATA BASE'''==int(self.LoginWindow.ID.text())):
-                idfound=True
-                if('''GET PASSWORD FROM DATA BASE'''==self.LoginWindow.PASSWORD.text()):
-                    self.toAcc()
-                elif (passfound==False):
-                        self.LoginWindow.lg_error.setText("PASSWORD INVALID")   
-            elif(idfound==False):
-                self.LoginWindow.lg_error.setText("ID NOT FOUND")
+        if (self.LoginWindow.ID.text()!="" and self.LoginWindow.PASSWORD.text()!=""):
+         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+         client.connect(('127.0.0.1', 12397 ))
+         id = self.LoginWindow.ID.text()
+         password = self.LoginWindow.PASSWORD.text()
+         password=hashlib.sha256(str.encode(password)).hexdigest()#password encryption before send it       
+         client.send(str.encode(id+' '+password))
+         response = client.recv(2048)
+         response = response.decode()
+         if response =='password or id is incorrect':
+            self.LoginWindow.lg_error.setText(response)
+         elif response =='YES':
+             self.toAcc()
+
+         client.close()
+        else:
+            self.LoginWindow.lg_error.setText("You can't leave any field empty")
+
                     
     def toLogin(self):
-        
+        self.LoginWindow.lg_error.setText("")
         self.library_tab.setCurrentIndex(0)
         self.clear("login")
         self.clear("myaccount")
@@ -161,9 +173,19 @@ class Ui_Gui(object):
                 if self.RegisterWindow.checkBox.isChecked():
                     # Ui_Gui.cur.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES('"+str(id)+"','"+fn+"','"+ln+"','"+ml+"','"+ph+"','"+ps+"')")
                     # Ui_Gui.conn.commit()
+                    # other info
+                    client1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    
+                    #response = client1.recv(2048)
+                    password=hashlib.sha256(str.encode(ps)).hexdigest()#password encryption before send it
+                    confirm_password=hashlib.sha256(str.encode(psc)).hexdigest()
+                    client1.connect(('172.0.0.1', 12397 ))
+                    client1.send(str.encode(id+' '+fn+' '+ln+' '+ml+' '+ph+' '+password))
                     self.clear("register")
+                    client1.close()
                     self.RegisterWindow.re_error.setStyleSheet("color:green;")
                     self.RegisterWindow.re_error.setText("Registered Succefully")
+                    self.toAcc()
                 else:
                     self.RegisterWindow.re_error.setStyleSheet("color:red;")
                     self.RegisterWindow.re_error.setText("Please confirm your action by checking the check box")         
@@ -197,3 +219,6 @@ class Ui_Gui(object):
             self.AccountWindow.ID.setText("")
             self.AccountWindow.PHONE.setText("")
             self.AccountWindow.EMAIL_ADDRESS.setText("")
+    
+  
+        

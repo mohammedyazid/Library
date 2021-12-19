@@ -2,6 +2,7 @@ from PyQt5 import QtGui
 from PyQt5.QtWidgets import QMainWindow,QApplication
 import sys
 from Gui import Ui_Gui
+import threading
 
 
 class MainWindow(QMainWindow):
@@ -11,7 +12,8 @@ class MainWindow(QMainWindow):
         self.ui = Ui_Gui()
         self.ui.setupUi(self)
         self.setWindowIcon(QtGui.QIcon('Ui/Assets/Ui/milky-way.png'))
-
+        client_handler = threading.Thread( target=self.ui.with_clients,args=()  )
+        client_handler.start()
 if __name__ == "__main__":
         app = QApplication(sys.argv)
         window = MainWindow()

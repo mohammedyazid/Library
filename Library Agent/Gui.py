@@ -1,3 +1,4 @@
+from threading import Thread
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 sys.path.append('Ui/')
@@ -6,23 +7,30 @@ from members import Ui_MembersWidnow
 import psycopg2
 from psycopg2 import extras
 import time
-
-DB_HOST="localhost"
-DB_NAME="library"
-DB_USER="postgres"
-DB_PASS="admin"
+import socket
 
 
+DB_HOST=""
+DB_NAME=""
+DB_USER=""
+DB_PASS=""
+
+ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
+
+
+port = 12397 # Reserve a port for your service
+
+try:
+        ServerSocket.bind(('', port))# bind the ServerSocket with (host+port) tuple
+except socket.error as e:
+        print(str(e))
+
+ServerSocket.listen(5)
 class Ui_Gui(object):
-    conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
-    cur1 = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    cur2 = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    '''Select from books table'''
-    cur1.execute("SELECT * FROM books")
-    '''select from members table'''
-    cur2.execute("SELECT * FROM books")
+    ThreadCount=0
     def setupUi(self, Gui):
-        '''Tab Widget Size & Postition intialisation'''
+        
+       # '''Tab Widget Size & Postition intialisation'''
         Gui.setObjectName("Library")
         Gui.resize(1179, 723)
         self.library_tab = QtWidgets.QTabWidget(Gui)
@@ -73,3 +81,47 @@ class Ui_Gui(object):
         self.library_tab.setCurrentIndex(1)
     def tobooks(self):
         self.library_tab.setCurrentIndex(0)
+    
+    def client_connection(self,Client):
+        
+
+        
+
+        data = Client.recv(2048)
+        data = data.decode()
+        infos=data.split()
+        
+        conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        cur2 = conn.cursor()
+        if len(infos) == 6:
+           cur2.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES(%s,%s,%s,%s,%s,%s)",(infos[0],infos[1],infos[2],infos[3],infos[4],infos[5]))
+        else:
+            idd1= infos[0]
+            passwordd1=infos[1]
+            sql_id_pssowrd = """SELECT id,password FROM members WHERE id = '%s' AND password = '%s'""" % (idd1,passwordd1)
+            cur2.execute(sql_id_pssowrd)
+            resault_id_password=cur2.fetchall()
+            
+            print(len(resault_id_password))
+
+            if len(resault_id_password) == 1:
+                Client.send(str.encode('YES'))
+            elif len(resault_id_password) == 0:
+                Client.send(str.encode('password or id is incorrect'))  
+           
+      
+        conn.commit()
+        cur2.close()
+        conn.close()
+     
+        
+        
+    def with_clients(self):
+        import threading
+        while True:
+            connec, address = ServerSocket.accept()
+            client_handler = threading.Thread(target=self.client_connection,args=(connec,))
+            client_handler.start()
+            Ui_Gui.ThreadCount += 1
+            print('Connection Request: ' + str(Ui_Gui.ThreadCount))
+            #ServerSocket.close()
