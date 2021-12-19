@@ -1,9 +1,9 @@
 from threading import Thread
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
-sys.path.append('Ui/')
-from books import Ui_BooksWindow
-from members import Ui_MembersWidnow
+
+from Ui.books import Ui_BooksWindow
+from Ui.members import Ui_MembersWidnow
 import psycopg2
 from psycopg2 import extras
 import time

@@ -29,7 +29,7 @@ class Ui_BooksWindow(object):
         self.icon.setStyleSheet("background-color: rgba(42, 41, 41, 0);")
         self.icon.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Library Agent/Ui/Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon.setIcon(icon)
         self.icon.setIconSize(QtCore.QSize(50, 50))
         self.icon.setObjectName("icon")
@@ -436,7 +436,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("../Library Management/Windows_Ui/Assets/Ui/Icons/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap("../Library Management/Windows_Library Agent/Ui/Assets/Ui/Icons/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SUBMIT.setIcon(icon5)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")

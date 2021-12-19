@@ -37,7 +37,7 @@ class Ui_BooksWindow(object):
         self.pushButton_14.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.pushButton_14.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/graduate-cap.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Library Management/Windows_Ui/Assets/Ui/Icons/graduate-cap.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_14.setIcon(icon)
         self.pushButton_14.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_14.setObjectName("pushButton_14")
@@ -68,7 +68,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("Library Management/Windows_Ui/Assets/Ui/Icons/programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.log_credits_24.setIcon(icon1)
         self.log_credits_24.setIconSize(QtCore.QSize(25, 25))
         self.log_credits_24.setObjectName("log_credits_24")
@@ -99,7 +99,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/book.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("Library Management/Windows_Ui/Assets/Ui/Icons/book.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.log_credits_25.setIcon(icon2)
         self.log_credits_25.setIconSize(QtCore.QSize(25, 25))
         self.log_credits_25.setObjectName("log_credits_25")
@@ -188,7 +188,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/interview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("Library Management/Windows_Ui/Assets/Ui/Icons/interview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.REQUEST.setIcon(icon3)
         self.REQUEST.setIconSize(QtCore.QSize(25, 25))
         self.REQUEST.setObjectName("REQUEST")
@@ -197,7 +197,7 @@ class Ui_BooksWindow(object):
         self.icon11.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.icon11.setText("")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/digital-library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("Library Management/Windows_Ui/Assets/Ui/Icons/digital-library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon11.setIcon(icon4)
         self.icon11.setIconSize(QtCore.QSize(100, 100))
         self.icon11.setObjectName("icon11")
@@ -255,7 +255,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/borrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap("Library Management/Windows_Ui/Assets/Ui/Icons/borrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BORROW.setIcon(icon5)
         self.BORROW.setIconSize(QtCore.QSize(30, 30))
         self.BORROW.setObjectName("BORROW")
@@ -426,7 +426,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("Windows_Ui/Assets/Ui/Icons/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap("Library Management/Windows_Ui/Assets/Ui/Icons/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SUBMIT.setIcon(icon6)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")

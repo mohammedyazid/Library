@@ -37,7 +37,7 @@ class Ui_MembersWidnow(object):
         self.icon.setStyleSheet("background-color: rgba(42, 41, 41, 0);")
         self.icon.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Library Agent/Ui/Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon.setIcon(icon)
         self.icon.setIconSize(QtCore.QSize(50, 50))
         self.icon.setObjectName("icon")
@@ -226,7 +226,7 @@ class Ui_MembersWidnow(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Assets/write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("Library Agent/Ui/Assets/write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SUBMIT_MODIFICATION.setIcon(icon2)
         self.SUBMIT_MODIFICATION.setIconSize(QtCore.QSize(20, 20))
         self.SUBMIT_MODIFICATION.setObjectName("SUBMIT_MODIFICATION")
@@ -258,7 +258,7 @@ class Ui_MembersWidnow(object):
 "}\n"
 "")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("Assets/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("Library Agent/Ui/Assets/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.DELETE.setIcon(icon3)
         self.DELETE.setIconSize(QtCore.QSize(20, 20))
         self.DELETE.setObjectName("DELETE")
@@ -290,7 +290,7 @@ class Ui_MembersWidnow(object):
 "}\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("Assets/add-user.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("Library Agent/Ui/Assets/add-user.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.ADDMEMBER.setIcon(icon4)
         self.ADDMEMBER.setIconSize(QtCore.QSize(20, 20))
         self.ADDMEMBER.setObjectName("ADDMEMBER")
@@ -358,7 +358,7 @@ class Ui_MembersWidnow(object):
         self.delete_book_5.setGeometry(QtCore.QRect(40, 180, 61, 51))
         self.delete_book_5.setStyleSheet("font: 75 13pt \"Ubuntu\";")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("Assets/algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap("Library Agent/Ui/Assets/algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.delete_book_5.setIcon(icon5)
         self.delete_book_5.setIconSize(QtCore.QSize(20, 20))
         self.delete_book_5.setObjectName("delete_book_5")
@@ -414,7 +414,7 @@ class Ui_MembersWidnow(object):
 "}\n"
 "")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("../Library Management/Windows_Ui/Assets/Ui/Icons/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap("../Library Management/Windows_Ui/Library Agent/Ui/Assets/Ui/Icons/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SUBMIT.setIcon(icon6)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")

@@ -5,13 +5,13 @@ from typing import Text
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
-sys.path.append('Windows_Ui/')
-from register import Ui_RegisterWindow
-from login import Ui_LoginWindow
-from help import Ui_HelpWindow
-from books import Ui_BooksWindow
-from request import Ui_RequestWindow
-from myacc import Ui_MyaccWindow
+
+from Windows_Ui.register import Ui_RegisterWindow
+from Windows_Ui.login import Ui_LoginWindow
+from Windows_Ui.help import Ui_HelpWindow
+from Windows_Ui.books import Ui_BooksWindow
+from Windows_Ui.request import Ui_RequestWindow
+from Windows_Ui.myacc import Ui_MyaccWindow
 import psycopg2
 from psycopg2 import extras
 import time
