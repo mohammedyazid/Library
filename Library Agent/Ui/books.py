@@ -76,6 +76,10 @@ class Ui_BooksWindow(object):
         self.Books_table.setObjectName("Books_table")
         self.Books_table.setColumnCount(5)
         self.Books_table.setRowCount(0)
+        self.Books_table.setColumnWidth(3,170)
+
+
+
         item = QtWidgets.QTableWidgetItem()
         self.Books_table.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()

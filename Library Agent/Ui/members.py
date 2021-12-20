@@ -84,6 +84,10 @@ class Ui_MembersWidnow(object):
         self.Members_table.setObjectName("Members_table")
         self.Members_table.setColumnCount(5)
         self.Members_table.setRowCount(0)
+        self.Members_table.setColumnWidth(4,170)
+
+
+
         item = QtWidgets.QTableWidgetItem()
         self.Members_table.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
