@@ -192,8 +192,11 @@ class Ui_Gui(object):
                     client1.send(str.encode(id+' '+fn+' '+ln+' '+ml+' '+ph+' '+password))
                     self.clear("register")
                     client1.close()
-                    self.RegisterWindow.re_error.setStyleSheet("color:green;")
-                    self.RegisterWindow.re_error.setText("Registered Succefully")
+                    self.AccountWindow.ID.setText(id)
+                    self.AccountWindow.FIRST_NAME.setText(fn)
+                    self.AccountWindow.LAST_NAME.setText(ln)
+                    self.AccountWindow.PHONE.setText(ph)
+                    self.AccountWindow.EMAIL_ADDRESS.setText(ml)
                     self.toAcc()
                 else:
                     self.RegisterWindow.re_error.setStyleSheet("color:red;")
