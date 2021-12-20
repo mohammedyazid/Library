@@ -151,6 +151,9 @@ background-color: rgb(34, 39, 46);</string>
     <property name="editTriggers">
      <set>QAbstractItemView::NoEditTriggers</set>
     </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>114</number>
+    </attribute>
     <column>
      <property name="text">
       <string>First Name</string>

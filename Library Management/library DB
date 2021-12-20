@@ -4,7 +4,7 @@
     Then you need to create a Database
     or if it already exists then connect to it using 'create database library;'
     3|\c library
-    4|CREATE TABLE members( id varchar(10) NOT NULL PRIMARY KEY,firstname varchar(45) NOT NULL,lastname varchar(50) NOT NULL,email varchar(45) DEFAULT NULL,phone varchar(45) DEFAULT NULL,password varchar(60) NOT NULL);
+    4|CREATE TABLE members( id serial NOT NULL PRIMARY KEY,firstname varchar(45) NOT NULL,lastname varchar(50) NOT NULL,email varchar(45) DEFAULT NULL,phone varchar(45) DEFAULT NULL,password varchar(60) NOT NULL);
       CREATE TABLE books( code varchar(25) PRIMARY KEY,title varchar(45),author varchar(50),released serial,status varchar(20));
 'Now let's jump into coding''
 DB_HOST="localhost"

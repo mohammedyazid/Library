@@ -9,7 +9,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_Gui()
         self.ui.setupUi(self)
-        self.setWindowIcon(QtGui.QIcon('Windows_Ui/Assets/Ui/Icons/mainicon.png'))
+        self.setWindowIcon(QtGui.QIcon('Library Management/Icons/mainicon.png'))
         
 if __name__ == "__main__":
         app = QApplication(sys.argv)

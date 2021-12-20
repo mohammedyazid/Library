@@ -1,19 +1,17 @@
 from threading import Thread
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
-
-from Ui.books import Ui_BooksWindow
-from Ui.members import Ui_MembersWidnow
+from books import Ui_BooksWindow
+from members import Ui_MembersWidnow
 import psycopg2
 from psycopg2 import extras
 import time
 import socket
 
 
-DB_HOST=""
-DB_NAME=""
-DB_USER=""
-DB_PASS=""
+DB_HOST="localhost"
+DB_NAME="library"
+DB_USER="postgres"
+DB_PASS="admin"
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 
