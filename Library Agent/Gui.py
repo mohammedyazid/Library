@@ -7,7 +7,6 @@ from psycopg2 import extras
 import time
 import socket
 
-
 DB_HOST="localhost"
 DB_NAME="library"
 DB_USER="postgres"
@@ -99,11 +98,14 @@ class Ui_Gui(object):
             sql_id_pssowrd = """SELECT id,password FROM members WHERE id = '%s' AND password = '%s'""" % (idd1,passwordd1)
             cur2.execute(sql_id_pssowrd)
             resault_id_password=cur2.fetchall()
-            
-            print(len(resault_id_password))
 
             if len(resault_id_password) == 1:
-                Client.send(str.encode('YES'))
+                sql_data = """SELECT id,firstname,lastname,phone,email FROM members WHERE id = '%s' AND password = '%s'""" % (idd1,passwordd1)
+                cur2.execute(sql_data)
+                result_data=cur2.fetchall()
+                result_data = ' '.join(map(str,result_data))
+                print(result_data)
+                Client.send(str.encode(result_data))
             elif len(resault_id_password) == 0:
                 Client.send(str.encode('password or id is incorrect'))  
            

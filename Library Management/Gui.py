@@ -1,9 +1,8 @@
 import socket
 import hashlib
 from typing import Text
-
-
-from PyQt5 import QtCore, QtGui, QtWidgets
+import re
+from PyQt5 import QtCore, QtWidgets
 import sys
 sys.path.append('Windows_Ui/')
 from register import Ui_RegisterWindow
@@ -133,10 +132,20 @@ class Ui_Gui(object):
          client.send(str.encode(id+' '+password))
          response = client.recv(2048)
          response = response.decode()
+         #This means if response is not an error message then turn it into a list
+         if(len(response)>27):
+            response = re.sub('[\' ()]', '', response)
+            response = re.sub('[,]', ' ', response)
+            response = response.split(' ')
          if response =='password or id is incorrect':
             self.LoginWindow.lg_error.setText(response)
-         elif response =='YES':
-             self.toAcc()
+         elif len(response)==5:
+            self.AccountWindow.ID.setText(response[0])
+            self.AccountWindow.FIRST_NAME.setText(response[1])
+            self.AccountWindow.LAST_NAME.setText(response[2])
+            self.AccountWindow.PHONE.setText(response[3])
+            self.AccountWindow.EMAIL_ADDRESS.setText(response[4])
+            self.toAcc()
 
          client.close()
         else:
@@ -219,6 +228,5 @@ class Ui_Gui(object):
             self.AccountWindow.ID.setText("")
             self.AccountWindow.PHONE.setText("")
             self.AccountWindow.EMAIL_ADDRESS.setText("")
-    
   
         
