@@ -103,6 +103,7 @@ class Ui_Gui(object):
         self.RequestWindow.MY_ACCOUNT.clicked.connect(self.toAcc)
         self.RequestWindow.BOOKS.clicked.connect(self.toBooks)
 
+        self.AccountWindow.SUBMIT.clicked.connect(self.changepass)
         '''Setting initial index to Zero which means 
         when you run the code the first page u will see is the login page'''
         ################################################
@@ -125,7 +126,7 @@ class Ui_Gui(object):
     def logged(self):
         if (self.LoginWindow.ID.text()!="" and self.LoginWindow.PASSWORD.text()!=""):
          client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-         client.connect(('192.168.1.11', 12397 ))
+         client.connect(('127.0.0.1', 12397 ))
          id = self.LoginWindow.ID.text()
          password = self.LoginWindow.PASSWORD.text()
          password=hashlib.sha256(str.encode(password)).hexdigest()#password encryption before send it       
@@ -163,10 +164,13 @@ class Ui_Gui(object):
     def toHelp(self):
         self.library_tab.setCurrentIndex(2)
     def toBooks(self):
+        self.AccountWindow.DISPLAY.setText('')
         self.library_tab.setCurrentIndex(3)
     def toAcc(self):
+        self.AccountWindow.DISPLAY.setText('')
         self.library_tab.setCurrentIndex(4)
     def toRequest(self):
+        self.AccountWindow.DISPLAY.setText('')
         self.library_tab.setCurrentIndex(5)
     def signupaction(self):
         #GetText From Register Fields
@@ -188,7 +192,7 @@ class Ui_Gui(object):
                     #response = client1.recv(2048)
                     password=hashlib.sha256(str.encode(ps)).hexdigest()#password encryption before send it
                     confirm_password=hashlib.sha256(str.encode(psc)).hexdigest()
-                    client1.connect(('192.168.1.11', 12397 ))
+                    client1.connect(('127.0.0.1', 12397 ))
                     client1.send(str.encode(id+' '+fn+' '+ln+' '+ml+' '+ph+' '+password))
                     self.clear("register")
                     client1.close()
@@ -231,5 +235,34 @@ class Ui_Gui(object):
             self.AccountWindow.ID.setText("")
             self.AccountWindow.PHONE.setText("")
             self.AccountWindow.EMAIL_ADDRESS.setText("")
-  
+        if(page=="changepass"):
+            self.AccountWindow.CURRENT_PASSWORD.setText("")
+            self.AccountWindow.NEW_PASSWORD.setText("")
+            self.AccountWindow.CONFIRME_PASSWORD.setText("")
         
+    def changepass(self):
+        password = self.AccountWindow.CURRENT_PASSWORD.text()
+        npassword= self.AccountWindow.NEW_PASSWORD.text()
+        cpassword = self.AccountWindow.CONFIRME_PASSWORD.text()
+        
+        if(npassword == cpassword):
+            client2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            client2.connect(('127.0.0.1', 12397 ))
+        
+            password=hashlib.sha256(str.encode(password)).hexdigest()
+            npassword=hashlib.sha256(str.encode(npassword)).hexdigest()
+            id = self.AccountWindow.ID.text()
+            client2.send(str.encode(id+' '+password+' '+npassword))
+            response = client2.recv(2048)
+            response = response.decode()
+            if(response == 'Done'):
+                self.AccountWindow.DISPLAY.setStyleSheet("color:green;")
+                self.AccountWindow.DISPLAY.setText('Password Changed succefully')
+                self.clear("changepass")
+            else:
+                self.AccountWindow.DISPLAY.setStyleSheet("color:red;")
+                self.AccountWindow.DISPLAY.setText(response)
+        else:
+            self.AccountWindow.DISPLAY.setStyleSheet("color:red;")
+            self.AccountWindow.DISPLAY.setText('New Pass != Confirmed Pass')
+        client2.close()

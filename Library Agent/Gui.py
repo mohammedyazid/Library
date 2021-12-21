@@ -8,9 +8,9 @@ import time
 import socket
 
 DB_HOST="localhost"
-DB_NAME=""
-DB_USER=""
-DB_PASS=""
+DB_NAME="library"
+DB_USER="postgres"
+DB_PASS="admin"
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 
@@ -87,7 +87,6 @@ class Ui_Gui(object):
         data = Client.recv(2048)
         data = data.decode()
         infos=data.split()
-        print(infos)#
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
         cur2 = conn.cursor()
         if len(infos) == 6:
@@ -108,6 +107,21 @@ class Ui_Gui(object):
                 Client.send(str.encode(result_data))
             elif len(resault_id_password) == 0:
                 Client.send(str.encode('password or id is incorrect'))  
+        
+        elif len(infos)==3:
+                idc=infos[0]
+                passc= infos[1]
+                newpass=infos[2]
+                sql_pass = """SELECT id,password FROM members WHERE id = '%s' AND password = '%s'""" % (idc,passc)
+                cur2.execute(sql_pass)
+                result_pass=cur2.fetchall()
+                if len(result_pass)==1:
+                    sql_update = """UPDATE members SET password='%s' WHERE id = '%s'""" % (newpass,idc)
+                    cur2.execute(sql_update)
+                    Client.send(str.encode('Done'))
+                else :
+                    Client.send(str.encode('Current Password Not found !'))
+        
         else:
             titlee=infos[0]
             titlee=titlee.split("|")

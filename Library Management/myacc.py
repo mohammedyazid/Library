@@ -42,7 +42,7 @@ class Ui_MyaccWindow(object):
 "background-color: rgba(28, 113, 216, 0);")
         self.label28.setObjectName("label28")
         self.SUBMIT = QtWidgets.QPushButton(self.frame_10)
-        self.SUBMIT.setGeometry(QtCore.QRect(80, 320, 191, 41))
+        self.SUBMIT.setGeometry(QtCore.QRect(90, 340, 191, 41))
         self.SUBMIT.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
@@ -146,6 +146,22 @@ class Ui_MyaccWindow(object):
         self.CONFIRME_PASSWORD.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
         self.CONFIRME_PASSWORD.setClearButtonEnabled(True)
         self.CONFIRME_PASSWORD.setObjectName("CONFIRME_PASSWORD")
+        self.DISPLAY = QtWidgets.QLabel(self.frame_10)
+        self.DISPLAY.setGeometry(QtCore.QRect(30, 310, 321, 20))
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(75)
+        font.setStrikeOut(False)
+        self.DISPLAY.setFont(font)
+        self.DISPLAY.setStyleSheet("color: rgb(224, 27, 36);\n"
+"background-color: rgba(42, 41, 41, 0);")
+        self.DISPLAY.setText("")
+        self.DISPLAY.setTextFormat(QtCore.Qt.AutoText)
+        self.DISPLAY.setAlignment(QtCore.Qt.AlignCenter)
+        self.DISPLAY.setWordWrap(False)
+        self.DISPLAY.setObjectName("DISPLAY")
         self.frame_16 = QtWidgets.QFrame(self.centralwidget)
         self.frame_16.setGeometry(QtCore.QRect(0, 0, 171, 621))
         self.frame_16.setStyleSheet("border: 1px ;\n"
@@ -580,7 +596,7 @@ class Ui_MyaccWindow(object):
         self.label33.setText(_translate("MyaccWindow", "ID"))
         self.label34.setText(_translate("MyaccWindow", "Phone"))
         self.label35.setText(_translate("MyaccWindow", "Email Address"))
-        self.label30.setText(_translate("MyaccWindow", "My Informations"))
+        self.label30.setText(_translate("MyaccWindow", "My Information"))
         self.label31.setText(_translate("MyaccWindow", "First name"))
         self.pushButton_11.setText(_translate("MyaccWindow", "+213"))
         self.label25.setText(_translate("MyaccWindow", "My Account"))

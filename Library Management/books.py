@@ -337,7 +337,7 @@ class Ui_BooksWindow(object):
         if self.TITLE.text() !="":    
                 
                 client2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                client2.connect(('192.168.1.11', 12397 ))
+                client2.connect(('127.0.0.1', 12397 ))
                 request =self.TITLE.text().lower().split()
                 request = "|".join(request)
                 
@@ -346,8 +346,6 @@ class Ui_BooksWindow(object):
                 response = response.decode()
                 response = re.sub('[\'()]', '', response)
                 response = response.split(",")
-                print(len(response))
-                print(response)
                 client2.close()
                 self.TABLE.insertRow(0)
                 
