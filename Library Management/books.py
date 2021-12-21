@@ -9,7 +9,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import socket
+import re
 
 class Ui_BooksWindow(object):
     def setupUi(self, BooksWindow):
@@ -273,6 +274,7 @@ class Ui_BooksWindow(object):
         self.SUBMIT.setIcon(icon5)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")
+        self.SUBMIT.clicked.connect(self.search_book)
         self.TITLE = QtWidgets.QLineEdit(self.frame_5)
         self.TITLE.setGeometry(QtCore.QRect(10, 80, 291, 31))
         font = QtGui.QFont()
@@ -328,3 +330,34 @@ class Ui_BooksWindow(object):
         self.label20.setText(_translate("BooksWindow", "Catalogue"))
         self.SUBMIT.setText(_translate("BooksWindow", "Submit"))
         self.TITLE.setPlaceholderText(_translate("BooksWindow", "Title"))
+    def search_book(self):
+        while (self.TABLE.rowCount() > 0):
+                self.TABLE.removeRow(0)
+                    
+        if self.TITLE.text() !="":    
+                
+                client2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                client2.connect(('192.168.1.11', 12397 ))
+                request =self.TITLE.text().lower().split()
+                request = "|".join(request)
+                
+                client2.send(str.encode(request))
+                response = client2.recv(2048)
+                response = response.decode()
+                response = re.sub('[\'()]', '', response)
+                response = response.split(",")
+                print(len(response))
+                print(response)
+                client2.close()
+                self.TABLE.insertRow(0)
+                
+                for i in range(len(response)):
+                       
+                               
+                        self.TABLE.setItem(0 , i%5,QtWidgets.QTableWidgetItem(response[i]))
+                        if i%5 == 4 and i!=len(response)-1:
+                               self.TABLE.insertRow(0)
+
+                                              
+        else:
+                print("")        

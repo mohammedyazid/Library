@@ -8,9 +8,9 @@ import time
 import socket
 
 DB_HOST="localhost"
-DB_NAME="library"
-DB_USER="postgres"
-DB_PASS="admin"
+DB_NAME=""
+DB_USER=""
+DB_PASS=""
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 
@@ -87,12 +87,12 @@ class Ui_Gui(object):
         data = Client.recv(2048)
         data = data.decode()
         infos=data.split()
-        
+        print(infos)#
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
         cur2 = conn.cursor()
         if len(infos) == 6:
            cur2.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES(%s,%s,%s,%s,%s,%s)",(infos[0],infos[1],infos[2],infos[3],infos[4],infos[5]))
-        else:
+        elif len(infos) == 2:
             idd1= infos[0]
             passwordd1=infos[1]
             sql_id_pssowrd = """SELECT id,password FROM members WHERE id = '%s' AND password = '%s'""" % (idd1,passwordd1)
@@ -104,12 +104,25 @@ class Ui_Gui(object):
                 cur2.execute(sql_data)
                 result_data=cur2.fetchall()
                 result_data = ' '.join(map(str,result_data))
-                print(result_data)
+                #print(result_data)
                 Client.send(str.encode(result_data))
             elif len(resault_id_password) == 0:
                 Client.send(str.encode('password or id is incorrect'))  
-           
-      
+        else:
+            titlee=infos[0]
+            titlee=titlee.split("|")
+            sql_book= """select * from books where title like '%s';""" %('%'+titlee[0]+'%')
+            cur2.execute(sql_book)
+            result_book = cur2.fetchall()
+            
+            if len(result_book)>0:
+                result_book = ','.join(map(str,result_book))
+                Client.send(str.encode(result_book))
+            
+                
+            else:
+                Client.send(str.encode("book not found")) 
+
         conn.commit()
         cur2.close()
         conn.close()
