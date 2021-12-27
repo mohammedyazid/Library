@@ -10,7 +10,7 @@ import socket
 DB_HOST="localhost"
 DB_NAME="library"
 DB_USER="postgres"
-DB_PASS="admin"
+DB_PASS=""
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 
@@ -58,6 +58,10 @@ class Ui_Gui(object):
         #Actions
         self.BooksWindow.MANAGE_MEMBERS.clicked.connect(self.tomembers)
         self.MembersWindow.MANAGE_BOOKS.clicked.connect(self.tobooks)
+        self.BooksWindow.ADD_BOOK.clicked.connect(self.add_book)
+        self.BooksWindow.DELETE.clicked.connect(self.delete_book)
+        self.MembersWindow.ADDMEMBER.clicked.connect(self.add_member)
+        self.MembersWindow.DELETE.clicked.connect(self.delete_member)
 
         '''Setting initial index to Zero which means 
         when you run the code the first page u will see is the login page'''
@@ -152,3 +156,135 @@ class Ui_Gui(object):
             Ui_Gui.ThreadCount += 1
             print('Connection Request: ' + str(Ui_Gui.ThreadCount))
             #ServerSocket.close()
+
+    def add_book(self):
+        
+        #GetText From books Fields  
+        bt_d=self.BooksWindow.BOOK_TITLE_ADD.text()
+        au_d=self.BooksWindow.AUTHOR_ADD.text()
+        ry_d=self.BooksWindow.RELEASE_YEAR_ADD.text()
+        code=self.BooksWindow.RELEASE_YEAR.text()
+        
+        conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        cur3 = conn.cursor()
+        cur4=conn.cursor()
+        
+        
+        if(bt_d!="" and au_d!="" and ry_d!=""):
+
+            cur3.execute("INSERT INTO books (code,title,author,released,status) VALUES(%s,%s,%s,%s,%s)",(code,bt_d,au_d,ry_d,"avalible"))
+            conn.commit()
+            cur3.close()
+            
+            self.BooksWindow.BOOK_TITLE_ADD.setText("")
+            self.BooksWindow.AUTHOR_ADD.setText("")
+            self.BooksWindow.RELEASE_YEAR_ADD.setText("")
+            self.BooksWindow.RELEASE_YEAR.setText("")
+            
+        
+        cur4.execute("SELECT * FROM books")
+        data = cur4.fetchall()
+        conn.commit()
+        a = len(data) 
+        b =  len(data[0])
+
+        self.BooksWindow.Books_table.setSortingEnabled(False)
+        self.BooksWindow.Books_table.setRowCount(a)
+        self.BooksWindow.Books_table.setColumnCount(b)
+        i=1
+        j=0
+        for j in range(a):
+            for i in range(b):
+             item = QtWidgets.QTableWidgetItem(data[j][i])
+             self.BooksWindow.Books_table.setItem(j, i, item)
+        self.BooksWindow.Books_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
+        
+    
+    def delete_book(self):
+        
+        bt=self.BooksWindow.BOOK_TITLE.text()
+        au=self.BooksWindow.AUTHOR.text()
+        ry=self.BooksWindow.RELEASE_YEAR.text()
+        
+        conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        cur3 = conn.cursor()
+        cur4=conn.cursor()
+
+        cur3.execute("DELETE FROM books WHERE title=%s AND author=%s AND released=%s AND status='avalible'",(bt,au,ry) )
+        conn.commit()
+        cur3.close()
+        
+        cur4.execute("SELECT * FROM books")
+        data = cur4.fetchall()
+        conn.commit()
+        a = len(data) 
+        b =  len(data[0])
+
+        self.BooksWindow.Books_table.setSortingEnabled(False)
+        self.BooksWindow.Books_table.setRowCount(a)
+        self.BooksWindow.Books_table.setColumnCount(b)
+        i=1
+        j=0
+        for j in range(a):
+            for i in range(b):
+             item = QtWidgets.QTableWidgetItem(data[j][i])
+             self.BooksWindow.Books_table.setItem(j, i, item)
+        self.BooksWindow.Books_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
+    
+    
+    def add_member(self):
+
+        
+        conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        cur5=conn.cursor()
+
+        cur5.execute("SELECT * FROM members")
+        data = cur5.fetchall()
+        conn.commit()
+        a = len(data) 
+        b =  len(data[0])
+
+        self.MembersWindow.Members_table.setSortingEnabled(False)
+        self.MembersWindow.Members_table.setRowCount(a)
+        self.MembersWindow.Members_table.setColumnCount(b)
+        i=1
+        j=0
+        for j in range(a):
+            for i in range(b):
+             item = QtWidgets.QTableWidgetItem(data[j][i])
+             self.MembersWindow.Members_table.setItem(j, i, item)
+        self.MembersWindow.Members_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
+        
+        
+    def delete_member(self):
+        
+        id=self.MembersWindow.ID.text()
+        fn=self.MembersWindow.FIRST_NAME.text()
+        ln=self.MembersWindow.LAST_NAME.text()
+        ph=self.MembersWindow.PHONE.text()
+        em=self.MembersWindow.EMAIL_ADDRESS.text()
+        
+        
+        conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        cur5=conn.cursor()
+        cur6=conn.cursor()
+        
+        cur6.execute("DELETE FROM members WHERE id=%s AND firstname=%s AND lastname=%s AND phone=%s AND email=%s",(id,fn,ln,ph,em) )
+        cur5.execute("SELECT * FROM members")
+        data = cur5.fetchall()
+        conn.commit()
+        a = len(data) 
+        b =  len(data[0])
+
+        self.MembersWindow.Members_table.setSortingEnabled(False)
+        self.MembersWindow.Members_table.setRowCount(a)
+        self.MembersWindow.Members_table.setColumnCount(b)
+        i=1
+        j=0
+        for j in range(a):
+            for i in range(b):
+             item = QtWidgets.QTableWidgetItem(data[j][i])
+             self.MembersWindow.Members_table.setItem(j, i, item)
+        self.MembersWindow.Members_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
+     
+    
