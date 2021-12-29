@@ -9,7 +9,7 @@ import socket
 
 DB_HOST="localhost"
 DB_NAME="library"
-DB_USER="postgres"
+DB_USER=""
 DB_PASS=""
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
@@ -70,7 +70,7 @@ class Ui_Gui(object):
         self.library_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Gui)
         ################################################
-        
+        self.display()
     def retranslateUi(self, Gui):
         _translate = QtCore.QCoreApplication.translate
         Gui.setWindowTitle(_translate("Agent Space", "Agent Space"))
@@ -160,16 +160,19 @@ class Ui_Gui(object):
     def add_book(self):
         
         #GetText From books Fields  
-        bt_d=self.BooksWindow.BOOK_TITLE_ADD.text()
-        au_d=self.BooksWindow.AUTHOR_ADD.text()
-        ry_d=self.BooksWindow.RELEASE_YEAR_ADD.text()
-        code=self.BooksWindow.RELEASE_YEAR.text()
+        bt_d=self.BooksWindow.BOOK_TITLE_ADD.text().lower()
+        au_d=self.BooksWindow.AUTHOR_ADD.text().lower()
+        ry_d=self.BooksWindow.RELEASE_YEAR_ADD.text().lower()
+        
         
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
         cur3 = conn.cursor()
         cur4=conn.cursor()
-        
-        
+        cur4.execute('select count(*) from books;')######################################
+        number_in_db=cur4.fetchall()[0][0]
+        code=str(number_in_db+1)+bt_d[0]+au_d[len(au_d)-1]+str(len(bt_d))+au_d[0]+bt_d[len(bt_d)-1]
+        code=code.lower()
+
         if(bt_d!="" and au_d!="" and ry_d!=""):
 
             cur3.execute("INSERT INTO books (code,title,author,released,status) VALUES(%s,%s,%s,%s,%s)",(code,bt_d,au_d,ry_d,"avalible"))
@@ -287,4 +290,24 @@ class Ui_Gui(object):
              self.MembersWindow.Members_table.setItem(j, i, item)
         self.MembersWindow.Members_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
      
-    
+    def display(self):
+        conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        cur7=conn.cursor() 
+        cur7.execute("SELECT * FROM books")
+        data = cur7.fetchall()
+        conn.commit()
+        a = len(data) 
+        b =  len(data[0])
+
+        self.BooksWindow.Books_table.setSortingEnabled(False)
+        self.BooksWindow.Books_table.setRowCount(a)
+        self.BooksWindow.Books_table.setColumnCount(b)
+        i=1
+        j=0
+        for j in range(a):
+            data[j]=list(data[j])
+            data[j][0]=data[j][0].upper()
+            for i in range(b):   
+             item = QtWidgets.QTableWidgetItem(data[j][i])
+             self.BooksWindow.Books_table.setItem(j, i, item)
+        self.BooksWindow.Books_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
