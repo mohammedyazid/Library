@@ -60,7 +60,6 @@ class Ui_Gui(object):
         self.MembersWindow.MANAGE_BOOKS.clicked.connect(self.tobooks)
         self.BooksWindow.ADD_BOOK.clicked.connect(self.add_book)
         self.BooksWindow.DELETE.clicked.connect(self.delete_book)
-        self.MembersWindow.ADDMEMBER.clicked.connect(self.add_member)
         self.MembersWindow.DELETE.clicked.connect(self.delete_member)
 
         '''Setting initial index to Zero which means 
@@ -70,7 +69,8 @@ class Ui_Gui(object):
         self.library_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Gui)
         ################################################
-        self.display()
+        self.display_books()
+        self.display_members()
     def retranslateUi(self, Gui):
         _translate = QtCore.QCoreApplication.translate
         Gui.setWindowTitle(_translate("Agent Space", "Agent Space"))
@@ -235,7 +235,7 @@ class Ui_Gui(object):
         self.BooksWindow.Books_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
     
     
-    def add_member(self):
+    def display_members(self):
 
         
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
@@ -290,7 +290,7 @@ class Ui_Gui(object):
              self.MembersWindow.Members_table.setItem(j, i, item)
         self.MembersWindow.Members_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
      
-    def display(self):
+    def display_books(self):
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
         cur7=conn.cursor() 
         cur7.execute("SELECT * FROM books")
