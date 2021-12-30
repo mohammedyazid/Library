@@ -8,9 +8,9 @@ import time
 import socket
 
 DB_HOST="localhost"
-DB_NAME="library"
-DB_USER=""
-DB_PASS=""
+DB_NAME="libraryagent"
+DB_USER="yassine"
+DB_PASS="adpost2008"
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 
@@ -296,6 +296,19 @@ class Ui_Gui(object):
         cur7.execute("SELECT * FROM books")
         data = cur7.fetchall()
         conn.commit()
+        cur7.execute("select count(*) from books")
+        number_of_books=cur7.fetchall()
+        conn.commit()
+        cur7.execute("select count(*) from members")
+        number_of_members=cur7.fetchall()
+        conn.commit()
+        number_of_books=number_of_books[0][0]
+        number_of_members=number_of_members[0][0]
+
+        self.BooksWindow.NUMBER_OF_BOOKS.setText(str(number_of_books))
+        self.BooksWindow.NUMBER_OF_MEMBERS.setText(str(number_of_members)) 
+
+
         a = len(data) 
         b =  len(data[0])
 
