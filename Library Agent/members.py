@@ -365,7 +365,7 @@ class Ui_MembersWidnow(object):
         self.delete_book_5.setIconSize(QtCore.QSize(20, 20))
         self.delete_book_5.setObjectName("delete_book_5")
         self.SEARCH_FIELD = QtWidgets.QLineEdit(self.MembersWindow)
-        self.SEARCH_FIELD.setGeometry(QtCore.QRect(590, 90, 471, 31))
+        self.SEARCH_FIELD.setGeometry(QtCore.QRect(590, 90, 400, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -389,8 +389,35 @@ class Ui_MembersWidnow(object):
         self.SEARCH_FIELD.setClearButtonEnabled(True)
         self.SEARCH_FIELD.setObjectName("SEARCH_FIELD")
         self.SUBMIT = QtWidgets.QPushButton(self.MembersWindow)
-        self.SUBMIT.setGeometry(QtCore.QRect(1070, 90, 91, 31))
+        self.SUBMIT.setGeometry(QtCore.QRect(990, 90, 91, 31))
+        self.DISPLAY_ALL = QtWidgets.QPushButton(self.MembersWindow)
+        self.DISPLAY_ALL.setGeometry(QtCore.QRect(1080, 90, 91, 31))
         self.SUBMIT.setStyleSheet("\n"
+"QPushButton {\n"
+"    \n"
+"    background-color: rgb(36, 31, 49);\n"
+"    border: 2px solid white;\n"
+"    border-radius: 15px;\n"
+"    border-style: outset;\n"
+"    padding: 5px;\n"
+"    transition: all .5s ease;\n"
+"    color: white;\n"
+"    font-family:\'Montserrat\', sans-serif;\n"
+"    text-transform: uppercase;\n"
+"    text-align: center;\n"
+"    line-height: 1;\n"
+"    font-size: 10px;\n"
+"    padding: 0px;\n"
+"    outline: none;\n"
+"    \n"
+"    \n"
+"}\n"
+"QPushButton:hover {\n"
+"    color:rgb(0, 137, 236);;\n"
+"    background-color: white;;\n"
+"}\n"
+"")
+        self.DISPLAY_ALL.setStyleSheet("\n"
 "QPushButton {\n"
 "    \n"
 "    background-color: rgb(36, 31, 49);\n"
@@ -469,3 +496,4 @@ class Ui_MembersWidnow(object):
         self.delete_book_5.setText(_translate("MembersWidnow", "+213"))
         self.SEARCH_FIELD.setPlaceholderText(_translate("MembersWidnow", "Enter any Member First or Last Name Or ID"))
         self.SUBMIT.setText(_translate("MembersWidnow", "Submit"))
+        self.DISPLAY_ALL.setText(_translate("MembersWidnow", "display all"))

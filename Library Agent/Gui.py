@@ -8,9 +8,9 @@ import time
 import socket
 
 DB_HOST="localhost"
-DB_NAME="library"
-DB_USER=""
-DB_PASS=""
+DB_NAME="libraryagent"
+DB_USER="yassine"
+DB_PASS="adpost2008"
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 
@@ -61,6 +61,10 @@ class Ui_Gui(object):
         self.BooksWindow.ADD_BOOK.clicked.connect(self.add_book)
         self.BooksWindow.DELETE.clicked.connect(self.delete_book)
         self.MembersWindow.DELETE.clicked.connect(self.delete_member)
+        self.BooksWindow.SUBMIT.clicked.connect(self.search_book)
+        self.MembersWindow.SUBMIT.clicked.connect(self.search_member)
+        self.BooksWindow.DISPLAY_ALL.clicked.connect(self.display_books)
+        self.MembersWindow.DISPLAY_ALL.clicked.connect(self.display_members)
 
         '''Setting initial index to Zero which means 
         when you run the code the first page u will see is the login page'''
@@ -324,3 +328,51 @@ class Ui_Gui(object):
              item = QtWidgets.QTableWidgetItem(data[j][i])
              self.BooksWindow.Books_table.setItem(j, i, item)
         self.BooksWindow.Books_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
+
+    def search_book(self):
+        title=self.BooksWindow.SEARCH_FIELD.text().lower()
+        conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        cur8=conn.cursor()    
+        sql_search= """select * from books where title like '%s';""" %('%'+title+'%')
+        cur8.execute(sql_search)
+        data=cur8.fetchall()
+        
+        while (self.BooksWindow.Books_table.rowCount() > 0):
+                self.BooksWindow.Books_table.removeRow(0)
+        
+                
+        for i in range(len(data)):
+                
+                self.BooksWindow.Books_table.insertRow(0)        
+                self.BooksWindow.Books_table.setItem(0 , 0,QtWidgets.QTableWidgetItem(data[i][0]))
+                self.BooksWindow.Books_table.setItem(0 , 1,QtWidgets.QTableWidgetItem(data[i][1]))
+                self.BooksWindow.Books_table.setItem(0 , 2,QtWidgets.QTableWidgetItem(data[i][2]))
+                self.BooksWindow.Books_table.setItem(0 , 3,QtWidgets.QTableWidgetItem(data[i][3]))
+                self.BooksWindow.Books_table.setItem(0 , 4,QtWidgets.QTableWidgetItem(data[i][4]))
+              
+
+
+
+        
+    def search_member(self):
+        id_search=self.MembersWindow.SEARCH_FIELD.text().lower()
+        conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        cur8=conn.cursor()    
+        cur8.execute("select * from members where id=%s",(id_search,))
+        data1=cur8.fetchall()
+
+
+        while (self.MembersWindow.Members_table.rowCount() > 0):
+                self.MembersWindow.Members_table.removeRow(0)
+        
+                
+        for i in range(len(data1)):
+                
+                self.MembersWindow.Members_table.insertRow(0)        
+                self.MembersWindow.Members_table.setItem(0 , 0,QtWidgets.QTableWidgetItem(data1[i][0]))
+                self.MembersWindow.Members_table.setItem(0 , 1,QtWidgets.QTableWidgetItem(data1[i][1]))
+                self.MembersWindow.Members_table.setItem(0 , 2,QtWidgets.QTableWidgetItem(data1[i][2]))
+                self.MembersWindow.Members_table.setItem(0 , 3,QtWidgets.QTableWidgetItem(data1[i][3]))
+                self.MembersWindow.Members_table.setItem(0 , 4,QtWidgets.QTableWidgetItem(data1[i][4]))  
+                self.MembersWindow.Members_table.setItem(0 , 5,QtWidgets.QTableWidgetItem(data1[i][5]))  
+      
