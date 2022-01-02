@@ -8,9 +8,9 @@ import time
 import socket
 
 DB_HOST="localhost"
-DB_NAME="libraryagent"
-DB_USER="yassine"
-DB_PASS="adpost2008"
+DB_NAME="library"
+DB_USER=""
+DB_PASS=""
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 
