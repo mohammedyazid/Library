@@ -239,38 +239,6 @@ class Ui_BooksWindow(object):
         self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_16.setObjectName("frame_16")
-        self.SUBMIT_MODIFICATION = QtWidgets.QPushButton(self.frame_16)
-        self.SUBMIT_MODIFICATION.setGeometry(QtCore.QRect(290, 110, 181, 41))
-        self.SUBMIT_MODIFICATION.setStyleSheet("\n"
-"QPushButton {\n"
-"    \n"
-"    background-color: rgb(26, 95, 180);\n"
-"    border: 1px solid white;\n"
-"    border-radius: 20px;\n"
-"    border-style: outset;\n"
-"    padding: 5px;\n"
-"    transition: all .5s ease;\n"
-"    color: white;\n"
-"    font-family:\'Montserrat\', sans-serif;\n"
-"    text-transform: uppercase;\n"
-"    text-align: center;\n"
-"    line-height: 1;\n"
-"    font-size: 12px;\n"
-"    padding: 10px;\n"
-"    outline: none;\n"
-"    \n"
-"    \n"
-"}\n"
-"QPushButton:hover {\n"
-"    color:rgb(0, 137, 236);;\n"
-"    background-color: white;;\n"
-"}\n"
-"")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("Library Agent/Assets/write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.SUBMIT_MODIFICATION.setIcon(icon3)
-        self.SUBMIT_MODIFICATION.setIconSize(QtCore.QSize(20, 20))
-        self.SUBMIT_MODIFICATION.setObjectName("SUBMIT_MODIFICATION")
         self.DELETE = QtWidgets.QPushButton(self.frame_16)
         self.DELETE.setGeometry(QtCore.QRect(290, 170, 181, 41))
         self.DELETE.setStyleSheet("\n"
@@ -513,7 +481,7 @@ class Ui_BooksWindow(object):
         self.NUMBER_OF_BOOKS.setReadOnly(True)
         self.NUMBER_OF_BOOKS.setPlaceholderText("")
         self.NUMBER_OF_BOOKS.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.NUMBER_OF_BOOKS.setClearButtonEnabled(True)
+        self.NUMBER_OF_BOOKS.setClearButtonEnabled(False)
         self.NUMBER_OF_BOOKS.setObjectName("NUMBER_OF_BOOKS")
         self.frame_18 = QtWidgets.QFrame(self.BookWindow)
         self.frame_18.setGeometry(QtCore.QRect(340, 560, 221, 131))
@@ -552,7 +520,7 @@ class Ui_BooksWindow(object):
         self.NUMBER_OF_MEMBERS.setReadOnly(True)
         self.NUMBER_OF_MEMBERS.setPlaceholderText("")
         self.NUMBER_OF_MEMBERS.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.NUMBER_OF_MEMBERS.setClearButtonEnabled(True)
+        self.NUMBER_OF_MEMBERS.setClearButtonEnabled(False)
         self.NUMBER_OF_MEMBERS.setObjectName("NUMBER_OF_MEMBERS")
         self.frame_15.raise_()
         self.frame_5.raise_()
@@ -598,7 +566,6 @@ class Ui_BooksWindow(object):
         self.ADD_BOOK.setText(_translate("BooksWindow", "Add Book"))
         self.label21.setText(_translate("BooksWindow", "Book Title"))
         self.label20_2.setText(_translate("BooksWindow", "Add a Book"))
-        self.SUBMIT_MODIFICATION.setText(_translate("BooksWindow", "Submit Modification"))
         self.DELETE.setText(_translate("BooksWindow", "dELETE"))
         self.label21_2.setText(_translate("BooksWindow", "Book Title"))
         self.label22_2.setText(_translate("BooksWindow", "Author"))

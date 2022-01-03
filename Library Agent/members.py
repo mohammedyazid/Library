@@ -200,38 +200,6 @@ class Ui_MembersWidnow(object):
 "color:black;\n"
 "background-color: rgba(28, 113, 216, 0);")
         self.label20_2.setObjectName("label20_2")
-        self.SUBMIT_MODIFICATION = QtWidgets.QPushButton(self.frame_15)
-        self.SUBMIT_MODIFICATION.setGeometry(QtCore.QRect(180, 440, 181, 41))
-        self.SUBMIT_MODIFICATION.setStyleSheet("\n"
-"QPushButton {\n"
-"    \n"
-"    background-color: rgb(26, 95, 180);\n"
-"    border: 1px solid white;\n"
-"    border-radius: 20px;\n"
-"    border-style: outset;\n"
-"    padding: 5px;\n"
-"    transition: all .5s ease;\n"
-"    color: white;\n"
-"    font-family:\'Montserrat\', sans-serif;\n"
-"    text-transform: uppercase;\n"
-"    text-align: center;\n"
-"    line-height: 1;\n"
-"    font-size: 12px;\n"
-"    padding: 10px;\n"
-"    outline: none;\n"
-"    \n"
-"    \n"
-"}\n"
-"QPushButton:hover {\n"
-"    color:rgb(0, 137, 236);;\n"
-"    background-color: white;;\n"
-"}\n"
-"")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Library Agent/Assets/write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.SUBMIT_MODIFICATION.setIcon(icon2)
-        self.SUBMIT_MODIFICATION.setIconSize(QtCore.QSize(20, 20))
-        self.SUBMIT_MODIFICATION.setObjectName("SUBMIT_MODIFICATION")
         self.DELETE = QtWidgets.QPushButton(self.frame_15)
         self.DELETE.setGeometry(QtCore.QRect(180, 380, 181, 41))
         self.DELETE.setStyleSheet("\n"
@@ -488,7 +456,6 @@ class Ui_MembersWidnow(object):
         self.label23.setText(_translate("MembersWidnow", "Phone"))
         self.label21.setText(_translate("MembersWidnow", "First Name"))
         self.label20_2.setText(_translate("MembersWidnow", "Manage Member Informations"))
-        self.SUBMIT_MODIFICATION.setText(_translate("MembersWidnow", "Submit Modification"))
         self.DELETE.setText(_translate("MembersWidnow", "dELETE"))
         self.ADDMEMBER.setText(_translate("MembersWidnow", "Add Member"))
         self.label23_2.setText(_translate("MembersWidnow", "Email Address"))

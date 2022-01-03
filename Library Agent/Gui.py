@@ -8,9 +8,9 @@ import time
 import socket
 
 DB_HOST="localhost"
-DB_NAME="library"
-DB_USER=""
-DB_PASS=""
+DB_NAME="libraryagent"
+DB_USER="yassine"
+DB_PASS="adpost2008"
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 
@@ -98,7 +98,12 @@ class Ui_Gui(object):
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
         cur2 = conn.cursor()
         if len(infos) == 6:
-           cur2.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES(%s,%s,%s,%s,%s,%s)",(infos[0],infos[1],infos[2],infos[3],infos[4],infos[5]))
+           cur2.execute('select id from members where id=%s',(infos[0],))
+           test_id=cur2.fetchall()
+           if len(test_id)==0:
+            cur2.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES(%s,%s,%s,%s,%s,%s)",(infos[0],infos[1],infos[2],infos[3],infos[4],infos[5]))
+           else:
+            print('try an other one')        
         elif len(infos) == 2:
             idd1= infos[0]
             passwordd1=infos[1]
@@ -375,4 +380,5 @@ class Ui_Gui(object):
                 self.MembersWindow.Members_table.setItem(0 , 3,QtWidgets.QTableWidgetItem(data1[i][3]))
                 self.MembersWindow.Members_table.setItem(0 , 4,QtWidgets.QTableWidgetItem(data1[i][4]))  
                 self.MembersWindow.Members_table.setItem(0 , 5,QtWidgets.QTableWidgetItem(data1[i][5]))  
-      
+
+    
