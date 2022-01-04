@@ -23,7 +23,7 @@ except socket.error as e:
         print(str(e))
 
 ServerSocket.listen(5)
-class Ui_Gui(object):
+class Agent(object):
     ThreadCount=0
     def setupUi(self, Gui):
         
@@ -162,8 +162,8 @@ class Ui_Gui(object):
             connec, address = ServerSocket.accept()
             client_handler = threading.Thread(target=self.client_connection,args=(connec,))
             client_handler.start()
-            Ui_Gui.ThreadCount += 1
-            print('Connection Request: ' + str(Ui_Gui.ThreadCount))
+            Agent.ThreadCount += 1
+            print('Connection Request: ' + str(Agent.ThreadCount))
             #ServerSocket.close()
 
     def add_book(self):

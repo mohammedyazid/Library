@@ -1,13 +1,13 @@
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QMainWindow,QApplication
 import sys
-from Gui import Ui_Gui
+from Gui import Client
 
 class MainWindow(QMainWindow):
     
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.ui = Ui_Gui()
+        self.ui = Client()
         self.ui.setupUi(self)
         self.setWindowIcon(QtGui.QIcon('Library Management/Icons/mainicon.png'))
         

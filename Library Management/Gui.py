@@ -24,7 +24,7 @@ import time
 
 
 
-class Ui_Gui(object):
+class Client(object):
     #conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
     #cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     
@@ -184,12 +184,9 @@ class Ui_Gui(object):
         if(fn!="" and ln!="" and ml!="" and ph!="" and ps!="" and id!=""): 
             if(ps==psc):
                 if self.RegisterWindow.checkBox.isChecked():
-                    # Ui_Gui.cur.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES('"+str(id)+"','"+fn+"','"+ln+"','"+ml+"','"+ph+"','"+ps+"')")
-                    # Ui_Gui.conn.commit()
-                    # other info
+        
                     client1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     
-                    #response = client1.recv(2048)
                     password=hashlib.sha256(str.encode(ps)).hexdigest()#password encryption before send it
                     confirm_password=hashlib.sha256(str.encode(psc)).hexdigest()
                     client1.connect(('127.0.0.1', 12397 ))
@@ -212,10 +209,10 @@ class Ui_Gui(object):
             self.RegisterWindow.re_error.setStyleSheet("color:red;")
             self.RegisterWindow.re_error.setText("You can't leave any field empty")
     def getbooks(self):
-        with Ui_Gui.conn:
-            Ui_Gui.cur.execute("SELECT * FROM book")
+        with Client.conn:
+            Client.cur.execute("SELECT * FROM book")
             #Fetch Books Data's from data base
-            data = Ui_Gui.cur.fetchall()
+            data = Client.cur.fetchall()
             #Adding Books data to table down here
     def clear(self,page):
         if(page=="register"):
