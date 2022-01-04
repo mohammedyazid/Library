@@ -37,7 +37,7 @@ class Ui_MembersWidnow(object):
         self.icon.setStyleSheet("background-color: rgba(42, 41, 41, 0);")
         self.icon.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Library Agent/Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("../../../../../.designer/backup/Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon.setIcon(icon)
         self.icon.setIconSize(QtCore.QSize(50, 50))
         self.icon.setObjectName("icon")
@@ -70,7 +70,7 @@ class Ui_MembersWidnow(object):
 "}\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Library Agent/Library Agent/Assets/programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("../../../../../.designer/backup/Icons/programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.MANAGE_BOOKS.setIcon(icon1)
         self.MANAGE_BOOKS.setIconSize(QtCore.QSize(25, 25))
         self.MANAGE_BOOKS.setObjectName("MANAGE_BOOKS")
@@ -80,9 +80,12 @@ class Ui_MembersWidnow(object):
 "border: 1px ;\n"
 "border-radius: 20px;\n"
 "background-color: rgb(34, 39, 46);")
+        self.Members_table.setLineWidth(25)
         self.Members_table.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.Members_table.setDefaultDropAction(QtCore.Qt.IgnoreAction)
+        self.Members_table.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectColumns)
         self.Members_table.setObjectName("Members_table")
-        self.Members_table.setColumnCount(6)
+        self.Members_table.setColumnCount(5)
         self.Members_table.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         self.Members_table.setHorizontalHeaderItem(0, item)
@@ -94,8 +97,7 @@ class Ui_MembersWidnow(object):
         self.Members_table.setHorizontalHeaderItem(3, item)
         item = QtWidgets.QTableWidgetItem()
         self.Members_table.setHorizontalHeaderItem(4, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.Members_table.setHorizontalHeaderItem(5, item)
+        self.Members_table.horizontalHeader().setDefaultSectionSize(114)
         self.label22 = QtWidgets.QLabel(self.MembersWindow)
         self.label22.setGeometry(QtCore.QRect(310, 180, 101, 31))
         self.label22.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
@@ -261,10 +263,6 @@ class Ui_MembersWidnow(object):
         self.label23_2.setGeometry(QtCore.QRect(300, 160, 131, 31))
         self.label23_2.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(65, 191, 64, 0);")
-        self.label23_2 = QtWidgets.QLabel(self.frame_15)
-        self.label23_2.setGeometry(QtCore.QRect(300, 160, 131, 31))
-        self.label23_2.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
-"background-color: rgba(65, 191, 64, 0);")
         self.label23_2.setObjectName("label23_2")
         self.label23_4 = QtWidgets.QLabel(self.frame_15)
         self.label23_4.setGeometry(QtCore.QRect(170, 230, 121, 31))
@@ -299,13 +297,13 @@ class Ui_MembersWidnow(object):
         self.delete_book_5 = QtWidgets.QPushButton(self.frame_15)
         self.delete_book_5.setGeometry(QtCore.QRect(40, 180, 61, 51))
         self.delete_book_5.setStyleSheet("font: 75 13pt \"Ubuntu\";")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("Library Agent/Assets/algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.delete_book_5.setIcon(icon5)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("../../../../../.designer/backup/Assets/algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.delete_book_5.setIcon(icon3)
         self.delete_book_5.setIconSize(QtCore.QSize(20, 20))
         self.delete_book_5.setObjectName("delete_book_5")
         self.SEARCH_FIELD = QtWidgets.QLineEdit(self.MembersWindow)
-        self.SEARCH_FIELD.setGeometry(QtCore.QRect(590, 90, 400, 31))
+        self.SEARCH_FIELD.setGeometry(QtCore.QRect(570, 90, 491, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -329,9 +327,7 @@ class Ui_MembersWidnow(object):
         self.SEARCH_FIELD.setClearButtonEnabled(True)
         self.SEARCH_FIELD.setObjectName("SEARCH_FIELD")
         self.SUBMIT = QtWidgets.QPushButton(self.MembersWindow)
-        self.SUBMIT.setGeometry(QtCore.QRect(990, 90, 91, 31))
-        self.DISPLAY_ALL = QtWidgets.QPushButton(self.MembersWindow)
-        self.DISPLAY_ALL.setGeometry(QtCore.QRect(1080, 90, 91, 31))
+        self.SUBMIT.setGeometry(QtCore.QRect(1070, 90, 91, 31))
         self.SUBMIT.setStyleSheet("\n"
 "QPushButton {\n"
 "    \n"
@@ -357,34 +353,9 @@ class Ui_MembersWidnow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.DISPLAY_ALL.setStyleSheet("\n"
-"QPushButton {\n"
-"    \n"
-"    background-color: rgb(36, 31, 49);\n"
-"    border: 2px solid white;\n"
-"    border-radius: 15px;\n"
-"    border-style: outset;\n"
-"    padding: 5px;\n"
-"    transition: all .5s ease;\n"
-"    color: white;\n"
-"    font-family:\'Montserrat\', sans-serif;\n"
-"    text-transform: uppercase;\n"
-"    text-align: center;\n"
-"    line-height: 1;\n"
-"    font-size: 10px;\n"
-"    padding: 0px;\n"
-"    outline: none;\n"
-"    \n"
-"    \n"
-"}\n"
-"QPushButton:hover {\n"
-"    color:rgb(0, 137, 236);;\n"
-"    background-color: white;;\n"
-"}\n"
-"")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("../Library Management/Windows_Ui/Library Agent/Assets/Ui/Library Agent/Library Agent/Assets/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.SUBMIT.setIcon(icon6)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("../../../../../.designer/Library Management/Windows_Ui/Assets/Ui/Icons/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.SUBMIT.setIcon(icon4)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")
         self.frame_16 = QtWidgets.QFrame(self.MembersWindow)
@@ -421,7 +392,7 @@ class Ui_MembersWidnow(object):
 "    color:rgb(0, 137, 236);;\n"
 "    background-color: white;;\n"
 "}\n"
-"")     
+"")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("../../../../../.designer/backup/Assets/write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.RESERVE_3.setIcon(icon5)
@@ -505,11 +476,11 @@ class Ui_MembersWidnow(object):
         self.SEARCH_FIELD.raise_()
         self.SUBMIT.raise_()
         self.frame_16.raise_()
-        #MembersWidnow.setCentralWidget(self.MembersWindow)
+        MembersWidnow.setCentralWidget(self.MembersWindow)
         self.menubar = QtWidgets.QMenuBar(MembersWidnow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1179, 22))
         self.menubar.setObjectName("menubar")
-        #MembersWidnow.setMenuBar(self.menubar)
+        MembersWidnow.setMenuBar(self.menubar)
 
         self.retranslateUi(MembersWidnow)
         QtCore.QMetaObject.connectSlotsByName(MembersWidnow)
@@ -520,17 +491,15 @@ class Ui_MembersWidnow(object):
         self.label20.setText(_translate("MembersWidnow", "Library Agent Space"))
         self.MANAGE_BOOKS.setText(_translate("MembersWidnow", "Manage Books"))
         item = self.Members_table.horizontalHeaderItem(0)
-        item.setText(_translate("MembersWidnow", "ID"))
-        item = self.Members_table.horizontalHeaderItem(1)
         item.setText(_translate("MembersWidnow", "First Name"))
-        item = self.Members_table.horizontalHeaderItem(2)
+        item = self.Members_table.horizontalHeaderItem(1)
         item.setText(_translate("MembersWidnow", "Last Name"))
+        item = self.Members_table.horizontalHeaderItem(2)
+        item.setText(_translate("MembersWidnow", "ID"))
         item = self.Members_table.horizontalHeaderItem(3)
-        item.setText(_translate("MembersWidnow", "Email"))
-        item = self.Members_table.horizontalHeaderItem(4)
         item.setText(_translate("MembersWidnow", "Phone"))
-        item = self.Members_table.horizontalHeaderItem(5)
-        item.setText(_translate("MembersWidnow", "Password"))
+        item = self.Members_table.horizontalHeaderItem(4)
+        item.setText(_translate("MembersWidnow", "Email"))
         self.label22.setText(_translate("MembersWidnow", "Last Name"))
         self.label23.setText(_translate("MembersWidnow", "Phone"))
         self.label21.setText(_translate("MembersWidnow", "First Name"))
@@ -541,7 +510,6 @@ class Ui_MembersWidnow(object):
         self.delete_book_5.setText(_translate("MembersWidnow", "+213"))
         self.SEARCH_FIELD.setPlaceholderText(_translate("MembersWidnow", "Enter any Member First or Last Name Or ID"))
         self.SUBMIT.setText(_translate("MembersWidnow", "Submit"))
-        self.DISPLAY_ALL.setText(_translate("MembersWidnow", "display all"))
         self.RESERVE_3.setText(_translate("MembersWidnow", "Reserve"))
         self.label23_10.setText(_translate("MembersWidnow", "STUDENT ID"))
         self.label23_11.setText(_translate("MembersWidnow", "BOOK CODE"))

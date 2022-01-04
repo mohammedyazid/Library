@@ -52,3 +52,4 @@ CREATE TABLE members
   password varchar(60) NOT NULL,
   PRIMARY KEY(id)
 );
+

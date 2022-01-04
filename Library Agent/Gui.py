@@ -1,3 +1,4 @@
+import re
 from threading import Thread
 from PyQt5 import QtCore, QtGui, QtWidgets
 from books import Ui_BooksWindow
@@ -8,9 +9,9 @@ import time
 import socket
 
 DB_HOST="localhost"
-DB_NAME="libraryagent"
-DB_USER="yassine"
-DB_PASS="adpost2008"
+DB_NAME=""
+DB_USER=""
+DB_PASS=""
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 
@@ -65,6 +66,7 @@ class Agent(object):
         self.MembersWindow.SUBMIT.clicked.connect(self.search_member)
         self.BooksWindow.DISPLAY_ALL.clicked.connect(self.display_books)
         self.MembersWindow.DISPLAY_ALL.clicked.connect(self.display_members)
+        self.MembersWindow.RESERVE_3.clicked.connect(self.reserve)
 
         '''Setting initial index to Zero which means 
         when you run the code the first page u will see is the login page'''
@@ -380,5 +382,20 @@ class Agent(object):
                 self.MembersWindow.Members_table.setItem(0 , 3,QtWidgets.QTableWidgetItem(data1[i][3]))
                 self.MembersWindow.Members_table.setItem(0 , 4,QtWidgets.QTableWidgetItem(data1[i][4]))  
                 self.MembersWindow.Members_table.setItem(0 , 5,QtWidgets.QTableWidgetItem(data1[i][5]))  
-
-    
+    def reserve(self):
+        conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        cur9=conn.cursor()
+        cur8=conn.cursor()
+        code = self.MembersWindow.BOOKCODE.text()
+        studentid = self.MembersWindow.STUDENTID.text()
+        cur8.execute("select status from books where code=%s",(code,))
+        answ = cur8.fetchall()
+        if str(answ[0])=="('N/A',)":
+            print("Book Already Reserved")
+        else:
+            pass
+            cur9.execute("INSERT INTO reserve (id,bookcode) VALUES(%s,%s)",(code,studentid))
+            sql_update = """UPDATE books SET status='%s' WHERE code = '%s'""" % ("N/A",code)
+            cur8.execute(sql_update)
+            conn.commit()
+            
