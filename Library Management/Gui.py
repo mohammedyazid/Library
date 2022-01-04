@@ -24,7 +24,7 @@ import time
 
 
 
-class Client(object):
+class student(object):
     #conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
     #cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     
@@ -209,10 +209,10 @@ class Client(object):
             self.RegisterWindow.re_error.setStyleSheet("color:red;")
             self.RegisterWindow.re_error.setText("You can't leave any field empty")
     def getbooks(self):
-        with Client.conn:
-            Client.cur.execute("SELECT * FROM book")
+        with student.conn:
+            student.cur.execute("SELECT * FROM book")
             #Fetch Books Data's from data base
-            data = Client.cur.fetchall()
+            data = student.cur.fetchall()
             #Adding Books data to table down here
     def clear(self,page):
         if(page=="register"):
