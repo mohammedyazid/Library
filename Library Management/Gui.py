@@ -126,7 +126,7 @@ class student(object):
     def logged(self):
         if (self.LoginWindow.ID.text()!="" and self.LoginWindow.PASSWORD.text()!=""):
          client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-         client.connect(('127.0.0.1', 12397 ))
+         client.connect(('192.168.43.28', 12397 ))
          id = self.LoginWindow.ID.text()
          password = self.LoginWindow.PASSWORD.text()
          password=hashlib.sha256(str.encode(password)).hexdigest()#password encryption before send it       
@@ -189,7 +189,7 @@ class student(object):
                     
                     password=hashlib.sha256(str.encode(ps)).hexdigest()#password encryption before send it
                     confirm_password=hashlib.sha256(str.encode(psc)).hexdigest()
-                    client1.connect(('127.0.0.1', 12397 ))
+                    client1.connect(('192.168.43.28', 12397 ))
                     client1.send(str.encode(id+' '+fn+' '+ln+' '+ml+' '+ph+' '+password))
                     self.clear("register")
                     client1.close()
@@ -244,7 +244,7 @@ class student(object):
         
         if(npassword == cpassword):
             client2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            client2.connect(('127.0.0.1', 12397 ))
+            client2.connect(('192.168.43.28', 12397 ))
         
             password=hashlib.sha256(str.encode(password)).hexdigest()
             npassword=hashlib.sha256(str.encode(npassword)).hexdigest()
