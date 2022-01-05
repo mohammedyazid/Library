@@ -351,10 +351,12 @@ class Ui_BooksWindow(object):
                 
                 for i in range(len(response)):
                        
-                               
-                        self.TABLE.setItem(0 , i%5,QtWidgets.QTableWidgetItem(response[i]))
-                        if i%5 == 4 and i!=len(response)-1:
-                               self.TABLE.insertRow(0)
+                        if i%5==0: 
+                            self.TABLE.setItem(0 , i%5,QtWidgets.QTableWidgetItem(response[i].upper()))       
+                        else:
+                                self.TABLE.setItem(0 , i%5,QtWidgets.QTableWidgetItem(response[i]))
+                                if i%5 == 4 and i!=len(response)-1:
+                                   self.TABLE.insertRow(0)
 
                                               
         else:

@@ -9,7 +9,7 @@ import time
 import socket
 
 DB_HOST="localhost"
-DB_NAME=""
+DB_NAME="libraryagent"
 DB_USER=""
 DB_PASS=""
 
@@ -212,6 +212,7 @@ class Agent(object):
              item = QtWidgets.QTableWidgetItem(data[j][i])
              self.BooksWindow.Books_table.setItem(j, i, item)
         self.BooksWindow.Books_table.sortByColumn(0,QtCore.Qt.SortOrder.DescendingOrder)
+        self.display_books()
         
     
     def delete_book(self):
@@ -386,7 +387,7 @@ class Agent(object):
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
         cur9=conn.cursor()
         cur8=conn.cursor()
-        code = self.MembersWindow.BOOKCODE.text()
+        code = self.MembersWindow.BOOKCODE.text().lower()
         studentid = self.MembersWindow.STUDENTID.text()
         cur8.execute("select status from books where code=%s",(code,))
         answ = cur8.fetchall()
@@ -398,4 +399,5 @@ class Agent(object):
             sql_update = """UPDATE books SET status='%s' WHERE code = '%s'""" % ("N/A",code)
             cur8.execute(sql_update)
             conn.commit()
+            self.display_books()
             
