@@ -306,7 +306,9 @@ class Ui_MyaccWindow(object):
         self.BOOKS.setIconSize(QtCore.QSize(25, 25))
         self.BOOKS.setObjectName("BOOKS")
         self.REQUEST = QtWidgets.QPushButton(self.frame_16)
+        self.ABOUT_US = QtWidgets.QPushButton(self.frame_16)
         self.REQUEST.setGeometry(QtCore.QRect(10, 300, 151, 51))
+        self.ABOUT_US.setGeometry(QtCore.QRect(10, 530, 151, 51))
         self.REQUEST.setStyleSheet("\n"
 "QPushButton {\n"
 "    background-color: rgb(46, 194, 126);\n"
@@ -330,12 +332,37 @@ class Ui_MyaccWindow(object):
 "    color:rgb(0, 137, 236);;\n"
 "    background-color: white;;\n"
 "}\n"
-"")
+"")     
+        self.ABOUT_US.setStyleSheet("\n"
+"QPushButton {\n"
+"    background-color:transparent;\n"
+"    border: 0px solid white;\n"
+"    border-radius: 0px;\n"
+"    border-style: outset;\n"
+"    padding: 5px;\n"
+"    transition: all .5s ease;\n"
+"    color: white;\n"
+"    font-family:\'Montserrat\', sans-serif;\n"
+"    text-transform: uppercase;\n"
+"    text-align: center;\n"
+"    line-height: 1;\n"
+"    font-size: 16px;\n"
+"    padding: 10px;\n"
+"    outline: none;\n"
+"    \n"
+"    \n"
+"}\n"
+"QPushButton:hover {\n"
+"    color:rgb(0, 137, 236);;\n"
+"    background-color: transparent;;\n"
+"}\n"
+"")    
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("Library Management/Icons/interview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.REQUEST.setIcon(icon3)
         self.REQUEST.setIconSize(QtCore.QSize(25, 25))
         self.REQUEST.setObjectName("REQUEST")
+        self.ABOUT_US.setObjectName("ABOUT_US")
         self.icon11 = QtWidgets.QPushButton(self.frame_16)
         self.icon11.setGeometry(QtCore.QRect(-20, 50, 191, 111))
         self.icon11.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
@@ -592,6 +619,7 @@ class Ui_MyaccWindow(object):
         self.MY_ACCOUNT.setText(_translate("MyaccWindow", "My account"))
         self.BOOKS.setText(_translate("MyaccWindow", "Books"))
         self.REQUEST.setText(_translate("MyaccWindow", "Request"))
+        self.ABOUT_US.setText(_translate("MyaccWindow", "ABOUT US"))
         self.label32.setText(_translate("MyaccWindow", "Last Name"))
         self.label33.setText(_translate("MyaccWindow", "ID"))
         self.label34.setText(_translate("MyaccWindow", "Phone"))

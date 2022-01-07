@@ -37,7 +37,7 @@ class Ui_BooksWindow(object):
         self.icon.setStyleSheet("background-color: rgba(42, 41, 41, 0);")
         self.icon.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Library Agent/Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon.setIcon(icon)
         self.icon.setIconSize(QtCore.QSize(50, 50))
         self.icon.setObjectName("icon")
@@ -70,7 +70,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Library Agent/Assets/programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.MANAGE_MEMBERS.setIcon(icon1)
         self.MANAGE_MEMBERS.setIconSize(QtCore.QSize(25, 25))
         self.MANAGE_MEMBERS.setObjectName("MANAGE_MEMBERS")
@@ -133,7 +133,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Library Agent/Library Agent/Assets/borrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/borrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.ADD_BOOK.setIcon(icon2)
         self.ADD_BOOK.setIconSize(QtCore.QSize(30, 30))
         self.ADD_BOOK.setObjectName("ADD_BOOK")

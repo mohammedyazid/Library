@@ -11,7 +11,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Agent()
         self.ui.setupUi(self)
-        self.setWindowIcon(QtGui.QIcon('Library Agent/Assets/milky-way.png'))
+        self.setWindowIcon(QtGui.QIcon('/home/yassine/Library/Library/Library Agent/Assets/milky-way.png'))
         client_handler = threading.Thread( target=self.ui.with_clients,args=()  )
         client_handler.start()
 if __name__ == "__main__":
