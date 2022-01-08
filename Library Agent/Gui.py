@@ -9,9 +9,9 @@ import time
 import socket
 
 DB_HOST="localhost"
-DB_NAME="libraryagent"
-DB_USER=""
-DB_PASS=""
+DB_NAME="library"
+DB_USER="postgres"
+DB_PASS="admin"
 
 ServerSocket = socket.socket(family = socket.AF_INET, type = socket.SOCK_STREAM)
 

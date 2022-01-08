@@ -11,6 +11,7 @@ from help import Ui_HelpWindow
 from books import Ui_BooksWindow
 from request import Ui_RequestWindow
 from myacc import Ui_MyaccWindow
+from about import About
 import psycopg2
 from psycopg2 import extras
 import time
@@ -80,6 +81,13 @@ class student(object):
         self.RequestWindow= Ui_RequestWindow()
         self.RequestWindow.setupUi(self.tab5)
         self.library_tab.addTab(self.tab5,"")
+        
+        #TAB 7
+        self.tab6 = QtWidgets.QWidget()
+        self.tab6.setObjectName("tab6")
+        self.AboutWindow= About()
+        self.AboutWindow.setupUi(self.tab6)
+        self.library_tab.addTab(self.tab6,"")
 
         #########################################
 
@@ -89,8 +97,8 @@ class student(object):
         #Testing self.RegisterWindow.SIGN_UP.clicked.connect(self.toAcc)
         self.LoginWindow.SIGN_UP.clicked.connect(self.toRegister)
         self.LoginWindow.SIGN_IN.clicked.connect(self.logged)
-        self.LoginWindow.HELP.clicked.connect(self.toHelp)
-        self.RegisterWindow.HELP.clicked.connect(self.toHelp)
+        self.LoginWindow.ABOUT.clicked.connect(self.toabout)
+        self.RegisterWindow.ABOUT.clicked.connect(self.toabout)
         self.AccountWindow.LOGOUT.clicked.connect(self.toLogin)
         self.RegisterWindow.SIGN_UP.clicked.connect(self.signupaction)
         #####Main Page Actions "After Logging in"#####
@@ -104,6 +112,8 @@ class student(object):
         self.RequestWindow.BOOKS.clicked.connect(self.toBooks)
 
         self.AccountWindow.SUBMIT.clicked.connect(self.changepass)
+        
+        self.AboutWindow.BACK.clicked.connect(self.toLogin)
         '''Setting initial index to Zero which means 
         when you run the code the first page u will see is the login page'''
         ################################################
@@ -121,6 +131,7 @@ class student(object):
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab3), _translate("Gui", "Books"))
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab4), _translate("Gui", "My Account"))
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab5), _translate("Gui", "Request"))
+        self.library_tab.setTabText(self.library_tab.indexOf(self.tab6), _translate("Gui", "About"))
         
     #Fonctions
     def logged(self):
@@ -151,7 +162,8 @@ class student(object):
          client.close()
         else:
             self.LoginWindow.lg_error.setText("You can't leave any field empty")
-
+    def toabout(self):
+        self.library_tab.setCurrentIndex(6)
                     
     def toLogin(self):
         self.LoginWindow.lg_error.setText("")

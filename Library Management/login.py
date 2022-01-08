@@ -31,9 +31,9 @@ class Ui_LoginWindow(object):
         self.label1.setStyleSheet("font: 63 italic 40pt \"URW Bookman\";\n"
 "color:white;")
         self.label1.setObjectName("label1")
-        self.HELP = QtWidgets.QPushButton(self.frame_2)
-        self.HELP.setGeometry(QtCore.QRect(170, 270, 171, 41))
-        self.HELP.setStyleSheet("\n"
+        self.ABOUT = QtWidgets.QPushButton(self.frame_2)
+        self.ABOUT.setGeometry(QtCore.QRect(170, 270, 171, 41))
+        self.ABOUT.setStyleSheet("\n"
 "QPushButton {\n"
 "    transition: all .5s ease;\n"
 "    color: white;\n"
@@ -55,7 +55,7 @@ class Ui_LoginWindow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.HELP.setObjectName("HELP")
+        self.ABOUT.setObjectName("ABOUT")
         self.icon2 = QtWidgets.QPushButton(self.frame_2)
         self.icon2.setGeometry(QtCore.QRect(290, 60, 89, 41))
         self.icon2.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
@@ -239,7 +239,7 @@ class Ui_LoginWindow(object):
         _translate = QtCore.QCoreApplication.translate
         LoginWindow.setWindowTitle(_translate("LoginWindow", "Login"))
         self.label1.setText(_translate("LoginWindow", "Library"))
-        self.HELP.setText(_translate("LoginWindow", "HELP"))
+        self.ABOUT.setText(_translate("LoginWindow", "ABOUT"))
         self.SIGN_UP.setText(_translate("LoginWindow", "Sign Up"))
         self.label5.setText(_translate("LoginWindow", "ID"))
         self.label6.setText(_translate("LoginWindow", "Password"))

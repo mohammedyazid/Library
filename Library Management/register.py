@@ -31,9 +31,9 @@ class Ui_RegisterWindow(object):
         self.label8.setStyleSheet("font: 63 italic 40pt \"URW Bookman\";\n"
 "color:white;")
         self.label8.setObjectName("label8")
-        self.HELP = QtWidgets.QPushButton(self.frame_3)
-        self.HELP.setGeometry(QtCore.QRect(170, 270, 171, 41))
-        self.HELP.setStyleSheet("\n"
+        self.ABOUT = QtWidgets.QPushButton(self.frame_3)
+        self.ABOUT.setGeometry(QtCore.QRect(170, 270, 171, 41))
+        self.ABOUT.setStyleSheet("\n"
 "QPushButton {\n"
 "    transition: all .5s ease;\n"
 "    color: white;\n"
@@ -55,7 +55,7 @@ class Ui_RegisterWindow(object):
 "    background-color: white;;\n"
 "}\n"
 "")
-        self.HELP.setObjectName("HELP")
+        self.ABOUT.setObjectName("ABOUT")
         self.icon4 = QtWidgets.QPushButton(self.frame_3)
         self.icon4.setGeometry(QtCore.QRect(290, 60, 89, 41))
         self.icon4.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
@@ -381,7 +381,7 @@ class Ui_RegisterWindow(object):
         _translate = QtCore.QCoreApplication.translate
         RegisterWindow.setWindowTitle(_translate("RegisterWindow", "Register"))
         self.label8.setText(_translate("RegisterWindow", "Library"))
-        self.HELP.setText(_translate("RegisterWindow", "Help"))
+        self.ABOUT.setText(_translate("RegisterWindow", "ABOUT"))
         self.label12.setText(_translate("RegisterWindow", "First Name"))
         self.label15.setText(_translate("RegisterWindow", "ID"))
         self.SIGN_UP.setText(_translate("RegisterWindow", "Sign Up"))
