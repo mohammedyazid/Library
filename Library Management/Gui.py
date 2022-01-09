@@ -7,6 +7,7 @@ import sys
 sys.path.append('Windows_Ui/')
 from register import Ui_RegisterWindow
 from login import Ui_LoginWindow
+from help import Ui_HelpWindow
 from books import Ui_BooksWindow
 from request import Ui_RequestWindow
 from myacc import Ui_MyaccWindow
@@ -53,12 +54,12 @@ class student(object):
         self.RegisterWindow.setupUi(self.tab1)
         self.library_tab.addTab(self.tab1,"")
         
-        # #TAB 3 
-        # self.tab2 = QtWidgets.QWidget()
-        # self.tab2.setObjectName("tab2")
-        # self.HelpWindow=Ui_HelpWindow()
-        # self.HelpWindow.setupUi(self.tab2)
-        # self.library_tab.addTab(self.tab2,"")
+        #TAB 3 
+        self.tab2 = QtWidgets.QWidget()
+        self.tab2.setObjectName("tab2")
+        self.HelpWindow=Ui_HelpWindow()
+        self.HelpWindow.setupUi(self.tab2)
+        self.library_tab.addTab(self.tab2,"")
 
         #TAB 4
         self.tab3 = QtWidgets.QWidget()
@@ -92,6 +93,7 @@ class student(object):
 
         #Actions
         self.RegisterWindow.BACK.clicked.connect(self.toLogin)
+        self.HelpWindow.BACK.clicked.connect(self.toLogin)
         #Testing self.RegisterWindow.SIGN_UP.clicked.connect(self.toAcc)
         self.LoginWindow.SIGN_UP.clicked.connect(self.toRegister)
         self.LoginWindow.SIGN_IN.clicked.connect(self.logged)
@@ -126,6 +128,7 @@ class student(object):
         Gui.setWindowTitle(_translate("Gui", "Gui"))
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab0), _translate("Gui", "Login"))
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab1), _translate("Gui", "Register"))
+        self.library_tab.setTabText(self.library_tab.indexOf(self.tab2), _translate("Gui", "Help"))
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab3), _translate("Gui", "Books"))
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab4), _translate("Gui", "My Account"))
         self.library_tab.setTabText(self.library_tab.indexOf(self.tab5), _translate("Gui", "Request"))

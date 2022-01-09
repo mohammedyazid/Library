@@ -3,13 +3,13 @@ from PyQt5.QtWidgets import QMainWindow,QApplication
 import sys
 from Gui import Agent
 import threading
-from Path import *
+from Path import path
 
 class MainWindow(QMainWindow):
     
     def __init__(self):
-        super(MainWindow, self).__init__()
         self.path = path()
+        super(MainWindow, self).__init__()
         self.ui = Agent()
         self.ui.setupUi(self)
         self.setWindowIcon(QtGui.QIcon(self.path+'businessman.png'))

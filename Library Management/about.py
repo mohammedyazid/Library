@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Path import *
+from Path import path
 
 class About(object):
     def setupUi(self, About):

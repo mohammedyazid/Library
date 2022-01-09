@@ -11,7 +11,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import socket
 import re
-from Path import * 
+from Path import path
+
 class Ui_BooksWindow(object):
     def setupUi(self, BooksWindow):
         self.path = path()

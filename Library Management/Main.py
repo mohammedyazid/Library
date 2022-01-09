@@ -2,7 +2,7 @@ from PyQt5 import QtGui
 from PyQt5.QtWidgets import QMainWindow,QApplication
 import sys
 from Gui import student
-from Path import *
+from Path import path
 class MainWindow(QMainWindow):
     
     def __init__(self):

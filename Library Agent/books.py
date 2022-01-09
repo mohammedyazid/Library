@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Path import *
+from Path import path
 
 class Ui_BooksWindow(object):
     def setupUi(self, BooksWindow):
@@ -268,7 +268,7 @@ class Ui_BooksWindow(object):
 # "}\n"
 # "")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(self.path+"write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap("Assets/write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         # self.SUBMIT_MODIFICATION.setIcon(icon3)
         # self.SUBMIT_MODIFICATION.setIconSize(QtCore.QSize(20, 20))
         # self.SUBMIT_MODIFICATION.setObjectName("SUBMIT_MODIFICATION")
@@ -300,7 +300,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(self.path+"delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("../Assets/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.DELETE.setIcon(icon4)
         self.DELETE.setIconSize(QtCore.QSize(20, 20))
         self.DELETE.setObjectName("DELETE")
