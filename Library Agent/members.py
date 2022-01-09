@@ -97,12 +97,12 @@ class Ui_MembersWidnow(object):
         item = QtWidgets.QTableWidgetItem()
         self.Members_table.setHorizontalHeaderItem(5, item)
         self.label22 = QtWidgets.QLabel(self.MembersWindow)
-        self.label22.setGeometry(QtCore.QRect(310, 180, 101, 31))
+        self.label22.setGeometry(QtCore.QRect(50, 260, 101, 31))
         self.label22.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(42, 41, 41, 0);")
         self.label22.setObjectName("label22")
         self.label23 = QtWidgets.QLabel(self.MembersWindow)
-        self.label23.setGeometry(QtCore.QRect(50, 250, 61, 31))
+        self.label23.setGeometry(QtCore.QRect(50, 440, 61, 31))
         self.label23.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(65, 191, 64, 0);")
         self.label23.setObjectName("label23")
@@ -112,7 +112,7 @@ class Ui_MembersWidnow(object):
 "background-color: rgba(42, 41, 41, 0);")
         self.label21.setObjectName("label21")
         self.FIRST_NAME = QtWidgets.QLineEdit(self.MembersWindow)
-        self.FIRST_NAME.setGeometry(QtCore.QRect(50, 210, 201, 31))
+        self.FIRST_NAME.setGeometry(QtCore.QRect(50, 210, 271, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -137,7 +137,7 @@ class Ui_MembersWidnow(object):
         self.FIRST_NAME.setClearButtonEnabled(True)
         self.FIRST_NAME.setObjectName("FIRST_NAME")
         self.LAST_NAME = QtWidgets.QLineEdit(self.MembersWindow)
-        self.LAST_NAME.setGeometry(QtCore.QRect(310, 210, 191, 31))
+        self.LAST_NAME.setGeometry(QtCore.QRect(50, 290, 271, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -162,7 +162,7 @@ class Ui_MembersWidnow(object):
         self.LAST_NAME.setClearButtonEnabled(True)
         self.LAST_NAME.setObjectName("LAST_NAME")
         self.PHONE = QtWidgets.QLineEdit(self.MembersWindow)
-        self.PHONE.setGeometry(QtCore.QRect(110, 280, 141, 31))
+        self.PHONE.setGeometry(QtCore.QRect(110, 470, 141, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -187,7 +187,7 @@ class Ui_MembersWidnow(object):
         self.PHONE.setClearButtonEnabled(True)
         self.PHONE.setObjectName("PHONE")
         self.frame_15 = QtWidgets.QFrame(self.MembersWindow)
-        self.frame_15.setGeometry(QtCore.QRect(10, 90, 551, 381))
+        self.frame_15.setGeometry(QtCore.QRect(10, 90, 551, 601))
         self.frame_15.setStyleSheet("border: 1px;\n"
 "border-radius: 20px;\n"
 "background-color: white;")
@@ -195,13 +195,13 @@ class Ui_MembersWidnow(object):
         self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_15.setObjectName("frame_15")
         self.label20_2 = QtWidgets.QLabel(self.frame_15)
-        self.label20_2.setGeometry(QtCore.QRect(50, -10, 421, 71))
+        self.label20_2.setGeometry(QtCore.QRect(160, 0, 211, 71))
         self.label20_2.setStyleSheet("font: 63 italic 22pt \"URW Bookman\";\n"
 "color:black;\n"
 "background-color: rgba(28, 113, 216, 0);")
         self.label20_2.setObjectName("label20_2")
         self.DELETE = QtWidgets.QPushButton(self.frame_15)
-        self.DELETE.setGeometry(QtCore.QRect(180, 310, 181, 41))
+        self.DELETE.setGeometry(QtCore.QRect(100, 470, 341, 41))
         self.DELETE.setStyleSheet("\n"
 "QPushButton {\n"
 "    \n"
@@ -233,7 +233,7 @@ class Ui_MembersWidnow(object):
         self.DELETE.setIconSize(QtCore.QSize(20, 20))
         self.DELETE.setObjectName("DELETE")
         self.EMAIL_ADDRESS = QtWidgets.QLineEdit(self.frame_15)
-        self.EMAIL_ADDRESS.setGeometry(QtCore.QRect(300, 190, 201, 31))
+        self.EMAIL_ADDRESS.setGeometry(QtCore.QRect(40, 290, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -258,21 +258,21 @@ class Ui_MembersWidnow(object):
         self.EMAIL_ADDRESS.setClearButtonEnabled(True)
         self.EMAIL_ADDRESS.setObjectName("EMAIL_ADDRESS")
         self.label23_2 = QtWidgets.QLabel(self.frame_15)
-        self.label23_2.setGeometry(QtCore.QRect(300, 160, 131, 31))
+        self.label23_2.setGeometry(QtCore.QRect(40, 260, 131, 31))
         self.label23_2.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(65, 191, 64, 0);")
         self.label23_2 = QtWidgets.QLabel(self.frame_15)
-        self.label23_2.setGeometry(QtCore.QRect(300, 160, 131, 31))
+        self.label23_2.setGeometry(QtCore.QRect(40, 260, 131, 31))
         self.label23_2.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(65, 191, 64, 0);")
         self.label23_2.setObjectName("label23_2")
         self.label23_4 = QtWidgets.QLabel(self.frame_15)
-        self.label23_4.setGeometry(QtCore.QRect(170, 230, 121, 31))
+        self.label23_4.setGeometry(QtCore.QRect(330, 170, 121, 31))
         self.label23_4.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(65, 191, 64, 0);")
         self.label23_4.setObjectName("label23_4")
         self.ID = QtWidgets.QLineEdit(self.frame_15)
-        self.ID.setGeometry(QtCore.QRect(170, 260, 201, 31))
+        self.ID.setGeometry(QtCore.QRect(330, 200, 201, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -297,7 +297,7 @@ class Ui_MembersWidnow(object):
         self.ID.setClearButtonEnabled(True)
         self.ID.setObjectName("ID")
         self.delete_book_5 = QtWidgets.QPushButton(self.frame_15)
-        self.delete_book_5.setGeometry(QtCore.QRect(40, 180, 61, 51))
+        self.delete_book_5.setGeometry(QtCore.QRect(40, 370, 61, 51))
         self.delete_book_5.setStyleSheet("font: 75 13pt \"Ubuntu\";")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -387,145 +387,85 @@ class Ui_MembersWidnow(object):
         self.SUBMIT.setIcon(icon6)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")
-        self.frame_16 = QtWidgets.QFrame(self.MembersWindow)
-        self.frame_16.setGeometry(QtCore.QRect(10, 480, 551, 211))
-        self.frame_16.setStyleSheet("border: 1px;\n"
+        self.frame_17 = QtWidgets.QFrame(self.MembersWindow)
+        self.frame_17.setGeometry(QtCore.QRect(460, 0, 321, 81))
+        self.frame_17.setStyleSheet("border: 1px;\n"
 "border-radius: 20px;\n"
-"background-color: white;")
-        self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_16.setObjectName("frame_16")
-        self.RESERVE_3 = QtWidgets.QPushButton(self.frame_16)
-        self.BRING_BACK = QtWidgets.QPushButton(self.frame_16)
-        self.RESERVE_3.setGeometry(QtCore.QRect(245, 140, 241, 41))
-        self.BRING_BACK.setGeometry(QtCore.QRect(55, 140, 241, 41))
-        self.RESERVE_3.setStyleSheet("\n"
-"QPushButton {\n"
-"    \n"
-"    background-color: rgb(26, 95, 180);\n"
-"    border: 1px solid white;\n"
-"    border-radius: 20px;\n"
-"    border-style: outset;\n"
-"    padding: 5px;\n"
-"    transition: all .5s ease;\n"
-"    color: white;\n"
-"    font-family:\'Montserrat\', sans-serif;\n"
-"    text-transform: uppercase;\n"
-"    text-align: center;\n"
-"    line-height: 1;\n"
-"    font-size: 14px;\n"
-"    padding: 10px;\n"
-"    outline: none;\n"
-"    \n"
-"    \n"
-"}\n"
-"QPushButton:hover {\n"
-"    color:rgb(0, 137, 236);;\n"
-"    background-color: white;;\n"
-"}\n"
-"")    
-        self.BRING_BACK.setStyleSheet("\n"
-"QPushButton {\n"
-"    \n"
-"    background-color: rgb(26, 95, 180);\n"
-"    border: 1px solid white;\n"
-"    border-radius: 20px;\n"
-"    border-style: outset;\n"
-"    padding: 5px;\n"
-"    transition: all .5s ease;\n"
-"    color: white;\n"
-"    font-family:\'Montserrat\', sans-serif;\n"
-"    text-transform: uppercase;\n"
-"    text-align: center;\n"
-"    line-height: 1;\n"
-"    font-size: 14px;\n"
-"    padding: 10px;\n"
-"    outline: none;\n"
-"    \n"
-"    \n"
-"}\n"
-"QPushButton:hover {\n"
-"    color:rgb(0, 137, 236);;\n"
-"    background-color: white;;\n"
-"}\n"
+"background-color: transparent;\n"
+"color:white;")
+        self.frame_17.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_17.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_17.setObjectName("frame_17")
+        self.label21_3 = QtWidgets.QLabel(self.frame_17)
+        self.label21_3.setGeometry(QtCore.QRect(20, 0, 281, 31))
+        self.label21_3.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
+"background-color: rgba(42, 41, 41, 0);")
+        self.label21_3.setObjectName("label21_3")
+        self.NUMBER_OF_BOOKS = QtWidgets.QLineEdit(self.frame_17)
+        self.NUMBER_OF_BOOKS.setGeometry(QtCore.QRect(40, 40, 221, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.NUMBER_OF_BOOKS.setFont(font)
+        self.NUMBER_OF_BOOKS.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"color:black;"
 "")
-        icon5 = QtGui.QIcon()
-        icon7 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/borrow1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon7.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/return.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.NUMBER_OF_BOOKS.setMaxLength(100)
+        self.NUMBER_OF_BOOKS.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.NUMBER_OF_BOOKS.setDragEnabled(True)
+        self.NUMBER_OF_BOOKS.setReadOnly(True)
+        self.NUMBER_OF_BOOKS.setPlaceholderText("")
+        self.NUMBER_OF_BOOKS.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.NUMBER_OF_BOOKS.setClearButtonEnabled(False)
+        self.NUMBER_OF_BOOKS.setObjectName("NUMBER_OF_BOOKS")
+        self.frame_18 = QtWidgets.QFrame(self.MembersWindow)
+        self.frame_18.setGeometry(QtCore.QRect(790, 0, 221, 81))
+        self.frame_18.setStyleSheet("border: 1px;\n"
+"border-radius: 20px;\n"
+"background-color: transparent;\n"
+"color:white;")
+        self.frame_18.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_18.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_18.setObjectName("frame_18")
+        self.label21_4 = QtWidgets.QLabel(self.frame_18)
+        self.label21_4.setGeometry(QtCore.QRect(10, 0, 191, 31))
+        self.label21_4.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
+"background-color: rgba(42, 41, 41, 0);")
+        self.label21_4.setObjectName("label21_4")
+        self.NUMBER_OF_MEMBERS = QtWidgets.QLineEdit(self.frame_18)
+        self.NUMBER_OF_MEMBERS.setGeometry(QtCore.QRect(40, 40, 141, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.NUMBER_OF_MEMBERS.setFont(font)
+        self.NUMBER_OF_MEMBERS.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"color:black;"
+"")
+        self.NUMBER_OF_MEMBERS.setMaxLength(100)
+        self.NUMBER_OF_MEMBERS.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.NUMBER_OF_MEMBERS.setDragEnabled(True)
+        self.NUMBER_OF_MEMBERS.setReadOnly(True)
+        self.NUMBER_OF_MEMBERS.setPlaceholderText("")
+        self.NUMBER_OF_MEMBERS.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.NUMBER_OF_MEMBERS.setClearButtonEnabled(False)
+        self.NUMBER_OF_MEMBERS.setObjectName("NUMBER_OF_MEMBERS")
         
-        self.RESERVE_3.setIcon(icon5)
-        self.BRING_BACK.setIcon(icon7)
-        self.RESERVE_3.setIconSize(QtCore.QSize(38, 38))
-        self.BRING_BACK.setIconSize(QtCore.QSize(30,30))
-        self.RESERVE_3.setObjectName("RESERVE_3")
-        self.BRING_BACK.setObjectName("Bring_back")
-        self.STUDENTID = QtWidgets.QLineEdit(self.frame_16)
-        self.STUDENTID.setGeometry(QtCore.QRect(50, 80, 201, 31))
-        font = QtGui.QFont()
-        font.setFamily("Ubuntu Mono")
-        font.setPointSize(13)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(9)
-        self.STUDENTID.setFont(font)
-        self.STUDENTID.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 13pt \"Ubuntu Mono\";\n"
-"\n"
-"\n"
-"")
-        self.STUDENTID.setMaxLength(10)
-        self.STUDENTID.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.STUDENTID.setDragEnabled(True)
-        self.STUDENTID.setPlaceholderText("")
-        self.STUDENTID.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.STUDENTID.setClearButtonEnabled(True)
-        self.STUDENTID.setObjectName("STUDENTID")
-        self.BOOKCODE = QtWidgets.QLineEdit(self.frame_16)
-        self.BOOKCODE.setGeometry(QtCore.QRect(280, 80, 201, 31))
-        font = QtGui.QFont()
-        font.setFamily("Ubuntu Mono")
-        font.setPointSize(13)
-        font.setBold(False)
-        font.setItalic(False)
-        font.setWeight(9)
-        self.BOOKCODE.setFont(font)
-        self.BOOKCODE.setStyleSheet("background-color: white;\n"
-"border-style: solid;\n"
-"border-width: 1px;\n"
-"border-color:black;\n"
-"border-radius: 10px;\n"
-"font: 75 13pt \"Ubuntu Mono\";\n"
-"\n"
-"\n"
-"")
-        self.BOOKCODE.setMaxLength(9999)
-        self.BOOKCODE.setEchoMode(QtWidgets.QLineEdit.Normal)
-        self.BOOKCODE.setDragEnabled(True)
-        self.BOOKCODE.setPlaceholderText("")
-        self.BOOKCODE.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
-        self.BOOKCODE.setClearButtonEnabled(True)
-        self.BOOKCODE.setObjectName("BOOKCODE")
-        self.label23_10 = QtWidgets.QLabel(self.frame_16)
-        self.label23_10.setGeometry(QtCore.QRect(50, 50, 121, 31))
-        self.label23_10.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
-"background-color: rgba(65, 191, 64, 0);")
-        self.label23_10.setObjectName("label23_10")
-        self.label23_11 = QtWidgets.QLabel(self.frame_16)
-        self.label23_11.setGeometry(QtCore.QRect(280, 50, 121, 31))
-        self.label23_11.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
-"background-color: rgba(65, 191, 64, 0);")
-        self.label23_11.setObjectName("label23_11")
-        self.label20_3 = QtWidgets.QLabel(self.frame_16)
-        self.label20_3.setGeometry(QtCore.QRect(140, -10, 251, 71))
-        self.label20_3.setStyleSheet("font: 63 italic 22pt \"URW Bookman\";\n"
-"color:black;\n"
-"background-color: rgba(28, 113, 216, 0);")
-        self.label20_3.setObjectName("label20_3")
         self.frame_15.raise_()
         self.frame_5.raise_()
         self.Members_table.raise_()
@@ -537,7 +477,9 @@ class Ui_MembersWidnow(object):
         self.PHONE.raise_()
         self.SEARCH_FIELD.raise_()
         self.SUBMIT.raise_()
-        self.frame_16.raise_()
+        self.frame_17.raise_()
+        self.frame_18.raise_()
+        
         #MembersWidnow.setCentralWidget(self.MembersWindow)
         self.menubar = QtWidgets.QMenuBar(MembersWidnow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1179, 22))
@@ -567,16 +509,14 @@ class Ui_MembersWidnow(object):
         self.label22.setText(_translate("MembersWidnow", "Last Name"))
         self.label23.setText(_translate("MembersWidnow", "Phone"))
         self.label21.setText(_translate("MembersWidnow", "First Name"))
-        self.label20_2.setText(_translate("MembersWidnow", "Manage Member Informations"))
-        self.DELETE.setText(_translate("MembersWidnow", "dELETE"))
+        self.label20_2.setText(_translate("MembersWidnow", "Delete Member"))
+        self.DELETE.setText(_translate("MembersWidnow", "DELETE"))
         self.label23_2.setText(_translate("MembersWidnow", "Email Address"))
         self.label23_4.setText(_translate("MembersWidnow", "ID"))
         self.delete_book_5.setText(_translate("MembersWidnow", "+213"))
         self.SEARCH_FIELD.setPlaceholderText(_translate("MembersWidnow", "Enter any Member First or Last Name Or ID"))
         self.SUBMIT.setText(_translate("MembersWidnow", "Submit"))
         self.DISPLAY_ALL.setText(_translate("MembersWidnow", "display all"))
-        self.RESERVE_3.setText(_translate("MembersWidnow", "Reserve"))
-        self.BRING_BACK.setText(_translate("MembersWindow","bring back"))
-        self.label23_10.setText(_translate("MembersWidnow", "STUDENT ID"))
-        self.label23_11.setText(_translate("MembersWidnow", "BOOK CODE"))
-        self.label20_3.setText(_translate("MembersWidnow", "Book Reservation"))
+        self.label21_3.setText(_translate("BooksWindow", "Number of Books in the library"))
+        self.label21_4.setText(_translate("BooksWindow", "Number of Members"))
+        

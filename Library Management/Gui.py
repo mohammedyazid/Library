@@ -107,13 +107,14 @@ class student(object):
 
         self.AccountWindow.BOOKS.clicked.connect(self.toBooks)
         self.AccountWindow.REQUEST.clicked.connect(self.toRequest)
-
+        self.AccountWindow.ABOUT_US.clicked.connect(self.toabout)
+        
         self.RequestWindow.MY_ACCOUNT.clicked.connect(self.toAcc)
         self.RequestWindow.BOOKS.clicked.connect(self.toBooks)
 
         self.AccountWindow.SUBMIT.clicked.connect(self.changepass)
         
-        self.AboutWindow.BACK.clicked.connect(self.toLogin)
+        self.AboutWindow.BACK.clicked.connect(self.back)
         '''Setting initial index to Zero which means 
         when you run the code the first page u will see is the login page'''
         ################################################
@@ -121,7 +122,7 @@ class student(object):
         self.library_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Gui)
         ################################################
-        
+        self.indice=0
     def retranslateUi(self, Gui):
         _translate = QtCore.QCoreApplication.translate
         Gui.setWindowTitle(_translate("Gui", "Gui"))
@@ -164,22 +165,25 @@ class student(object):
             self.LoginWindow.lg_error.setText("You can't leave any field empty")
     def toabout(self):
         self.library_tab.setCurrentIndex(6)
+    def back(self):
+        self.library_tab.setCurrentIndex(self.indice)
                     
     def toLogin(self):
         self.LoginWindow.lg_error.setText("")
         self.library_tab.setCurrentIndex(0)
         self.clear("login")
         self.clear("myaccount")
+        self.indice=0
     def toRegister(self):
         self.clear("register")
         self.library_tab.setCurrentIndex(1)
-    def toHelp(self):
-        self.library_tab.setCurrentIndex(2)
+        self.indice=1
     def toBooks(self):
         self.AccountWindow.DISPLAY.setText('')
         self.library_tab.setCurrentIndex(3)
     def toAcc(self):
         self.AccountWindow.DISPLAY.setText('')
+        self.indice=4
         self.library_tab.setCurrentIndex(4)
     def toRequest(self):
         self.AccountWindow.DISPLAY.setText('')
@@ -193,7 +197,13 @@ class student(object):
         ps=self.RegisterWindow.PASSWORD.text()
         psc=self.RegisterWindow.CONFIRME_PASSWORD.text()
         id=self.RegisterWindow.ID.text()
-        if(fn!="" and ln!="" and ml!="" and ph!="" and ps!="" and id!=""): 
+        mailformat = re.match("^[A-Za-z0-9_.]{4,}@[A-Za-z]{3,}\.[A-Za-z]{2,}$",ml)
+        passformat = re.match("^.{8,}",ps)
+        idformat = re.match("^[0-9]{8,10}$",id)
+        phoneformat = re.match("^[0]?[6|7|5]{1}[0-9]{8}$",ph)
+        fnameformat = re.match("^[A-Za-z ]{3,}$",fn)
+        lnameformat = re.match("^[A-Za-z ]{3,}$",ln)
+        if(fn!="" and ln!="" and ml!="" and ph!="" and ps!="" and id!="" and mailformat!=None and passformat!=None and idformat!=None and phoneformat!=None) and fn !=None and ln!=None: 
             if(ps==psc):
                 if self.RegisterWindow.checkBox.isChecked():
         
@@ -218,8 +228,27 @@ class student(object):
                 self.RegisterWindow.re_error.setStyleSheet("color:red;")
                 self.RegisterWindow.re_error.setText("Password and Confirmed Password should be the same")
         else:
-            self.RegisterWindow.re_error.setStyleSheet("color:red;")
-            self.RegisterWindow.re_error.setText("You can't leave any field empty")
+            if fnameformat == None:
+                self.RegisterWindow.re_error.setStyleSheet("color:red;")
+                self.RegisterWindow.re_error.setText("invalid first name")
+            elif lnameformat == None:
+                self.RegisterWindow.re_error.setStyleSheet("color:red;")
+                self.RegisterWindow.re_error.setText("invalid last name")
+            elif mailformat==None:
+                self.RegisterWindow.re_error.setStyleSheet("color:red;")
+                self.RegisterWindow.re_error.setText("Invalid Mail format")
+            elif idformat ==None:
+                self.RegisterWindow.re_error.setStyleSheet("color:red;")
+                self.RegisterWindow.re_error.setText("invalid id")
+            elif phoneformat ==None:
+                self.RegisterWindow.re_error.setStyleSheet("color:red;")
+                self.RegisterWindow.re_error.setText("invalid phone number")
+            elif passformat==None:
+                self.RegisterWindow.re_error.setStyleSheet("color:red;")
+                self.RegisterWindow.re_error.setText("Short Password Please type a long one")
+            else:
+                self.RegisterWindow.re_error.setStyleSheet("color:red;")
+                self.RegisterWindow.re_error.setText("You can't leave any field empty")
     def getbooks(self):
         with student.conn:
             student.cur.execute("SELECT * FROM book")

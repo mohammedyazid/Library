@@ -66,8 +66,8 @@ class Agent(object):
         self.MembersWindow.SUBMIT.clicked.connect(self.search_member)
         self.BooksWindow.DISPLAY_ALL.clicked.connect(self.display_books)
         self.MembersWindow.DISPLAY_ALL.clicked.connect(self.display_members)
-        self.MembersWindow.RESERVE_3.clicked.connect(self.reserve)
-        self.MembersWindow.BRING_BACK.clicked.connect(self.bring_back)
+        self.BooksWindow.RESERVE_3.clicked.connect(self.reserve)
+        self.BooksWindow.BRING_BACK.clicked.connect(self.bring_back)
 
         '''Setting initial index to Zero which means 
         when you run the code the first page u will see is the login page'''
@@ -187,7 +187,7 @@ class Agent(object):
 
         if(bt_d!="" and au_d!="" and ry_d!=""):
 
-            cur3.execute("INSERT INTO books (code,title,author,released,status) VALUES(%s,%s,%s,%s,%s)",(code,bt_d,au_d,ry_d,"avalible"))
+            cur3.execute("INSERT INTO books (code,title,author,released,status) VALUES(%s,%s,%s,%s,%s)",(code,bt_d,au_d,ry_d,"Available"))
             conn.commit()
             cur3.close()
             
@@ -319,7 +319,9 @@ class Agent(object):
         number_of_members=number_of_members[0][0]
 
         self.BooksWindow.NUMBER_OF_BOOKS.setText(str(number_of_books))
+        self.MembersWindow.NUMBER_OF_BOOKS.setText(str(number_of_books))
         self.BooksWindow.NUMBER_OF_MEMBERS.setText(str(number_of_members)) 
+        self.MembersWindow.NUMBER_OF_MEMBERS.setText(str(number_of_members))
 
 
         a = len(data) 
@@ -388,30 +390,32 @@ class Agent(object):
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
         cur9=conn.cursor()
         cur8=conn.cursor()
-        code = self.MembersWindow.BOOKCODE.text().lower()
-        studentid = self.MembersWindow.STUDENTID.text()
+        code = self.BooksWindow.BOOKCODE.text().lower()
+        studentid = self.BooksWindow.STUDENTID.text()
         cur8.execute("select status from books where code=%s",(code,))
         answ = cur8.fetchall()
         if str(answ[0])=="('N/A',)":
-            print("Book Already Reserved")
+            self.BooksWindow.LABEL.setStyleSheet("color:red;")
+            self.BooksWindow.LABEL.setText("Book Already Reserved")
         else:
-            pass
             cur9.execute("INSERT INTO reserve (id,bookcode) VALUES(%s,%s)",(studentid,code))
             sql_update = """UPDATE books SET status='%s' WHERE code = '%s'""" % ("N/A",code)
             cur8.execute(sql_update)
             conn.commit()
             self.display_books()
+            self.BooksWindow.LABEL.setStyleSheet("color:green;")
+            self.BooksWindow.LABEL.setText("Book reserved ruccesfully!")
 
     def bring_back(self):
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)     
         cur10 = conn.cursor()
         cur11 = conn.cursor()
-        code1=self.MembersWindow.BOOKCODE.text().lower()
-        studentid1=self.MembersWindow.STUDENTID.text()
+        code1=self.BooksWindow.BOOKCODE.text().lower()
+        studentid1=self.BooksWindow.STUDENTID.text()
         cur10.execute("DELETE FROM reserve WHERE id=%s AND bookcode=%s",(studentid1,code1) )
         conn.commit()
         cur10.close()  
-        sql_update1 = """UPDATE books SET status='%s' WHERE code = '%s'""" % ("available",code1)
+        sql_update1 = """UPDATE books SET status='%s' WHERE code = '%s'""" % ("Available",code1)
         cur11.execute(sql_update1)  
         conn.commit()
         self.display_books()    

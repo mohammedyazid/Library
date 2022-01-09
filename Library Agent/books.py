@@ -75,7 +75,7 @@ class Ui_BooksWindow(object):
         self.MANAGE_MEMBERS.setIconSize(QtCore.QSize(25, 25))
         self.MANAGE_MEMBERS.setObjectName("MANAGE_MEMBERS")
         self.Books_table = QtWidgets.QTableWidget(self.BookWindow)
-        self.Books_table.setGeometry(QtCore.QRect(590, 130, 571, 561))
+        self.Books_table.setGeometry(QtCore.QRect(570, 130, 591, 561))
         self.Books_table.setStyleSheet("color:white;\n"
 "border: 1px ;\n"
 "border-radius: 20px;\n"
@@ -218,7 +218,7 @@ class Ui_BooksWindow(object):
         self.RELEASE_YEAR_ADD.setClearButtonEnabled(True)
         self.RELEASE_YEAR_ADD.setObjectName("RELEASE_YEAR_ADD")
         self.frame_15 = QtWidgets.QFrame(self.BookWindow)
-        self.frame_15.setGeometry(QtCore.QRect(10, 90, 551, 211))
+        self.frame_15.setGeometry(QtCore.QRect(10, 90, 551, 191))
         self.frame_15.setStyleSheet("border: 1px;\n"
 "border-radius: 20px;\n"
 "background-color: white;")
@@ -232,15 +232,47 @@ class Ui_BooksWindow(object):
 "background-color: rgba(28, 113, 216, 0);")
         self.label20_2.setObjectName("label20_2")
         self.frame_16 = QtWidgets.QFrame(self.BookWindow)
-        self.frame_16.setGeometry(QtCore.QRect(10, 310, 551, 241))
+        self.frame_16.setGeometry(QtCore.QRect(10, 290, 551, 161))
         self.frame_16.setStyleSheet("border: 1px;\n"
 "border-radius: 20px;\n"
 "background-color: white;")
         self.frame_16.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_16.setObjectName("frame_16")
+#         self.SUBMIT_MODIFICATION = QtWidgets.QPushButton(self.frame_16)
+#         self.SUBMIT_MODIFICATION.setGeometry(QtCore.QRect(270, 90, 171, 41))
+#         self.SUBMIT_MODIFICATION.setStyleSheet("\n"
+# "QPushButton {\n"
+# "    \n"
+# "    background-color: rgb(26, 95, 180);\n"
+# "    border: 1px solid white;\n"
+# "    border-radius: 20px;\n"
+# "    border-style: outset;\n"
+# "    padding: 5px;\n"
+# "    transition: all .5s ease;\n"
+# "    color: white;\n"
+# "    font-family:\'Montserrat\', sans-serif;\n"
+# "    text-transform: uppercase;\n"
+# "    text-align: center;\n"
+# "    line-height: 1;\n"
+# "    font-size: 12px;\n"
+# "    padding: 10px;\n"
+# "    outline: none;\n"
+# "    \n"
+# "    \n"
+# "}\n"
+# "QPushButton:hover {\n"
+# "    color:rgb(0, 137, 236);;\n"
+# "    background-color: white;;\n"
+# "}\n"
+# "")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("Assets/write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        # self.SUBMIT_MODIFICATION.setIcon(icon3)
+        # self.SUBMIT_MODIFICATION.setIconSize(QtCore.QSize(20, 20))
+        # self.SUBMIT_MODIFICATION.setObjectName("SUBMIT_MODIFICATION")
         self.DELETE = QtWidgets.QPushButton(self.frame_16)
-        self.DELETE.setGeometry(QtCore.QRect(290, 170, 181, 41))
+        self.DELETE.setGeometry(QtCore.QRect(300, 90, 231, 41))
         self.DELETE.setStyleSheet("\n"
 "QPushButton {\n"
 "    \n"
@@ -267,7 +299,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("../Assets/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.DELETE.setIcon(icon4)
         self.DELETE.setIconSize(QtCore.QSize(20, 20))
         self.DELETE.setObjectName("DELETE")
@@ -277,12 +309,12 @@ class Ui_BooksWindow(object):
 "background-color: rgba(42, 41, 41, 0);")
         self.label21_2.setObjectName("label21_2")
         self.label22_2 = QtWidgets.QLabel(self.frame_16)
-        self.label22_2.setGeometry(QtCore.QRect(40, 150, 91, 31))
+        self.label22_2.setGeometry(QtCore.QRect(40, 70, 91, 31))
         self.label22_2.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(42, 41, 41, 0);")
         self.label22_2.setObjectName("label22_2")
         self.BOOK_TITLE = QtWidgets.QLineEdit(self.frame_16)
-        self.BOOK_TITLE.setGeometry(QtCore.QRect(40, 40, 221, 31))
+        self.BOOK_TITLE.setGeometry(QtCore.QRect(40, 40, 301, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -307,7 +339,7 @@ class Ui_BooksWindow(object):
         self.BOOK_TITLE.setClearButtonEnabled(True)
         self.BOOK_TITLE.setObjectName("BOOK_TITLE")
         self.AUTHOR = QtWidgets.QLineEdit(self.frame_16)
-        self.AUTHOR.setGeometry(QtCore.QRect(40, 180, 221, 31))
+        self.AUTHOR.setGeometry(QtCore.QRect(40, 100, 221, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -332,7 +364,7 @@ class Ui_BooksWindow(object):
         self.AUTHOR.setClearButtonEnabled(True)
         self.AUTHOR.setObjectName("AUTHOR")
         self.RELEASE_YEAR = QtWidgets.QLineEdit(self.frame_16)
-        self.RELEASE_YEAR.setGeometry(QtCore.QRect(40, 110, 221, 31))
+        self.RELEASE_YEAR.setGeometry(QtCore.QRect(350, 40, 181, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -357,7 +389,7 @@ class Ui_BooksWindow(object):
         self.RELEASE_YEAR.setClearButtonEnabled(True)
         self.RELEASE_YEAR.setObjectName("RELEASE_YEAR")
         self.label23_2 = QtWidgets.QLabel(self.frame_16)
-        self.label23_2.setGeometry(QtCore.QRect(40, 80, 121, 31))
+        self.label23_2.setGeometry(QtCore.QRect(350, 10, 121, 31))
         self.label23_2.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(65, 191, 64, 0);")
         self.label23_2.setObjectName("label23_2")
@@ -445,20 +477,21 @@ class Ui_BooksWindow(object):
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")
         self.frame_17 = QtWidgets.QFrame(self.BookWindow)
-        self.frame_17.setGeometry(QtCore.QRect(10, 560, 321, 131))
+        self.frame_17.setGeometry(QtCore.QRect(460, 0, 321, 81))
         self.frame_17.setStyleSheet("border: 1px;\n"
 "border-radius: 20px;\n"
-"background-color: white;")
+"background-color: transparent;\n"
+"color:white;")
         self.frame_17.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_17.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_17.setObjectName("frame_17")
         self.label21_3 = QtWidgets.QLabel(self.frame_17)
-        self.label21_3.setGeometry(QtCore.QRect(20, 10, 281, 31))
+        self.label21_3.setGeometry(QtCore.QRect(20, 0, 281, 31))
         self.label21_3.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(42, 41, 41, 0);")
         self.label21_3.setObjectName("label21_3")
         self.NUMBER_OF_BOOKS = QtWidgets.QLineEdit(self.frame_17)
-        self.NUMBER_OF_BOOKS.setGeometry(QtCore.QRect(40, 50, 221, 31))
+        self.NUMBER_OF_BOOKS.setGeometry(QtCore.QRect(40, 40, 221, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -472,8 +505,7 @@ class Ui_BooksWindow(object):
 "border-color:black;\n"
 "border-radius: 10px;\n"
 "font: 75 13pt \"Ubuntu Mono\";\n"
-"\n"
-"\n"
+"color:black;"
 "")
         self.NUMBER_OF_BOOKS.setMaxLength(100)
         self.NUMBER_OF_BOOKS.setEchoMode(QtWidgets.QLineEdit.Normal)
@@ -484,20 +516,21 @@ class Ui_BooksWindow(object):
         self.NUMBER_OF_BOOKS.setClearButtonEnabled(False)
         self.NUMBER_OF_BOOKS.setObjectName("NUMBER_OF_BOOKS")
         self.frame_18 = QtWidgets.QFrame(self.BookWindow)
-        self.frame_18.setGeometry(QtCore.QRect(340, 560, 221, 131))
+        self.frame_18.setGeometry(QtCore.QRect(790, 0, 221, 81))
         self.frame_18.setStyleSheet("border: 1px;\n"
 "border-radius: 20px;\n"
-"background-color: white;")
+"background-color: transparent;\n"
+"color:white;")
         self.frame_18.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_18.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_18.setObjectName("frame_18")
         self.label21_4 = QtWidgets.QLabel(self.frame_18)
-        self.label21_4.setGeometry(QtCore.QRect(10, 10, 191, 31))
+        self.label21_4.setGeometry(QtCore.QRect(10, 0, 191, 31))
         self.label21_4.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
 "background-color: rgba(42, 41, 41, 0);")
         self.label21_4.setObjectName("label21_4")
         self.NUMBER_OF_MEMBERS = QtWidgets.QLineEdit(self.frame_18)
-        self.NUMBER_OF_MEMBERS.setGeometry(QtCore.QRect(40, 50, 141, 31))
+        self.NUMBER_OF_MEMBERS.setGeometry(QtCore.QRect(40, 40, 141, 31))
         font = QtGui.QFont()
         font.setFamily("Ubuntu Mono")
         font.setPointSize(13)
@@ -511,8 +544,7 @@ class Ui_BooksWindow(object):
 "border-color:black;\n"
 "border-radius: 10px;\n"
 "font: 75 13pt \"Ubuntu Mono\";\n"
-"\n"
-"\n"
+"color:black;"
 "")
         self.NUMBER_OF_MEMBERS.setMaxLength(100)
         self.NUMBER_OF_MEMBERS.setEchoMode(QtWidgets.QLineEdit.Normal)
@@ -522,6 +554,152 @@ class Ui_BooksWindow(object):
         self.NUMBER_OF_MEMBERS.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
         self.NUMBER_OF_MEMBERS.setClearButtonEnabled(False)
         self.NUMBER_OF_MEMBERS.setObjectName("NUMBER_OF_MEMBERS")
+        self.frame_19 = QtWidgets.QFrame(self.BookWindow)
+        self.frame_19.setGeometry(QtCore.QRect(10, 460, 551, 231))
+        self.frame_19.setStyleSheet("border: 1px;\n"
+"border-radius: 20px;\n"
+"background-color: white;")
+        self.frame_19.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_19.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_19.setObjectName("frame_19")
+        self.RESERVE_3 = QtWidgets.QPushButton(self.frame_19)
+        self.BRING_BACK = QtWidgets.QPushButton(self.frame_19)
+        self.RESERVE_3.setGeometry(QtCore.QRect(245, 140, 241, 41))
+        self.BRING_BACK.setGeometry(QtCore.QRect(55, 140, 241, 41))
+        self.RESERVE_3.setStyleSheet("\n"
+"QPushButton {\n"
+"    \n"
+"    background-color: rgb(26, 95, 180);\n"
+"    border: 1px solid white;\n"
+"    border-radius: 20px;\n"
+"    border-style: outset;\n"
+"    padding: 5px;\n"
+"    transition: all .5s ease;\n"
+"    color: white;\n"
+"    font-family:\'Montserrat\', sans-serif;\n"
+"    text-transform: uppercase;\n"
+"    text-align: center;\n"
+"    line-height: 1;\n"
+"    font-size: 14px;\n"
+"    padding: 10px;\n"
+"    outline: none;\n"
+"    \n"
+"    \n"
+"}\n"
+"QPushButton:hover {\n"
+"    color:rgb(0, 137, 236);;\n"
+"    background-color: white;;\n"
+"}\n"
+"")    
+        self.BRING_BACK.setStyleSheet("\n"
+"QPushButton {\n"
+"    \n"
+"    background-color: rgb(26, 95, 180);\n"
+"    border: 1px solid white;\n"
+"    border-radius: 20px;\n"
+"    border-style: outset;\n"
+"    padding: 5px;\n"
+"    transition: all .5s ease;\n"
+"    color: white;\n"
+"    font-family:\'Montserrat\', sans-serif;\n"
+"    text-transform: uppercase;\n"
+"    text-align: center;\n"
+"    line-height: 1;\n"
+"    font-size: 14px;\n"
+"    padding: 10px;\n"
+"    outline: none;\n"
+"    \n"
+"    \n"
+"}\n"
+"QPushButton:hover {\n"
+"    color:rgb(0, 137, 236);;\n"
+"    background-color: white;;\n"
+"}\n"
+"")
+        icon5 = QtGui.QIcon()
+        icon7 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/borrow1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/return.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.LABEL = QtWidgets.QLabel(self.frame_19)
+        self.LABEL.setGeometry(QtCore.QRect(50, 120, 431, 20))
+        self.LABEL.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.LABEL.setStyleSheet("color: rgb(245, 121, 0);")
+        self.LABEL.setText("")
+        self.LABEL.setAlignment(QtCore.Qt.AlignCenter)
+        self.LABEL.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+        self.LABEL.setObjectName("LABEL")
+        self.RESERVE_3.setIcon(icon5)
+        self.BRING_BACK.setIcon(icon7)
+        self.RESERVE_3.setIconSize(QtCore.QSize(38, 38))
+        self.BRING_BACK.setIconSize(QtCore.QSize(30,30))
+        self.RESERVE_3.setObjectName("RESERVE_3")
+        self.BRING_BACK.setObjectName("Bring_back")
+        self.STUDENTID = QtWidgets.QLineEdit(self.frame_19)
+        self.STUDENTID.setGeometry(QtCore.QRect(50, 80, 201, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.STUDENTID.setFont(font)
+        self.STUDENTID.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.STUDENTID.setMaxLength(10)
+        self.STUDENTID.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.STUDENTID.setDragEnabled(True)
+        self.STUDENTID.setPlaceholderText("")
+        self.STUDENTID.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.STUDENTID.setClearButtonEnabled(True)
+        self.STUDENTID.setObjectName("STUDENTID")
+        self.BOOKCODE = QtWidgets.QLineEdit(self.frame_19)
+        self.BOOKCODE.setGeometry(QtCore.QRect(280, 80, 201, 31))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Mono")
+        font.setPointSize(13)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.BOOKCODE.setFont(font)
+        self.BOOKCODE.setStyleSheet("background-color: white;\n"
+"border-style: solid;\n"
+"border-width: 1px;\n"
+"border-color:black;\n"
+"border-radius: 10px;\n"
+"font: 75 13pt \"Ubuntu Mono\";\n"
+"\n"
+"\n"
+"")
+        self.BOOKCODE.setMaxLength(9999)
+        self.BOOKCODE.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.BOOKCODE.setDragEnabled(True)
+        self.BOOKCODE.setPlaceholderText("")
+        self.BOOKCODE.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
+        self.BOOKCODE.setClearButtonEnabled(True)
+        self.BOOKCODE.setObjectName("BOOKCODE")
+        self.label23_10 = QtWidgets.QLabel(self.frame_19)
+        self.label23_10.setGeometry(QtCore.QRect(50, 50, 121, 31))
+        self.label23_10.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
+"background-color: rgba(65, 191, 64, 0);")
+        self.label23_10.setObjectName("label23_10")
+        self.label23_11 = QtWidgets.QLabel(self.frame_19)
+        self.label23_11.setGeometry(QtCore.QRect(280, 50, 121, 31))
+        self.label23_11.setStyleSheet("font: 75 16pt \"Ubuntu\";\n"
+"background-color: rgba(65, 191, 64, 0);")
+        self.label23_11.setObjectName("label23_11")
+        self.label20_3 = QtWidgets.QLabel(self.frame_19)
+        self.label20_3.setGeometry(QtCore.QRect(140, -10, 251, 71))
+        self.label20_3.setStyleSheet("font: 63 italic 22pt \"URW Bookman\";\n"
+"color:black;\n"
+"background-color: rgba(28, 113, 216, 0);")
+        self.label20_3.setObjectName("label20_3")
         self.frame_15.raise_()
         self.frame_5.raise_()
         self.Books_table.raise_()
@@ -533,6 +711,7 @@ class Ui_BooksWindow(object):
         self.AUTHOR_ADD.raise_()
         self.RELEASE_YEAR_ADD.raise_()
         self.frame_16.raise_()
+        self.frame_19.raise_()
         self.SEARCH_FIELD.raise_()
         self.SUBMIT.raise_()
         self.frame_17.raise_()
@@ -566,7 +745,8 @@ class Ui_BooksWindow(object):
         self.ADD_BOOK.setText(_translate("BooksWindow", "Add Book"))
         self.label21.setText(_translate("BooksWindow", "Book Title"))
         self.label20_2.setText(_translate("BooksWindow", "Add a Book"))
-        self.DELETE.setText(_translate("BooksWindow", "dELETE"))
+        #self.SUBMIT_MODIFICATION.setText(_translate("BooksWindow", "Submit Modification"))
+        self.DELETE.setText(_translate("BooksWindow", "DELETE"))
         self.label21_2.setText(_translate("BooksWindow", "Book Title"))
         self.label22_2.setText(_translate("BooksWindow", "Author"))
         self.label23_2.setText(_translate("BooksWindow", "Release Year"))
@@ -575,3 +755,8 @@ class Ui_BooksWindow(object):
         self.DISPLAY_ALL.setText(_translate("BooksWindow", "Display all"))
         self.label21_3.setText(_translate("BooksWindow", "Number of Books in the library"))
         self.label21_4.setText(_translate("BooksWindow", "Number of Members"))
+        self.RESERVE_3.setText(_translate("MembersWidnow", "Reserve"))
+        self.BRING_BACK.setText(_translate("MembersWindow","bring back"))
+        self.label23_10.setText(_translate("MembersWidnow", "STUDENT ID"))
+        self.label23_11.setText(_translate("MembersWidnow", "BOOK CODE"))
+        self.label20_3.setText(_translate("MembersWidnow", "Book Reservation"))
