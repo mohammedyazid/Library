@@ -9,10 +9,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from Path import *
 
 class About(object):
     def setupUi(self, About):
+        self.path = path()
         About.setObjectName("About")
         About.resize(1128, 629)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
@@ -59,7 +60,7 @@ class About(object):
 "")
         self.BACK.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Library Management/Icons/back.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(self.path+"back.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BACK.setIcon(icon)
         self.BACK.setIconSize(QtCore.QSize(25, 25))
         self.BACK.setObjectName("BACK")
@@ -68,7 +69,7 @@ class About(object):
         self.background.setStyleSheet("background-color: transparent;")
         self.background.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Library Management/Icons/wallhaven-e7ek7k.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(self.path+"wallhaven-e7ek7k.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.background.setIcon(icon1)
         self.background.setIconSize(QtCore.QSize(1128, 629))
         self.background.setObjectName("background")

@@ -9,10 +9,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from Path import *
 
 class Ui_RegisterWindow(object):
     def setupUi(self, RegisterWindow):
+        self.path = path()
         RegisterWindow.setObjectName("RegisterWindow")
         RegisterWindow.resize(1128, 615)
         RegisterWindow.setStyleSheet("background-color: rgb(222, 221, 218);")
@@ -61,7 +62,7 @@ class Ui_RegisterWindow(object):
         self.icon4.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.icon4.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Library Management/Icons/graduate-cap.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(self.path+"graduate-cap.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon4.setIcon(icon)
         self.icon4.setIconSize(QtCore.QSize(50, 50))
         self.icon4.setObjectName("icon4")
@@ -70,7 +71,7 @@ class Ui_RegisterWindow(object):
         self.icon5.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.icon5.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Library Management/Icons/online-library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(self.path+"online-library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon5.setIcon(icon1)
         self.icon5.setIconSize(QtCore.QSize(100, 100))
         self.icon5.setObjectName("icon5")
@@ -79,7 +80,7 @@ class Ui_RegisterWindow(object):
         self.BACK.setStyleSheet("")
         self.BACK.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Library Management/Icons/previous.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(self.path+"previous.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.BACK.setIcon(icon2)
         self.BACK.setIconSize(QtCore.QSize(40, 40))
         self.BACK.setObjectName("BACK")
@@ -142,7 +143,7 @@ class Ui_RegisterWindow(object):
         self.icon6.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.icon6.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("Library Management/Icons/add-user.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(self.path+"add-user.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon6.setIcon(icon3)
         self.icon6.setIconSize(QtCore.QSize(70, 70))
         self.icon6.setObjectName("icon6")
@@ -171,7 +172,7 @@ class Ui_RegisterWindow(object):
 "\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("Library Management/Icons/algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(self.path+"algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon7.setIcon(icon4)
         self.icon7.setObjectName("icon7")
         self.checkBox = QtWidgets.QCheckBox(self.frame_4)

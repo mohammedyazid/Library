@@ -9,10 +9,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from Path import *
 
 class Ui_LoginWindow(object):
     def setupUi(self, LoginWindow):
+        self.path = path()
         LoginWindow.setObjectName("LoginWindow")
         LoginWindow.resize(1128, 629)
         LoginWindow.setStyleSheet("background-color: rgb(222, 221, 218);")
@@ -61,7 +62,7 @@ class Ui_LoginWindow(object):
         self.icon2.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.icon2.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Library Management/Icons/graduate-cap.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(self.path+"graduate-cap.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon2.setIcon(icon)
         self.icon2.setIconSize(QtCore.QSize(50, 50))
         self.icon2.setObjectName("icon2")
@@ -70,7 +71,7 @@ class Ui_LoginWindow(object):
         self.icon1.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.icon1.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Library Management/Icons/online-library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(self.path+"online-library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon1.setIcon(icon1)
         self.icon1.setIconSize(QtCore.QSize(100, 100))
         self.icon1.setObjectName("icon1")
@@ -157,7 +158,7 @@ class Ui_LoginWindow(object):
         self.icon3.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.icon3.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Library Management/Icons/login.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(self.path+"login.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon3.setIcon(icon2)
         self.icon3.setIconSize(QtCore.QSize(100, 100))
         self.icon3.setObjectName("icon3")

@@ -9,10 +9,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from Path import *
 
 class Ui_MembersWidnow(object):
     def setupUi(self, MembersWidnow):
+        self.path = path()
         MembersWidnow.setObjectName("MembersWidnow")
         MembersWidnow.resize(1179, 723)
         MembersWidnow.setStyleSheet("background-color: rgb(222, 221, 218);")
@@ -37,7 +38,7 @@ class Ui_MembersWidnow(object):
         self.icon.setStyleSheet("background-color: rgba(42, 41, 41, 0);")
         self.icon.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(self.path+"milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon.setIcon(icon)
         self.icon.setIconSize(QtCore.QSize(50, 50))
         self.icon.setObjectName("icon")
@@ -70,7 +71,7 @@ class Ui_MembersWidnow(object):
 "}\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(self.path+"programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.MANAGE_BOOKS.setIcon(icon1)
         self.MANAGE_BOOKS.setIconSize(QtCore.QSize(25, 25))
         self.MANAGE_BOOKS.setObjectName("MANAGE_BOOKS")
@@ -228,7 +229,7 @@ class Ui_MembersWidnow(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(self.path+"delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.DELETE.setIcon(icon2)
         self.DELETE.setIconSize(QtCore.QSize(20, 20))
         self.DELETE.setObjectName("DELETE")
@@ -300,7 +301,7 @@ class Ui_MembersWidnow(object):
         self.delete_book_5.setGeometry(QtCore.QRect(40, 370, 61, 51))
         self.delete_book_5.setStyleSheet("font: 75 13pt \"Ubuntu\";")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(self.path+"algeria.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.delete_book_5.setIcon(icon5)
         self.delete_book_5.setIconSize(QtCore.QSize(20, 20))
         self.delete_book_5.setObjectName("delete_book_5")
@@ -383,7 +384,7 @@ class Ui_MembersWidnow(object):
 "}\n"
 "")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap(self.path+"magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SUBMIT.setIcon(icon6)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")

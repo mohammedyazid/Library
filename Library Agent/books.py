@@ -9,10 +9,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from Path import *
 
 class Ui_BooksWindow(object):
     def setupUi(self, BooksWindow):
+        self.path = path()
         BooksWindow.setObjectName("BooksWindow")
         BooksWindow.resize(1179, 723)
         BooksWindow.setStyleSheet("background-color: rgb(222, 221, 218);")
@@ -37,7 +38,7 @@ class Ui_BooksWindow(object):
         self.icon.setStyleSheet("background-color: rgba(42, 41, 41, 0);")
         self.icon.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(self.path+"milky-way.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon.setIcon(icon)
         self.icon.setIconSize(QtCore.QSize(50, 50))
         self.icon.setObjectName("icon")
@@ -70,7 +71,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(self.path+"programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.MANAGE_MEMBERS.setIcon(icon1)
         self.MANAGE_MEMBERS.setIconSize(QtCore.QSize(25, 25))
         self.MANAGE_MEMBERS.setObjectName("MANAGE_MEMBERS")
@@ -133,7 +134,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(self.path+"add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.ADD_BOOK.setIcon(icon2)
         self.ADD_BOOK.setIconSize(QtCore.QSize(25, 25))
         self.ADD_BOOK.setObjectName("ADD_BOOK")
@@ -267,7 +268,7 @@ class Ui_BooksWindow(object):
 # "}\n"
 # "")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("Assets/write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(self.path+"write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         # self.SUBMIT_MODIFICATION.setIcon(icon3)
         # self.SUBMIT_MODIFICATION.setIconSize(QtCore.QSize(20, 20))
         # self.SUBMIT_MODIFICATION.setObjectName("SUBMIT_MODIFICATION")
@@ -299,7 +300,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("../Assets/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(self.path+"delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.DELETE.setIcon(icon4)
         self.DELETE.setIconSize(QtCore.QSize(20, 20))
         self.DELETE.setObjectName("DELETE")
@@ -472,7 +473,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(self.path+"magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SUBMIT.setIcon(icon5)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")
@@ -618,8 +619,8 @@ class Ui_BooksWindow(object):
 "")
         icon5 = QtGui.QIcon()
         icon7 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/borrow1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon7.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/return.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(self.path+"borrow1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap(self.path+"return.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.LABEL = QtWidgets.QLabel(self.frame_19)
         self.LABEL.setGeometry(QtCore.QRect(50, 120, 431, 20))
         self.LABEL.setLayoutDirection(QtCore.Qt.LeftToRight)

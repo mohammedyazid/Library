@@ -9,10 +9,11 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from Path import *
 
 class Ui_RequestWindow(object):
     def setupUi(self, RequestWindow):
+        self.path = path()
         RequestWindow.setObjectName("RequestWindow")
         RequestWindow.resize(1128, 629)
         RequestWindow.setStyleSheet("background-color: rgb(222, 221, 218);")
@@ -37,7 +38,7 @@ class Ui_RequestWindow(object):
         self.pushButton_14.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.pushButton_14.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("Library Management/Icons/graduate-cap.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(self.path+"graduate-cap.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_14.setIcon(icon)
         self.pushButton_14.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_14.setObjectName("pushButton_14")
@@ -68,7 +69,7 @@ class Ui_RequestWindow(object):
 "}\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("Library Management/Icons/programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(self.path+"programmer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.log_credits_24.setIcon(icon1)
         self.log_credits_24.setIconSize(QtCore.QSize(25, 25))
         self.log_credits_24.setObjectName("log_credits_24")
@@ -99,7 +100,7 @@ class Ui_RequestWindow(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("Library Management/Icons/book.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(self.path+"book.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.log_credits_25.setIcon(icon2)
         self.log_credits_25.setIconSize(QtCore.QSize(25, 25))
         self.log_credits_25.setObjectName("log_credits_25")
@@ -166,7 +167,7 @@ class Ui_RequestWindow(object):
         self.icon11.setStyleSheet("background-color: rgba(28, 113, 216, 0);")
         self.icon11.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("Library Management/Icons/digital-library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(self.path+"digital-library.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.icon11.setIcon(icon3)
         self.icon11.setIconSize(QtCore.QSize(100, 100))
         self.icon11.setObjectName("icon11")
@@ -217,7 +218,7 @@ class Ui_RequestWindow(object):
 "}\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("Library Management/Icons/interview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(self.path+"interview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.REQUEST.setIcon(icon4)
         self.REQUEST.setIconSize(QtCore.QSize(30, 30))
         self.REQUEST.setObjectName("REQUEST")
