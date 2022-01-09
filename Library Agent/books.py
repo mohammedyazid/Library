@@ -133,9 +133,9 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/borrow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.ADD_BOOK.setIcon(icon2)
-        self.ADD_BOOK.setIconSize(QtCore.QSize(30, 30))
+        self.ADD_BOOK.setIconSize(QtCore.QSize(25, 25))
         self.ADD_BOOK.setObjectName("ADD_BOOK")
         self.label21 = QtWidgets.QLabel(self.BookWindow)
         self.label21.setGeometry(QtCore.QRect(50, 130, 91, 31))
@@ -267,7 +267,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("Library Agent/Assets/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.DELETE.setIcon(icon4)
         self.DELETE.setIconSize(QtCore.QSize(20, 20))
         self.DELETE.setObjectName("DELETE")
@@ -440,7 +440,7 @@ class Ui_BooksWindow(object):
 "}\n"
 "")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("../Library Management/Windows_Ui/Library Agent/Assets/Ui/Library Agent/Library Agent/Assets/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SUBMIT.setIcon(icon5)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")

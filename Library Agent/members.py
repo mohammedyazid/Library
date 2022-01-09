@@ -383,7 +383,7 @@ class Ui_MembersWidnow(object):
 "}\n"
 "")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("../Library Management/Windows_Ui/Library Agent/Assets/Ui/Library Agent/Library Agent/Assets/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/magnifying-glass.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.SUBMIT.setIcon(icon6)
         self.SUBMIT.setIconSize(QtCore.QSize(17, 17))
         self.SUBMIT.setObjectName("SUBMIT")
@@ -396,7 +396,9 @@ class Ui_MembersWidnow(object):
         self.frame_16.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_16.setObjectName("frame_16")
         self.RESERVE_3 = QtWidgets.QPushButton(self.frame_16)
-        self.RESERVE_3.setGeometry(QtCore.QRect(140, 140, 241, 41))
+        self.BRING_BACK = QtWidgets.QPushButton(self.frame_16)
+        self.RESERVE_3.setGeometry(QtCore.QRect(245, 140, 241, 41))
+        self.BRING_BACK.setGeometry(QtCore.QRect(55, 140, 241, 41))
         self.RESERVE_3.setStyleSheet("\n"
 "QPushButton {\n"
 "    \n"
@@ -411,7 +413,7 @@ class Ui_MembersWidnow(object):
 "    text-transform: uppercase;\n"
 "    text-align: center;\n"
 "    line-height: 1;\n"
-"    font-size: 12px;\n"
+"    font-size: 14px;\n"
 "    padding: 10px;\n"
 "    outline: none;\n"
 "    \n"
@@ -421,12 +423,43 @@ class Ui_MembersWidnow(object):
 "    color:rgb(0, 137, 236);;\n"
 "    background-color: white;;\n"
 "}\n"
-"")     
+"")    
+        self.BRING_BACK.setStyleSheet("\n"
+"QPushButton {\n"
+"    \n"
+"    background-color: rgb(26, 95, 180);\n"
+"    border: 1px solid white;\n"
+"    border-radius: 20px;\n"
+"    border-style: outset;\n"
+"    padding: 5px;\n"
+"    transition: all .5s ease;\n"
+"    color: white;\n"
+"    font-family:\'Montserrat\', sans-serif;\n"
+"    text-transform: uppercase;\n"
+"    text-align: center;\n"
+"    line-height: 1;\n"
+"    font-size: 14px;\n"
+"    padding: 10px;\n"
+"    outline: none;\n"
+"    \n"
+"    \n"
+"}\n"
+"QPushButton:hover {\n"
+"    color:rgb(0, 137, 236);;\n"
+"    background-color: white;;\n"
+"}\n"
+"")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("../../../../../.designer/backup/Assets/write.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/borrow1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap("/home/yassine/Library/Library/Library Agent/Assets/return.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        
         self.RESERVE_3.setIcon(icon5)
-        self.RESERVE_3.setIconSize(QtCore.QSize(20, 20))
+        self.BRING_BACK.setIcon(icon7)
+        self.RESERVE_3.setIconSize(QtCore.QSize(38, 38))
+        self.BRING_BACK.setIconSize(QtCore.QSize(30,30))
         self.RESERVE_3.setObjectName("RESERVE_3")
+        self.BRING_BACK.setObjectName("Bring_back")
         self.STUDENTID = QtWidgets.QLineEdit(self.frame_16)
         self.STUDENTID.setGeometry(QtCore.QRect(50, 80, 201, 31))
         font = QtGui.QFont()
@@ -543,6 +576,7 @@ class Ui_MembersWidnow(object):
         self.SUBMIT.setText(_translate("MembersWidnow", "Submit"))
         self.DISPLAY_ALL.setText(_translate("MembersWidnow", "display all"))
         self.RESERVE_3.setText(_translate("MembersWidnow", "Reserve"))
+        self.BRING_BACK.setText(_translate("MembersWindow","bring back"))
         self.label23_10.setText(_translate("MembersWidnow", "STUDENT ID"))
         self.label23_11.setText(_translate("MembersWidnow", "BOOK CODE"))
         self.label20_3.setText(_translate("MembersWidnow", "Book Reservation"))
