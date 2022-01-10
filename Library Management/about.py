@@ -69,7 +69,7 @@ class About(object):
         self.background.setStyleSheet("background-color: transparent;")
         self.background.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(self.path+"wallhaven-e7ek7k.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(self.path+"wallhaven-42l7wy.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.background.setIcon(icon1)
         self.background.setIconSize(QtCore.QSize(1128, 629))
         self.background.setObjectName("background")
@@ -77,7 +77,6 @@ class About(object):
         self.textBrowser_2.raise_()
         self.BACK.raise_()
         #About.setCentralWidget(self.centralwidget)
-
         self.retranslateUi(About)
         QtCore.QMetaObject.connectSlotsByName(About)
 
