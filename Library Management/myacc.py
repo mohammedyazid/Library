@@ -312,8 +312,8 @@ class Ui_MyaccWindow(object):
         self.ABOUT_US.setGeometry(QtCore.QRect(10, 530, 151, 51))
         self.REQUEST.setStyleSheet("\n"
 "QPushButton {\n"
-"    background-color: rgb(46, 194, 126);\n"
-"    border: 2px solid white;\n"
+"    background-color: transparent;\n"
+"    border: transparent;\n"
 "    border-radius: 20px;\n"
 "    border-style: outset;\n"
 "    padding: 5px;\n"
@@ -330,8 +330,8 @@ class Ui_MyaccWindow(object):
 "    \n"
 "}\n"
 "QPushButton:hover {\n"
-"    color:rgb(0, 137, 236);;\n"
-"    background-color: white;;\n"
+"    color:transparent;\n"
+"    background-color: transparent;\n"
 "}\n"
 "")     
         self.ABOUT_US.setStyleSheet("\n"
@@ -358,9 +358,7 @@ class Ui_MyaccWindow(object):
 "    background-color: transparent;;\n"
 "}\n"
 "")    
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(self.path+"interview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.REQUEST.setIcon(icon3)
+       
         self.REQUEST.setIconSize(QtCore.QSize(25, 25))
         self.REQUEST.setObjectName("REQUEST")
         self.ABOUT_US.setObjectName("ABOUT_US")
@@ -619,7 +617,7 @@ class Ui_MyaccWindow(object):
         self.log_credits_25.setText(_translate("MyaccWindow", "Books"))
         self.MY_ACCOUNT.setText(_translate("MyaccWindow", "My account"))
         self.BOOKS.setText(_translate("MyaccWindow", "Books"))
-        self.REQUEST.setText(_translate("MyaccWindow", "Request"))
+        self.REQUEST.setText(_translate("MyaccWindow", ""))
         self.ABOUT_US.setText(_translate("MyaccWindow", "ABOUT US"))
         self.label32.setText(_translate("MyaccWindow", "Last Name"))
         self.label33.setText(_translate("MyaccWindow", "ID"))

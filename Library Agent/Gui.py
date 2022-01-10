@@ -4,8 +4,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from books import Ui_BooksWindow
 from members import Ui_MembersWidnow
 import psycopg2
-from psycopg2 import extras
-import time
 import socket
 
 DB_HOST="localhost"
@@ -76,8 +74,11 @@ class Agent(object):
         self.library_tab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Gui)
         ################################################
+        
+        ##call display books and display members fonctions
         self.display_books()
         self.display_members()
+        
     def retranslateUi(self, Gui):
         _translate = QtCore.QCoreApplication.translate
         Gui.setWindowTitle(_translate("Agent Space", "Agent Space"))
@@ -91,22 +92,29 @@ class Agent(object):
         self.library_tab.setCurrentIndex(0)
     
     def client_connection(self,Client):
-        
-
-        
-
+        ###recieve data fron the client
         data = Client.recv(2048)
         data = data.decode()
+        
+        ##split data and save them as a list
         infos=data.split()
+        
+        #handle data base informations to connect to database
         conn = psycopg2.connect(dbname=DB_NAME,user=DB_USER,password=DB_PASS,host=DB_HOST)
+        
+        #define a cursor so we can interact with database
         cur2 = conn.cursor()
+        
+        #if the lenght of the list is 6 then this means that the recieved data are registeration infos
         if len(infos) == 6:
            cur2.execute('select id from members where id=%s',(infos[0],))
            test_id=cur2.fetchall()
            if len(test_id)==0:
             cur2.execute("INSERT INTO members (id,firstname,lastname,email,phone,password) VALUES(%s,%s,%s,%s,%s,%s)",(infos[0],infos[1],infos[2],infos[3],infos[4],infos[5]))
            else:
-            print('try an other one')        
+            print('try an other one')
+            
+        #if the lenght of the list is 2 then this means that the recieved data are login infos       
         elif len(infos) == 2:
             idd1= infos[0]
             passwordd1=infos[1]
@@ -124,6 +132,7 @@ class Agent(object):
             elif len(resault_id_password) == 0:
                 Client.send(str.encode('password or id is incorrect'))  
         
+        #if the lenght of the list is 3 then this means that the recieved data are the old password  and the new password = changing password
         elif len(infos)==3:
                 idc=infos[0]
                 passc= infos[1]
@@ -138,13 +147,16 @@ class Agent(object):
                 else :
                     Client.send(str.encode('Current Password Not found !'))
         
+        #else the recieved data are (book title for searching)
         else:
             titlee=infos[0]
             titlee=titlee.split("|")
             sql_book= """select * from books where title like '%s';""" %('%'+titlee[0]+'%')
             cur2.execute(sql_book)
+            ##fetch all data
             result_book = cur2.fetchall()
             
+            ##if the book is found gather the book infos from the DB and join them together in one string and send them to the client
             if len(result_book)>0:
                 result_book = ','.join(map(str,result_book))
                 Client.send(str.encode(result_book))
@@ -152,14 +164,15 @@ class Agent(object):
                 
             else:
                 Client.send(str.encode("book not found")) 
-
+        ##commit changes and close the cursor, disconnect from the database
         conn.commit()
         cur2.close()
         conn.close()
      
         
-        
+    ##This fonction treat all the multithreading actions so that more than one client can connect to the server
     def with_clients(self):
+        
         import threading
         while True:
             connec, address = ServerSocket.accept()
@@ -182,6 +195,8 @@ class Agent(object):
         cur4=conn.cursor()
         cur4.execute('select count(*) from books;')######################################
         number_in_db=cur4.fetchall()[0][0]
+        
+        ##Generate book code
         code=str(number_in_db+1)+bt_d[0]+au_d[len(au_d)-1]+str(len(bt_d))+au_d[0]+bt_d[len(bt_d)-1]
         code=code.lower()
 
@@ -418,4 +433,6 @@ class Agent(object):
         sql_update1 = """UPDATE books SET status='%s' WHERE code = '%s'""" % ("Available",code1)
         cur11.execute(sql_update1)  
         conn.commit()
-        self.display_books()    
+        self.display_books()
+        self.BooksWindow.LABEL.setStyleSheet("color:green;")
+        self.BooksWindow.LABEL.setText("Thank you!") 
